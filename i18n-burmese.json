@@ -8,36 +8,36 @@
   },
   "static": {
     "k1": {
-      "en": "Start here",
-      "my": "ဒီကနေ စလိုက်ပါ"
+      "en": "Start here, step one",
+      "my": "ဒီမှာ စတင်ပါ"
     },
     "k2": {
       "en": "You're about to learn the most useful tool in software.",
-      "my": "ဆော့ဖ်ဝဲလောကမှာ အသုံးအဝင်ဆုံး tool ကို သင်ယူတော့မှာပါ။"
+      "my": "ဆော့ဖ်ဝဲလောကမှာ အသုံးအဝင်ဆုံး tool ကို သင်ယူရတော့မှာပါ။"
     },
     "k3": {
       "en": "No experience needed. No jargon. One idea at a time — and you can stop and come back whenever you like.",
-      "my": "အတွေ့အကြုံ မလိုပါဘူး။ ခက်ခဲတဲ့ ဝေါဟာရတွေလည်း မသုံးပါဘူး။ အယူအဆတစ်ခုစီ တစ်ဆင့်ချင်း — ရပ်ချင်တဲ့အခါ ရပ်ပြီး ပြန်လာလို့ရပါတယ်။"
+      "my": "အတွေ့အကြုံ မလိုပါဘူး။ ခက်ခဲတဲ့ ဝေါဟာရတွေလည်း မသုံးပါဘူး။ အယူအဆတစ်ခုစီ တစ်ဆင့်ချင်း — ရပ်ချင်တဲ့နေရာမှာရပ်ပြီး ပြန်လေ့လာလို့ရပါတယ်။"
     },
     "k4": {
       "en": "By the end of these 14 short steps you'll understand what Git and GitHub actually are, you'll have typed real commands, and you'll know how professional teams work together on code without destroying each other's work.",
-      "my": "ဒီအဆင့် ၁၄ ဆင့် ပြီးသွားတဲ့အခါ Git နဲ့ GitHub ဆိုတာ တကယ်ဘာလဲဆိုတာ နားလည်သွားပါလိမ့်မယ်။ command တွေကို ကိုယ်တိုင် ရိုက်ဖူးပြီး ဖြစ်နေမှာဖြစ်သလို၊ ပရော်ဖက်ရှင်နယ် အဖွဲ့တွေက တစ်ယောက်နဲ့တစ်ယောက် အလုပ်တွေ မပျက်စီးစေဘဲ ဘယ်လို ပူးပေါင်းလုပ်ကိုင်ကြလဲဆိုတာလည်း သိသွားပါလိမ့်မယ်။"
+      "my": "ဒီအဆင့် ၁၄ ဆင့် ပြီးသွားတဲ့အခါ Git နဲ့ GitHubက ဘာလဲဆိုတာ နားလည်သွားပါလိမ့်မယ်။ command တွေကို ကိုယ်တိုင် ရိုက်စမ်းပြီး၊ ပရော်ဖက်ရှင်နယ် အဖွဲ့တွေက တစ်ယောက်နဲ့တစ်ယောက် အလုပ်တွေ မထိခိုက်စေပဲ ဘယ်လိုပူးပေါင်းလုပ်ကိုင်ကြလဲဆိုတာလည်း ရှင်းလင်းသွားပါလိမ့်မယ်။"
     },
     "k5": {
       "en": "The idea we'll keep coming back to",
-      "my": "အမြဲ ပြန်သုံးသွားမယ့် သဘောတရား"
+      "my": "ထပ်ခါထပ်ခါပြန်သုံးသွားမယ့် သဘောတရား"
     },
     "k6": {
       "en": "Learning Git is like learning to <b>save your progress in a video game</b>. You'll make save points, try risky things in a separate save slot, and share your saves with friends in the cloud. That's genuinely all it is.",
-      "my": "Git သင်ယူတာဟာ <b>ဂိမ်းထဲမှာ progress ကို save လုပ်တာ</b> နဲ့ တူပါတယ်။ save point တွေ ဆောက်မယ်၊ စွန့်စားစရာတွေကို သီးခြား save slot တစ်ခုမှာ စမ်းမယ်၊ ပြီးရင် အဲဒီ save တွေကို cloud ပေါ်တင်ပြီး သူငယ်ချင်းတွေနဲ့ မျှဝေမယ်။ တကယ်တော့ ဒီလောက်ပါပဲ။"
+      "my": "Git သင်ယူတာဟာ <b>ဂိမ်းထဲမှာ progress ကို save လုပ်တာ</b> နဲ့ တူပါတယ်။ save point တွေ ဆောက်မယ်၊ စမ်းသပ်မှုတွေကို သီးခြား save slot တစ်ခုမှာ စမ်းမယ်၊ ပြီးရင် အဲဒီ save တွေကို cloud(main) ပေါ်တင်ပြီး သူငယ်ချင်းတွေနဲ့ မျှဝေမယ်။ တကယ်တော့ ဒီလောက်ပါပဲ။"
     },
     "k7": {
       "en": "About 25 minutes",
       "my": "မိနစ် ၂၅ ခန့်"
     },
     "k8": {
-      "en": "Fourteen small steps. Your place is saved automatically if you leave.",
-      "my": "အဆင့်သေးသေးလေး ၁၄ ဆင့်။ ထွက်သွားရင်တောင် ရောက်နေတဲ့နေရာကို အလိုအလျောက် မှတ်ထားပေးပါတယ်။"
+      "en": "Fourteen small steps.",
+      "my": "အဆင့်သေးသေးလေး ၁၄ ဆင့်။"
     },
     "k9": {
       "en": "Nothing to install yet",
@@ -49,11 +49,11 @@
     },
     "k11": {
       "en": "One promise",
-      "my": "ကတိတစ်ခု"
+      "my": "သေချာတာတစ်ခုက"
     },
     "k12": {
-      "en": "If anything here feels confusing, it's the explanation's fault, not yours. Every idea is introduced only after you've seen why you'd want it.",
-      "my": "ဒီမှာ ရှုပ်ထွေးတယ်လို့ ခံစားရရင် သင့်အပြစ် မဟုတ်ပါဘူး — ရှင်းပြပုံရဲ့ အပြစ်ပါ။ အယူအဆတိုင်းကို ဘာကြောင့် လိုအပ်လဲဆိုတာ မြင်ပြီးမှသာ မိတ်ဆက်ပေးထားပါတယ်။"
+      "en": "If anything here feels confusing, it's not your fault. Every idea is introduced only after you've seen why you'd want it.",
+      "my": "ဒီမှာ ရှုပ်ထွေးတယ်လို့ ခံစားရရင် သင့်အပြစ် မဟုတ်ပါဘူး။ လိုအပ်မှုအပေါ် အခြေခံပြီးမှ ရှင်းပြထားခြင်းဖြစ်ပါသည်။"
     },
     "k13": {
       "en": "Step 2 · The problem",
@@ -65,19 +65,19 @@
     },
     "k15": {
       "en": "You're working on something important. You save a copy before making big changes. Then another. A week later your folder looks like this:",
-      "my": "အရေးကြီးတဲ့ အလုပ်တစ်ခု လုပ်နေတယ်။ အပြောင်းအလဲကြီးကြီး မလုပ်ခင် မိတ္တူတစ်ခု သိမ်းထားလိုက်တယ်။ ပြီးတော့ နောက်တစ်ခု။ တစ်ပတ်ကြာတော့ ကိုယ့် folder က ဒီလို ဖြစ်နေတယ် —"
+      "my": "အရေးကြီးတဲ့ အလုပ်တစ်ခုအတွက် ပြောင်းလဲမှုတွေမလုပ်ခင် မိတ္တူတွေ သိမ်းထားလိုက်တယ်။ ပြီးတော့ နောက်တစ်ခုထပ်သိမ်းရင်း တစ်ပတ်ကြာတော့ ကိုယ့်folderက ဒီလို ဖြစ်နေတယ် —"
     },
     "k16": {
       "en": "Same work. One is chaos; the other is a history you can walk through.",
-      "my": "အလုပ်ချင်း အတူတူပါပဲ။ တစ်ဖက်က ရှုပ်ထွေးမှု၊ တစ်ဖက်ကတော့ ပြန်လျှောက်ကြည့်လို့ရတဲ့ မှတ်တမ်း။"
+      "my": "အလုပ်ချင်း အတူတူပါပဲ။ တစ်ဖက်က ရှုပ်ထွေးမှု၊ တစ်ဖက်ကတော့ ပြန်စစ်ကြည့်လို့ရတဲ့ မှတ်တမ်း။"
     },
     "k17": {
       "en": "The copying approach fails in three ways: you can't tell <b>what</b> changed between two files, you can't tell <b>why</b> anyone changed it, and if two people edit at once, somebody's work gets overwritten.",
-      "my": "မိတ္တူကူးတဲ့ နည်းလမ်းက အချက် ၃ ချက်နဲ့ ကျရှုံးပါတယ် — ဖိုင်နှစ်ခုကြားမှာ <b>ဘာ</b> ပြောင်းသွားလဲ မသိရဘူး၊ <b>ဘာကြောင့်</b> ပြောင်းလဲတာလဲ မသိရဘူး၊ ပြီးတော့ နှစ်ယောက် တစ်ပြိုင်နက် ပြင်လိုက်ရင် တစ်ယောက်ရဲ့ အလုပ် ပျောက်သွားတယ်။"
+      "my": "မိတ္တူကူးတဲ့ နည်းလမ်းက ဒီအချက် ၃ ချက်နဲ့ကြောင့်ရှုပ်ထွေးရပါတယ် — ဖိုင်နှစ်ခုကြားမှာ <b>ဘာ</b> ပြောင်းသွားလဲ မသိရဘူး၊ <b>ဘာကြောင့်</b> ပြောင်းလဲတာလဲ မသိရဘူး၊ ပြီးတော့ နှစ်ယောက် တစ်ပြိုင်နက် ပြင်လိုက်ရင် နောက်တစ်ယောက်ရဲ့ Log ပျောက်သွားတယ်။"
     },
     "k18": {
       "en": "This is the entire reason Git exists.",
-      "my": "ဒါဟာ Git တည်ရှိရတဲ့ အကြောင်းရင်း အပြည့်အစုံပါ။"
+      "my": "ဒါဟာ Git ကိုသုံးရခြင်း အကြောင်းရင်း အပြည့်အစုံပါ။"
     },
     "k19": {
       "en": "Not to be complicated — to make that folder impossible.",
@@ -113,31 +113,31 @@
     },
     "k27": {
       "en": "Broke something? Return to any earlier point in seconds.",
-      "my": "တစ်ခုခု ပျက်သွားလား။ အရင်အချိန် တစ်ခုခုကို စက္ကန့်ပိုင်းအတွင်း ပြန်ရောက်နိုင်ပါတယ်။"
+      "my": "တစ်ခုခု ပျက်သွားလား။ အရင်မှတ်တမ်းတစ်ခုခုကို စက္ကန့်ပိုင်းအတွင်း ပြန်ရောက်နိုင်ပါတယ်။"
     },
     "k28": {
       "en": "See what changed",
-      "my": "ဘာပြောင်းလဲ မြင်နိုင်"
+      "my": "ပြောင်းလဲမှူမှတ်တမ်းကို မြင်နိုင်ခြင်း"
     },
     "k29": {
       "en": "Compare any two moments, line by line.",
-      "my": "အချိန်နှစ်ခုကို လိုင်းလိုက် နှိုင်းယှဉ်ကြည့်လို့ ရပါတယ်။"
+      "my": "ပြောင်းလဲမှုနှစ်ခုကို code lineများကြည့်ပြီး နှိုင်းယှဉ်ကြည့်လို့ ရပါတယ်။"
     },
     "k30": {
       "en": "Work together",
-      "my": "အတူတကွ လုပ်ကိုင်နိုင်"
+      "my": "အတူတကွ ပူးပေါင်းလုပ်ကိုင်နိုင်"
     },
     "k31": {
       "en": "Several people edit the same project without overwriting each other.",
-      "my": "လူအများကြီးက project တစ်ခုတည်းကို တစ်ယောက်နဲ့တစ်ယောက် မဖျက်မိဘဲ ပြင်နိုင်ပါတယ်။"
+      "my": "လူအများကြီးက project တစ်ခုတည်းကို တစ်ယောက်နဲ့တစ်ယောက် မထိခိုက်မိဘဲ ပြင်နိုင်ပါတယ်။"
     },
     "k32": {
       "en": "Try wild ideas",
-      "my": "စွန့်စားတဲ့ အကြံတွေ စမ်းနိုင်"
+      "my": "ကိုယ့်ရဲ့အကြံတွေ စမ်းသပ်နိုင်"
     },
     "k33": {
       "en": "Experiment freely, knowing the working version is untouched.",
-      "my": "အလုပ်လုပ်နေတဲ့ version ကို မထိခိုက်ဘူးဆိုတာ သိထားလို့ လွတ်လွတ်လပ်လပ် စမ်းသပ်နိုင်ပါတယ်။"
+      "my": "တကယ်အလုပ်လုပ်နေတဲ့ version ကို မထိခိုက်ဘူးဆိုတာ သိထားလို့ လွတ်လွတ်လပ်လပ် စမ်းသပ်နိုင်ပါတယ်။"
     },
     "k34": {
       "en": "Check yourself",
@@ -180,8 +180,8 @@
       "my": "<b>ကိုယ့်ကွန်ပျူတာ</b> ပေါ်မှာ ရှိတဲ့ အခမဲ့ program တစ်ခုပါ။ snapshot တွေ ရိုက်ပေးပြီး မှတ်တမ်းကို သိမ်းထားပေးတယ်။ အင်တာနက် လုံးဝ မလိုပါဘူး။"
     },
     "k44": {
-      "en": "GitHub = the photo app",
-      "my": "GitHub = ဓာတ်ပုံ app"
+      "en": "GitHub = Google Drive app",
+      "my": "GitHub =  Google drive app"
     },
     "k45": {
       "en": "A <b>website</b> where you upload those snapshots so others can see them, comment, and contribute. Optional — but it's where teamwork happens.",
@@ -229,7 +229,7 @@
     },
     "k56": {
       "en": "Git is usually operated by typing, in a program called the <b>terminal</b>. If that sounds intimidating, here's the reframe: it's just a way of asking your computer to do things with words instead of clicks.",
-      "my": "Git ကို များသောအားဖြင့် <b>terminal</b> လို့ခေါ်တဲ့ program ထဲမှာ စာရိုက်ပြီး သုံးပါတယ်။ ကြောက်စရာလို့ ထင်ရင် ဒီလို ပြန်စဉ်းစားကြည့်ပါ — ကွန်ပျူတာကို click နှိပ်မယ့်အစား စကားလုံးနဲ့ ခိုင်းလိုက်တာပါပဲ။"
+      "my": "Git ကို များသောအားဖြင့် <b>terminal</b> လို့ခေါ်တဲ့ program ထဲမှာ စာရိုက်ပြီး သုံးပါတယ်။  ကွန်ပျူတာကို click နှိပ်မယ့်အစား စကားလုံးနဲ့ ခိုင်းလိုက်တာပါပဲ။"
     },
     "k57": {
       "en": "Think of it as",
@@ -281,7 +281,7 @@
     },
     "k69": {
       "en": "Not with these. <code class=\"i\">pwd</code>, <code class=\"i\">ls</code> and <code class=\"i\">cd</code> only look and walk around — they change nothing. Explore freely.",
-      "my": "ဒီ command တွေနဲ့တော့ မဖြစ်ပါဘူး။ <code class=\"i\">pwd</code>၊ <code class=\"i\">ls</code> နဲ့ <code class=\"i\">cd</code> က ကြည့်ရုံ၊ လျှောက်ရုံပဲ — ဘာမှ မပြောင်းလဲပါဘူး။ လွတ်လွတ်လပ်လပ် လေ့လာလိုက်ပါ။"
+      "my": "ဒီ command တွေနဲ့တော့ မဖြစ်ပါဘူး။ <code class=\"i\">pwd</code>၊ <code class=\"i\">ls</code> နဲ့ <code class=\"i\">cd</code> က ကြည့်ရှုရုံပဲ — ဘာမှ မပြောင်းလဲပါဘူး။ လွတ်လွတ်လပ်လပ် လေ့လာလိုက်ပါ။"
     },
     "k70": {
       "en": "Step 6 · Setup (once, forever)",
@@ -317,7 +317,7 @@
     },
     "k78": {
       "en": "2 · Sign your work",
-      "my": "၂ · ကိုယ့်အလုပ်ကို လက်မှတ်ထိုးပါ"
+      "my": "၂ · လက်မှတ်ထိုးပါ"
     },
     "k79": {
       "en": "Every save point gets stamped with your name, so teammates know who did what. Type these two lines once:",
@@ -337,7 +337,7 @@
     },
     "k83": {
       "en": "Step 7 · Create the world",
-      "my": "အဆင့် ၇ · ကမ္ဘာကို ဖန်တီးပါ"
+      "my": "အဆင့် ၇ · ကိုယ်ပိုင် projectကို ဖန်တီးပါ"
     },
     "k84": {
       "en": "Turn a folder into a project Git watches.",
@@ -421,11 +421,11 @@
     },
     "k104": {
       "en": "Write notes your future self will thank you for",
-      "my": "နောင်တစ်ချိန် ကိုယ့်ကိုယ်ကိုယ် ကျေးဇူးတင်မယ့် မှတ်ချက်တွေ ရေးပါ"
+      "my": "နောင်တစ်ချိန် ကိုယ့်historyကိုကြည့်ပြီး မှတ်မိစေမယ့် မှတ်ချက်တွေ ရေးပါ"
     },
     "k105": {
       "en": "\"Fix crash when the file is empty\" is useful. \"update\", \"stuff\", \"asdf\" are not. You'll be reading these later, promise.",
-      "my": "“ဖိုင်ဗလာဖြစ်နေရင် crash ဖြစ်တာ ပြင်ပြီး” ဆိုတာမျိုးက အသုံးဝင်ပါတယ်။ “update”၊ “stuff”၊ “asdf” တို့ကတော့ မဝင်ပါဘူး။ ဒါတွေကို နောက်မှ ကိုယ်တိုင် ပြန်ဖတ်ရမှာပါ။"
+      "my": " ဖိုင်ဗလာဖြစ်နေရင် crash ဖြစ်တာ ပြင်ပြီး ဆိုတာမျိုးက အသုံးဝင်ပါတယ်။ “update”၊ “stuff”၊ “asdf” တို့ကတော့ မဝင်ပါဘူး။ ဒါတွေကို နောက်မှ ကိုယ်တိုင် ပြန်ဖတ်ရမှာပါ။"
     },
     "k106": {
       "en": "Step 9 · Looking back",
