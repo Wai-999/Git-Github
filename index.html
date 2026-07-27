@@ -214,6 +214,32 @@ nav#sidebar.searching .part-links{max-height:none;overflow:visible}
   section{page-break-inside:avoid;break-inside:avoid}
   .hero{page-break-after:always}
 }
+
+/* ===== Metaphor & plain-language boxes ===== */
+.metabox{background:linear-gradient(135deg,rgba(188,140,255,.12),rgba(88,166,255,.08));border:1px solid var(--border);border-left:4px solid var(--purple);border-radius:12px;padding:20px 24px;margin:0 0 28px;max-width:900px}
+.metabox h3{margin:0 0 10px;color:var(--purple);font-size:1.05rem}
+.metabox p{margin-bottom:10px;font-size:.93rem}
+.metabox table.maptable{margin:10px 0 0;font-size:.86rem;max-width:100%}
+.metabox table.maptable th{background:rgba(188,140,255,.12);color:var(--purple)}
+.metabox table.maptable td:first-child{color:var(--muted);width:46%}
+.plainbox{background:rgba(63,185,80,.07);border:1px solid var(--border);border-left:4px solid var(--green);border-radius:0 10px 10px 0;padding:14px 18px;margin:0 0 18px;max-width:880px}
+.plainbox .pb-tag{display:inline-block;background:var(--green);color:#04140a;font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:2px 9px;border-radius:999px;margin-bottom:7px}
+.plainbox p{margin:0;font-size:.94rem}
+[data-theme="light"] .plainbox{background:rgba(26,127,55,.06)}
+/* ===== Beginner mode ===== */
+.adv-tag{display:inline-block;background:rgba(210,153,34,.15);color:var(--orange);border:1px solid var(--orange);border-radius:999px;font-size:.62rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:1px 8px;margin-left:8px;vertical-align:middle}
+body:not(.beginner) .plainbox{display:none}
+body.beginner .advanced{display:none!important}
+body.beginner .metabox{border-left-width:5px}
+#beg-toggle{background:var(--panel);border:1px solid var(--border);color:var(--text);border-radius:999px;padding:6px 14px;cursor:pointer;font-size:.82rem;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+#beg-toggle .sw{width:30px;height:16px;border-radius:999px;background:var(--border);position:relative;transition:background .25s}
+#beg-toggle .sw::after{content:"";position:absolute;top:2px;left:2px;width:12px;height:12px;border-radius:50%;background:var(--muted);transition:transform .25s,background .25s}
+body.beginner #beg-toggle{border-color:var(--green);color:var(--green)}
+body.beginner #beg-toggle .sw{background:rgba(63,185,80,.35)}
+body.beginner #beg-toggle .sw::after{transform:translateX(14px);background:var(--green)}
+.begbanner{display:none;background:rgba(63,185,80,.1);border:1px solid var(--green);border-radius:10px;padding:10px 16px;margin-bottom:18px;font-size:.86rem;color:var(--text);max-width:900px}
+body.beginner .begbanner{display:block}
+@media(max-width:900px){#beg-toggle span.lbl{display:none}}
 </style>
 </head>
 <body>
@@ -262,7 +288,11 @@ nav#sidebar.searching .part-links{max-height:none;overflow:visible}
   <a href="#pipeline">Code → Production</a>
   <a href="#best">Best Practices</a>
   </div>
-  <button class="part-head" data-page="6">Ⅶ · Reference<span class="chev">▸</span></button>
+  <button class="part-head" data-page="6">Ⅶ · First Real Project<span class="chev">▸</span></button>
+  <div class="part-links">
+  <a href="#story">🍜 Complete Walkthrough</a>
+  </div>
+  <button class="part-head" data-page="7">Ⅷ · Reference<span class="chev">▸</span></button>
   <div class="part-links">
   <a href="#cheatsheet">Command Cheat Sheet</a>
   <a href="#glossary">Glossary</a>
@@ -274,21 +304,35 @@ nav#sidebar.searching .part-links{max-height:none;overflow:visible}
 <header class="topbar">
   <button id="menu-btn" aria-label="Open navigation">☰</button>
   <div class="tb-title">🌿 Git &amp; GitHub — The Complete Guide</div>
-  <div class="tb-actions"><button id="theme-toggle" aria-label="Toggle color theme">☀️ Light</button></div>
+  <div class="tb-actions">
+    <button id="beg-toggle" aria-pressed="true"><span class="sw"></span><span class="lbl">Beginner mode</span></button>
+    <button id="theme-toggle" aria-label="Toggle color theme">☀️ Light</button>
+  </div>
 </header>
 
 <div class="page" data-title="Foundations">
 <div class="hero">
   <h1>Git &amp; GitHub — The Complete Guide</h1>
-  <p>A professional, step-by-step guide to version control systems, distributed version control, Git, and GitHub — from first principles to real-world team workflows. Compiled from <em>Pro Git</em> (2nd ed.), GitHub's official cheat sheet, your <em>Git &amp; GitHub for Data Science</em> materials, and the topics of Meta's <em>Introduction to Version Control</em> course — including a complete command-line module.</p>
+  <p>Learn version control, the command line, Git, and GitHub from zero — with plain-language explanations, one running metaphor, hands-on practice, and a complete project you build from start to finish.</p>
   <div class="badges">
-    <span class="badge">Version Control</span><span class="badge">Distributed VCS</span><span class="badge">Git Internals</span><span class="badge">GitHub Workflow</span><span class="badge">Data Science</span><span class="badge">Interactive</span>
+    <span class="badge">Beginner friendly</span><span class="badge">Interactive</span><span class="badge">No setup needed</span>
   </div>
 </div>
+<div class="begbanner">🌱 <b>Beginner mode is on.</b> Green “In plain English” boxes explain each idea simply, and advanced topics are hidden. Switch it off in the header anytime to see everything.</div>
+<div class="metabox"><h3>🎮 The save-game metaphor</h3><p>Every idea in this guide maps onto something you already understand: <b>saving your progress in a video game</b>. We'll use this same world in every chapter.</p>
+<table class="maptable"><tr><th>In a game…</th><th>In Git…</th></tr>
+<tr><td>Your game world</td><td><b>Repository</b> — the project Git watches over</td></tr>
+<tr><td>A save point</td><td><b>Commit</b> — a snapshot you can always return to</td></tr>
+<tr><td>A second save slot for a risky boss fight</td><td><b>Branch</b> — a parallel line of work</td></tr>
+<tr><td>Which save file you're playing right now</td><td><b>HEAD</b> — where you currently are</td></tr>
+<tr><td>Cloud saves your friends can load</td><td><b>GitHub</b> — the shared copy online</td></tr>
+<tr><td>Everyone owning the full game world offline</td><td><b>Distributed</b> version control</td></tr></table></div>
+
 
 <!-- ============ 1. WHAT IS VERSION CONTROL ============ -->
 <section id="intro">
 <h2><span class="num">1</span>What Is Version Control?</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>In one sentence:</b> version control is an <b>unlimited undo button for a whole project</b> — one that also remembers who changed what, and why. Instead of keeping <code class="inline">report_final_v2_REAL.docx</code>, you keep one file with a complete, labelled history behind it.</p></div>
 <p>A <b>Version Control System (VCS)</b> is software that records changes to a file or set of files over time so that you can recall specific versions later. Think of it as a <b>time machine for your project</b>: every meaningful change is saved as a snapshot, and you can rewind to any of them at any moment.</p>
 <p>With a VCS you can:</p>
 <div class="cards">
@@ -305,6 +349,7 @@ nav#sidebar.searching .part-links{max-height:none;overflow:visible}
 <!-- ============ 2. TYPES OF VCS ============ -->
 <section id="types">
 <h2><span class="num">2</span>The Three Types of Version Control Systems</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>The short version:</b> version control had three generations. First it worked on <b>one computer only</b> (no teamwork). Then everything lived on <b>one central server</b> — teamwork became possible, but if the server went down, everyone stopped. Today everyone carries a <b>full copy</b> of the project, so nothing can stop you working, and no single crash can lose the history.</p></div>
 <p>Version control evolved through three generations. Understanding this evolution explains <em>why Git works the way it does</em>.</p>
 
 <h3>2.1 Local VCS — one machine, one history</h3>
@@ -367,6 +412,7 @@ nav#sidebar.searching .part-links{max-height:none;overflow:visible}
 <!-- ============ 3. DVCS ============ -->
 <section id="dvcs">
 <h2><span class="num">3</span>Distributed Version Control, Explained</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>Distributed means:</b> when you download a project, you don't get just the latest files — you get <b>the entire history, every version, every branch</b>. That's why Git is fast (nothing needs the internet) and safe (every teammate's laptop is a complete backup).</p></div>
 <div class="diagram">
 <svg viewBox="0 0 700 290" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
   <rect x="270" y="15" width="160" height="80" rx="10" fill="#1c2330" stroke="#3fb950" stroke-width="2"/>
@@ -432,6 +478,7 @@ nav#sidebar.searching .part-links{max-height:none;overflow:visible}
 <!-- ============ 5. GIT VS GITHUB ============ -->
 <section id="git-vs-github">
 <h2><span class="num">5</span>Git vs GitHub — Not the Same Thing</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>Easiest way to remember:</b> Git is the <b>app on your computer</b> that saves your progress. GitHub is the <b>website</b> where you upload those saves so others can see them. Git works fine with no internet; GitHub is where teamwork happens. Like a camera (Git) and Instagram (GitHub).</p></div>
 <div class="cards">
   <div class="card"><span class="icon">🔧</span><h4>Git — the tool</h4><p>An open-source, distributed version control <b>program</b> that runs on <em>your</em> computer. It tracks changes, stores snapshots, manages branches, and merges work. It works perfectly with no internet and no GitHub.</p></div>
   <div class="card"><span class="icon">☁️</span><h4>GitHub — the platform</h4><p>A <b>cloud service</b> that hosts Git repositories and adds collaboration on top: pull requests, code review, issues, project boards, GitHub Actions (CI/CD), and a public profile that acts as a developer portfolio.</p></div>
@@ -444,10 +491,20 @@ nav#sidebar.searching .part-links{max-height:none;overflow:visible}
 </div><!-- /page -->
 
 <div class="page" data-title="The Command Line">
+<div class="metabox"><h3>🎮 Where the metaphor starts</h3><p>Before you can save your game, you need to know how to walk around the world. The command line is exactly that: <b>moving through your computer's folders on foot</b> instead of clicking.</p>
+<table class="maptable"><tr><th>Think of it as…</th><th>The command</th></tr>
+<tr><td>"Where am I standing?"</td><td><code class="inline">pwd</code></td></tr>
+<tr><td>"What's in this room?"</td><td><code class="inline">ls</code></td></tr>
+<tr><td>"Walk into that room"</td><td><code class="inline">cd folder</code></td></tr>
+<tr><td>"Walk back out"</td><td><code class="inline">cd ..</code></td></tr>
+<tr><td>"Build a new room"</td><td><code class="inline">mkdir</code></td></tr>
+<tr><td>"Search every room for a word"</td><td><code class="inline">grep</code></td></tr></table></div>
+
 
 <!-- ============ CLI: INTRO ============ -->
 <section id="cli-intro">
 <h2><span class="num">6</span>The Command Line — Your Developer Cockpit</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>Don't be scared of the black window.</b> It's just a way of asking your computer to do things by typing instead of clicking. Every command follows the same shape: <b>the verb, then what to do it to</b> — <code class="inline">cd projects</code> means "go into projects". Nothing you type here can break your computer, and you can't lose your work by exploring with <code class="inline">pwd</code>, <code class="inline">ls</code>, and <code class="inline">cd</code>.</p></div>
 <p>Before Git makes sense, you need the environment it was born in: the <b>command line</b>. Instead of clicking through windows, you type text commands into a <b>shell</b> — a program that interprets what you type and asks the operating system to do it. Developers rely on it because it is <b>faster</b> (no menu-hunting), <b>scriptable</b> (automate anything you can type), <b>universal</b> (the same commands work on any server in the world), and it's where professional tools — Git included — live first.</p>
 <h3>Terminal vs shell — two different things</h3>
 <div class="cards">
@@ -474,6 +531,7 @@ nav#sidebar.searching .part-links{max-height:none;overflow:visible}
 <!-- ============ CLI: NAVIGATION ============ -->
 <section id="cli-nav">
 <h2><span class="num">7</span>Navigating the Filesystem</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>Only three commands matter at first:</b> <code class="inline">pwd</code> (where am I?), <code class="inline">ls</code> (what's here?), <code class="inline">cd</code> (go there). That's genuinely enough to move anywhere on your computer. And press <b>Tab</b> constantly — it finishes names for you and prevents typos.</p></div>
 <p>The filesystem is a tree of directories (folders). At any moment your shell is "standing" in one of them — the <b>working directory</b>. Three commands cover 90% of navigation:</p>
 <h3>pwd — where am I?</h3>
 <div class="codeblock"><div class="cb-head"><span>terminal</span><button class="copy-btn">Copy</button></div><pre>pwd
@@ -531,6 +589,7 @@ rm -r old-project          <span class="cmt"># delete a directory and everything
 <!-- ============ CLI: PIPES/REDIRECT/GREP ============ -->
 <section id="cli-power">
 <h2><span class="num">9</span>Power Tools: Pipes, Redirection &amp; Grep</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>The big idea:</b> each command is a tiny tool that does one job. The pipe <code class="inline">|</code> is a <b>conveyor belt</b> that feeds one tool's output into the next. So <code class="inline">cat log | grep "ERROR" | wc -l</code> reads: pour out the log → keep only error lines → count them. Three simple tools, one useful answer.</p></div>
 <p>This is where the Unix philosophy pays off: small commands become powerful when you <b>connect</b> them.</p>
 <h3>Standard streams — the plumbing</h3>
 <p>Every command has three data streams: <b>stdin</b> (input, 0), <b>stdout</b> (normal output, 1), and <b>stderr</b> (error messages, 2). By default stdout/stderr go to your screen — redirection and pipes reroute them.</p>
@@ -598,9 +657,18 @@ ls | grep <span class="str">".ipynb"</span>               <span class="cmt"># fi
 </div><!-- /page -->
 
 <div class="page" data-title="Git Fundamentals">
+<div class="metabox"><h3>🎮 Saving your game, step by step</h3><p>Git doesn't save automatically — <em>you</em> decide when a moment is worth keeping. It happens in three moves:</p>
+<table class="maptable"><tr><th>The game moment</th><th>The Git step</th></tr>
+<tr><td>You play, and things change</td><td>Edit files in your <b>working directory</b></td></tr>
+<tr><td>You pick which achievements to record</td><td><code class="inline">git add</code> → the <b>staging area</b></td></tr>
+<tr><td>You hit "Save" and name the save file</td><td><code class="inline">git commit -m "..."</code></td></tr>
+<tr><td>You upload the save to the cloud</td><td><code class="inline">git push</code></td></tr></table>
+<p>The <b>staging area</b> is the step most tutorials skip. It's simply this: you choose <em>what</em> goes into the save, instead of saving everything blindly.</p></div>
+
 <!-- ============ 6. HOW GIT THINKS ============ -->
 <section id="internals">
 <h2><span class="num">11</span>How Git Thinks — The Mental Model</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>The one thing to understand:</b> a commit is a <b>photograph of your entire project</b> at a moment in time, not a list of edits. Each photo is stamped with who took it, when, and a note about why — and it points back to the previous photo. That chain of photos <em>is</em> your history.</p></div>
 <p>Most Git confusion disappears once you internalize four ideas from <em>Pro Git</em>:</p>
 
 <h3>6.1 Snapshots, not differences</h3>
@@ -609,9 +677,10 @@ ls | grep <span class="str">".ipynb"</span>               <span class="cmt"># fi
 <h3>6.2 Nearly every operation is local</h3>
 <p>History browsing, diffs, commits, branch switches — all read from your local database, so they feel instantaneous and work offline (on a plane, on a train, off VPN). You only touch the network when you explicitly <code class="inline">fetch</code>, <code class="inline">pull</code>, or <code class="inline">push</code>.</p>
 
-<h3>6.3 Integrity: everything is checksummed</h3>
+<div class="advanced"><h3>6.3 Integrity: everything is checksummed<span class="adv-tag">advanced</span></h3>
 <p>Every object in Git is addressed by the <b>SHA-1 hash</b> of its contents — a 40-character fingerprint like <code class="inline">24b9da6552252987aa493b52f8696cd6d3b00373</code>. You cannot change any file, commit, or byte of history without Git noticing, because the checksum would no longer match. A commit's ID even depends on its parent's ID, so history forms a tamper-evident chain.</p>
 
+</div>
 <h3>6.4 The three states &amp; three areas</h3>
 <p>Every tracked file is in one of three states, corresponding to three areas of a Git project:</p>
 <div class="diagram">
@@ -706,6 +775,7 @@ ls | grep <span class="str">".ipynb"</span>               <span class="cmt"># fi
 <!-- ============ 7. SETUP ============ -->
 <section id="setup">
 <h2><span class="num">12</span>Installation &amp; First-Time Setup</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>You only do this once.</b> Install Git, then tell it your name and email so your save points get signed with your name. That's the whole setup.</p></div>
 <h3>7.1 Install Git</h3>
 <div class="tabs">
   <div class="tab-btns">
@@ -731,6 +801,7 @@ git config --list                        <span class="cmt"># verify your setting
 <!-- ============ 8. CORE WORKFLOW ============ -->
 <section id="workflow">
 <h2><span class="num">13</span>The Core Workflow, Step by Step</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>The rhythm of every project:</b> edit → <code class="inline">git add</code> (choose what to save) → <code class="inline">git commit</code> (save it with a note) → <code class="inline">git push</code> (upload it). You'll repeat this loop thousands of times. Do it after every small piece of work that <em>runs</em> — not once at the end of the day.</p></div>
 <p>This is the heartbeat of daily Git use — the <b>edit → add → commit → push</b> cycle. Repeat it often: after every small, working improvement.</p>
 <div class="step-flow">
   <div class="step-box"><div class="s-num">STEP 0</div><code>git init / git clone</code><small>Create a new repo, or download an existing one</small></div>
@@ -847,9 +918,18 @@ git show &lt;commit&gt;            <span class="cmt"># details + changes of a sp
 </div><!-- /page -->
 
 <div class="page" data-title="Branching &amp; Remotes">
+<div class="metabox"><h3>🎮 Parallel save slots</h3><p>You're about to try something risky — a new algorithm, a redesign, a boss fight. You don't want to ruin your main playthrough, so you <b>copy your save into a second slot</b> and experiment there.</p>
+<table class="maptable"><tr><th>In a game…</th><th>In Git…</th></tr>
+<tr><td>Make a second save slot</td><td><code class="inline">git switch -c my-experiment</code></td></tr>
+<tr><td>Play in the new slot; main stays untouched</td><td>Commit freely on your branch</td></tr>
+<tr><td>It worked! Fold it into your main playthrough</td><td><code class="inline">git merge</code></td></tr>
+<tr><td>It failed — delete the slot, no harm done</td><td><code class="inline">git branch -d my-experiment</code></td></tr>
+<tr><td>Two players changed the same chest</td><td>A <b>merge conflict</b> — you decide the outcome</td></tr></table></div>
+
 <!-- ============ 10. BRANCHING ============ -->
 <section id="branching">
 <h2><span class="num">15</span>Branching &amp; Merging — Git's Superpower</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>Why branches exist:</b> so you can try something risky <b>without endangering the working version</b>. Make a branch, break things freely, and if it doesn't work out, delete it — the main version never knew. If it does work, merge it in.</p></div>
 <p>A branch is a movable pointer to a commit — creating one is instant and free. Branches let you develop features, run experiments, and fix bugs in <b>parallel universes</b> that don't disturb the stable <code class="inline">main</code> branch.</p>
 <div class="diagram">
 <svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
@@ -902,7 +982,7 @@ learning_rate = 0.001       <span class="cmt"># their version (incoming branch)<
 <li><code class="inline">git commit</code> to complete the merge.</li>
 </ol>
 
-<h3>Rebase (the other way to integrate)</h3>
+<div class="advanced"><h3>Rebase (the other way to integrate)<span class="adv-tag">advanced</span></h3>
 <p><code class="inline">git rebase main</code> replays your branch's commits <em>on top of</em> main, producing a straight-line history instead of a merge commit. Cleaner to read — but it <b>rewrites commits</b>.</p>
 <div class="callout danger"><b>The golden rule of rebasing</b>Never rebase (or otherwise rewrite) commits that you've already pushed and others may have based work on. Rebase your own local work freely; leave shared history alone.</div>
 
@@ -943,6 +1023,7 @@ learning_rate = 0.001       <span class="cmt"># their version (incoming branch)<
 <div class="caption">Real-world convention: rebase your own unpushed work to keep it tidy; merge (via pull request) to combine shared work.</div>
 </div>
 
+</div>
 <h3>Tagging milestones</h3>
 <div class="codeblock"><div class="cb-head"><span>terminal</span><button class="copy-btn">Copy</button></div><pre>git tag -a v1.0 -m <span class="str">"Baseline model: 87% accuracy"</span>
 git push origin v1.0</pre></div>
@@ -952,6 +1033,7 @@ git push origin v1.0</pre></div>
 <!-- ============ 11. REMOTES ============ -->
 <section id="remotes">
 <h2><span class="num">16</span>Remotes — Connecting to GitHub</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>Remote just means "the copy on the internet".</b> <code class="inline">push</code> = upload my saves. <code class="inline">pull</code> = download everyone else's. Start each work session with a pull, so you're building on the latest version rather than an old one.</p></div>
 <p>A <b>remote</b> is a named reference to another copy of your repository, usually on GitHub. The default name is <code class="inline">origin</code>.</p>
 <h3>11.1 Create the GitHub repository</h3>
 <ol>
@@ -987,6 +1069,7 @@ git push             <span class="cmt"># upload your commits</span></pre></div>
 <!-- ============ GITHUB AUTH ============ -->
 <section id="github-auth">
 <h2><span class="num">17</span>Connecting to GitHub: HTTPS vs SSH</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>Why this exists:</b> GitHub needs proof it's really you before accepting uploads. Either you paste a <b>token</b> (a long password Git remembers for you), or you set up an <b>SSH key</b> once — a pair of files where you give GitHub the public half and keep the secret half. After that, uploads just work.</p></div>
 <p>When you push or pull, GitHub must know it's really you. There are two ways to authenticate — both secure, different trade-offs:</p>
 <div class="cards">
   <div class="card"><span class="icon">🔑</span><h4>HTTPS + token</h4><p>URLs like <code class="inline">https://github.com/user/repo.git</code>. You authenticate with a <b>Personal Access Token (PAT)</b> — GitHub no longer accepts account passwords for Git operations. Easiest to start; works through corporate firewalls.</p></div>
@@ -1024,9 +1107,18 @@ ssh -T git@github.com
 </div><!-- /page -->
 
 <div class="page" data-title="Collaboration &amp; Safety">
+<div class="metabox"><h3>🎮 Playing with friends — and undoing mistakes</h3><p>Now other people share your world. Nobody edits the main world directly; you propose your changes and the group approves them.</p>
+<table class="maptable"><tr><th>In a game…</th><th>In Git/GitHub…</th></tr>
+<tr><td>"Here's my quest — can the guild approve it?"</td><td><b>Pull Request</b></td></tr>
+<tr><td>Guildmates read it and suggest fixes</td><td><b>Code review</b></td></tr>
+<tr><td>Approved → it becomes part of the world</td><td><b>Merge</b> into <code class="inline">main</code></td></tr>
+<tr><td>Load an earlier save to fix a disaster</td><td><code class="inline">git revert</code> / <code class="inline">git reset</code></td></tr>
+<tr><td>"Who moved this chest, and why?"</td><td><code class="inline">git blame</code></td></tr></table></div>
+
 <!-- ============ 12. COLLABORATION ============ -->
 <section id="collab">
 <h2><span class="num">18</span>Collaboration: GitHub Flow, Pull Requests &amp; Issues</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>How teams actually work:</b> nobody edits the shared version directly. You make a branch, do your work, and open a <b>pull request</b> — which is simply saying "here's what I changed, please check it before it goes in". Teammates comment, tests run, then it gets merged. That's it — that's professional software development.</p></div>
 <p>The most widely used team workflow is <b>GitHub Flow</b> — simple, safe, and review-centered:</p>
 <div class="step-flow">
   <div class="step-box"><div class="s-num">1</div><code>git switch -c feature-x</code><small>Branch off main for each feature/experiment — never work directly on main</small></div>
@@ -1096,13 +1188,14 @@ ssh -T git@github.com
 <!-- ============ HEAD / DIFF / BLAME ============ -->
 <section id="head-diff-blame">
 <h2><span class="num">19</span>Under the Hood: HEAD, Diff &amp; Blame</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>Three questions, three commands:</b> "Where am I?" → <b>HEAD</b>. "What did I change?" → <code class="inline">git diff</code>. "Who wrote this line and why?" → <code class="inline">git blame</code>. Together they let you understand any codebase, including your own from six months ago.</p></div>
 <h3>HEAD — "you are here"</h3>
 <p><code class="inline">HEAD</code> is Git's pointer to <b>whatever you currently have checked out</b> — normally the tip of your current branch. It's literally a tiny file: <code class="inline">.git/HEAD</code>, usually containing <code class="inline">ref: refs/heads/main</code>. When you commit, the branch moves forward and HEAD rides along; when you switch branches, HEAD is what changes.</p>
 <div class="codeblock"><div class="cb-head"><span>terminal</span><button class="copy-btn">Copy</button></div><pre>cat .git/HEAD               <span class="cmt"># see it yourself — just a pointer!</span>
 <span class="out">ref: refs/heads/main</span>
 git show HEAD               <span class="cmt"># the commit you're standing on</span>
 git show HEAD~1             <span class="cmt"># its parent (~2 = grandparent, etc.)</span></pre></div>
-<div class="callout warn"><b>Detached HEAD — not as scary as it sounds</b>Checking out a specific commit (<code class="inline">git checkout a1b2c3d</code>) points HEAD at a commit instead of a branch. You can look around freely — but commits made here belong to no branch and can be lost. Want to keep work from there? <code class="inline">git switch -c rescue-branch</code>. Want out? <code class="inline">git switch main</code>.</div>
+<div class="callout warn advanced"><b>Detached HEAD — not as scary as it sounds</b>Checking out a specific commit (<code class="inline">git checkout a1b2c3d</code>) points HEAD at a commit instead of a branch. You can look around freely — but commits made here belong to no branch and can be lost. Want to keep work from there? <code class="inline">git switch -c rescue-branch</code>. Want out? <code class="inline">git switch main</code>.</div>
 <h3>Diff — see exactly what changed</h3>
 <div class="codeblock"><div class="cb-head"><span>terminal</span><button class="copy-btn">Copy</button></div><pre>git diff                    <span class="cmt"># working directory vs staging (unstaged edits)</span>
 git diff --staged           <span class="cmt"># staging vs last commit (what will be committed)</span>
@@ -1132,6 +1225,7 @@ git push -u origin fix-login-bug  <span class="cmt"># 5. publish the branch</spa
 <!-- ============ 13. UNDOING ============ -->
 <section id="undo">
 <h2><span class="num">20</span>Undoing Things — The Safety Manual</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>Don't memorize these — memorize the question:</b> <em>has anyone else seen it yet?</em> If it's still only on your computer, you can rewrite freely. If you already pushed it, use <code class="inline">git revert</code>, which undoes the change by adding a new commit instead of erasing history. And if you truly panic: <code class="inline">git reflog</code> — Git almost never loses committed work.</p></div>
 <table>
 <tr><th>Situation</th><th>Command</th><th>Danger level</th></tr>
 <tr><td>Discard edits in a file (back to last commit)</td><td><code class="inline">git restore file.py</code></td><td>⚠️ Edits are gone forever</td></tr>
@@ -1194,6 +1288,7 @@ git push -u origin fix-login-bug  <span class="cmt"># 5. publish the branch</spa
 <!-- ============ 14. GITIGNORE & LFS ============ -->
 <section id="ignore">
 <h2><span class="num">21</span>.gitignore &amp; Handling Large Files</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>Not everything belongs in a repository.</b> Code: yes. Passwords: never — once committed, they live in the history forever. Huge data files: keep them elsewhere. The <code class="inline">.gitignore</code> file is your bouncer at the door — list what Git should ignore, and it will.</p></div>
 <h3>14.1 The .gitignore file</h3>
 <p>Some files should never be tracked: temporary files, credentials, caches, giant data. List patterns in a file named <code class="inline">.gitignore</code> at the repo root:</p>
 <div class="codeblock"><div class="cb-head"><span>.gitignore (data science example)</span><button class="copy-btn">Copy</button></div><pre><span class="cmt"># Secrets — NEVER commit these</span>
@@ -1219,7 +1314,7 @@ models/*.pkl
 .DS_Store
 Thumbs.db</pre></div>
 <p>Ready-made templates for every language live at <code class="inline">github.com/github/gitignore</code>.</p>
-<h3>14.2 Large files &amp; Git LFS</h3>
+<div class="advanced"><h3>14.2 Large files &amp; Git LFS<span class="adv-tag">advanced</span></h3>
 <p><b>GitHub blocks files over 100 MB</b>, and Git itself was never designed for huge binary files — every version of a large file bloats every clone. Options, in order of preference:</p>
 <ul>
 <li><b>Don't commit big data at all.</b> Keep raw datasets in cloud storage (S3, Drive, a database) and commit the <em>download script</em> plus a small sample.</li>
@@ -1231,6 +1326,7 @@ git lfs track <span class="str">"*.h5"</span>
 git add .gitattributes      <span class="cmt"># commit the tracking rules themselves</span></pre></div>
 <div class="callout warn"><b>Quick rule</b>Code, configs, notebooks, small reference files → Git. Datasets, trained models, media → cloud storage or LFS. Secrets → nowhere near a repository, ever.</div>
 
+</div>
 <h3>Infographic: what belongs in a repository?</h3>
 <div class="cards">
   <div class="card" style="border-top:3px solid var(--green)"><span class="icon">✅</span><h4>Always commit</h4><p>Source code (<code class="inline">.py</code>, <code class="inline">.js</code>…) • notebooks (outputs stripped) • <code class="inline">requirements.txt</code> / lock files • configs &amp; templates <em>without secrets</em> • <code class="inline">README</code>, docs, licenses • tests • <code class="inline">.gitignore</code> itself • small reference/sample data</p></div>
@@ -1244,9 +1340,17 @@ git add .gitattributes      <span class="cmt"># commit the tracking rules themse
 </div><!-- /page -->
 
 <div class="page" data-title="Professional Practice">
+<div class="metabox"><h3>🎮 From your bedroom to the arcade</h3><p>Everything so far was your private game. Professional work adds one thing: <b>other people depend on it not breaking</b>. So the save travels through checkpoints before the public plays it.</p>
+<table class="maptable"><tr><th>The journey</th><th>The stage</th></tr>
+<tr><td>You play on your own machine</td><td><b>Development</b></td></tr>
+<tr><td>Robots test the save automatically</td><td><b>CI</b> (GitHub Actions)</td></tr>
+<tr><td>Testers try it on a copy of the real arcade</td><td><b>Staging</b></td></tr>
+<tr><td>The public plays it</td><td><b>Production</b></td></tr></table></div>
+
 <!-- ============ 15. DATA SCIENCE ============ -->
 <section id="datascience">
 <h2><span class="num">22</span>Git for Data Science &amp; ML Projects</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>For data and ML work:</b> commit the <b>recipe</b>, not the <b>ingredients</b>. Code, notebooks, and the list of packages go into Git; giant datasets and trained models live in cloud storage. Then anyone can rebuild your results from scratch.</p></div>
 <h3>15.1 Professional project structure</h3>
 <div class="codeblock"><div class="cb-head"><span>recommended layout</span><button class="copy-btn">Copy</button></div><pre>my-ml-project/
 ├── data/
@@ -1304,6 +1408,7 @@ git add .gitattributes      <span class="cmt"># commit the tracking rules themse
 <!-- ============ 17. BEST PRACTICES ============ -->
 <section id="best">
 <h2><span class="num">24</span>Best Practices &amp; Common Pitfalls</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p><b>If you remember five things:</b> commit small and often · write messages that explain <em>why</em> · branch for anything risky · pull before you push · never commit secrets.</p></div>
 <div class="cards">
 <div class="card"><span class="icon">✅</span><h4>Do</h4><p>Commit early and often — small, logical units • Write imperative, descriptive messages • Branch for every feature/experiment • Pull before you push • Review via pull requests • Keep <code class="inline">main</code> always working • Use .gitignore from day one</p></div>
 <div class="card"><span class="icon">❌</span><h4>Don't</h4><p>Commit secrets, API keys, or passwords (history remembers forever!) • Commit huge datasets or binaries • Work directly on main in a team • Force-push shared branches • Write messages like "update" / "fix" / "asdf" • Let work sit uncommitted for days</p></div>
@@ -1315,7 +1420,133 @@ git add .gitattributes      <span class="cmt"># commit the tracking rules themse
 
 </div><!-- /page -->
 
+
+<div class="page" data-title="Your First Real Project">
+<div class="metabox"><h3>🍜 One project, from empty folder to live website</h3>
+<p>Everything you've learned, used once, in order. You and your friend <b>Ana</b> are building a small recipe website. Follow along by typing the commands yourself — the whole thing takes about 30 minutes.</p>
+<p style="margin-bottom:0"><b>You'll use:</b> the terminal → <code class="inline">git init</code> → commits → a branch → GitHub → a pull request → a merge conflict → a live site.</p></div>
+
+<section id="story">
+<h2><span class="num">28</span>Your First Real Project (Complete Walkthrough)</h2>
+<div class="plainbox"><span class="pb-tag">In plain English</span><p>Reading about Git is like reading about swimming. This chapter is getting in the water. Every command below is one you'd genuinely type on a real job — nothing is simplified away.</p></div>
+
+<h3>Scene 1 — Create the project (the terminal chapter, used for real)</h3>
+<p>Open your terminal. First, walk to where you keep projects and build a room for this one:</p>
+<div class="codeblock"><div class="cb-head"><span>terminal</span><button class="copy-btn">Copy</button></div><pre>cd ~/Documents          <span class="cmt"># walk to Documents</span>
+mkdir recipe-site       <span class="cmt"># build the room</span>
+cd recipe-site          <span class="cmt"># step inside</span>
+pwd                     <span class="cmt"># confirm where you are</span>
+<span class="out">/Users/you/Documents/recipe-site</span></pre></div>
+<p>Now create the first two files:</p>
+<div class="codeblock"><div class="cb-head"><span>terminal</span><button class="copy-btn">Copy</button></div><pre>echo <span class="str">"# Recipe Site"</span> &gt; README.md
+touch index.html
+ls
+<span class="out">README.md  index.html</span></pre></div>
+
+<h3>Scene 2 — Turn the folder into a save-game world</h3>
+<div class="codeblock"><div class="cb-head"><span>terminal</span><button class="copy-btn">Copy</button></div><pre>git init
+<span class="out">Initialized empty Git repository in /Users/you/Documents/recipe-site/.git/</span>
+
+ls -a                   <span class="cmt"># the hidden .git folder is Git's memory</span>
+<span class="out">.  ..  .git  README.md  index.html</span></pre></div>
+<div class="callout"><b>What just happened</b>Git created a hidden <code class="inline">.git</code> folder. That folder <em>is</em> your repository — every save point will live there. Delete it and you're back to an ordinary folder (your files stay, the history goes).</div>
+
+<h3>Scene 3 — Your first save point</h3>
+<div class="codeblock"><div class="cb-head"><span>terminal</span><button class="copy-btn">Copy</button></div><pre>git status
+<span class="out">On branch main
+Untracked files:
+  README.md
+  index.html</span>
+
+git add .                                  <span class="cmt"># choose what to save</span>
+git commit -m <span class="str">"Start recipe site"</span>       <span class="cmt"># save it, with a note</span>
+<span class="out">[main (root-commit) a1b2c3d] Start recipe site
+ 2 files changed, 1 insertion(+)</span></pre></div>
+<p>That <code class="inline">a1b2c3d</code> is your save point's name. You can return to this exact moment forever.</p>
+
+<h3>Scene 4 — Try something risky, safely (branching)</h3>
+<p>You want to add a dark theme, but you're not sure it'll look good. Second save slot:</p>
+<div class="codeblock"><div class="cb-head"><span>terminal</span><button class="copy-btn">Copy</button></div><pre>git switch -c dark-theme      <span class="cmt"># create + enter the new slot</span>
+<span class="out">Switched to a new branch 'dark-theme'</span>
+
+<span class="cmt"># …edit index.html, add your dark styles…</span>
+
+git add index.html
+git commit -m <span class="str">"Add dark theme colors"</span>
+
+git switch main               <span class="cmt"># hop back to the safe version</span>
+cat index.html                <span class="cmt"># your dark theme is GONE from view — it's safe on the branch</span>
+git switch dark-theme         <span class="cmt"># and back again — it returns</span></pre></div>
+<div class="callout good"><b>This is the moment Git clicks for most people</b>Two versions of your project exist at once, and switching between them takes a fraction of a second. Nothing was copied, nothing was lost.</div>
+
+<h3>Scene 5 — Put it on GitHub</h3>
+<p>Create an empty repository on github.com (<b>+</b> → New repository, name it <code class="inline">recipe-site</code>, don't add a README), then connect and upload:</p>
+<div class="codeblock"><div class="cb-head"><span>terminal</span><button class="copy-btn">Copy</button></div><pre>git switch main
+git remote add origin https://github.com/YOUR-NAME/recipe-site.git
+git push -u origin main
+<span class="out">Enumerating objects: 4, done.
+To https://github.com/YOUR-NAME/recipe-site.git
+ * [new branch]      main -&gt; main</span></pre></div>
+<p>Refresh the GitHub page — your files are there. Now push the branch too:</p>
+<div class="codeblock"><div class="cb-head"><span>terminal</span><button class="copy-btn">Copy</button></div><pre>git push -u origin dark-theme</pre></div>
+
+<h3>Scene 6 — Propose your change (pull request)</h3>
+<ol>
+<li>On GitHub you'll see a banner: <b>"dark-theme had recent pushes — Compare &amp; pull request"</b>. Click it.</li>
+<li>Write a title and a sentence explaining <em>why</em>: "Adds a dark theme for evening readers."</li>
+<li>Click <b>Create pull request</b>.</li>
+<li>Ana reviews it, leaves a comment, you push another commit to the same branch — the PR updates automatically.</li>
+<li>She approves. Click <b>Merge pull request</b> → <b>Confirm merge</b> → <b>Delete branch</b>.</li>
+</ol>
+<div class="codeblock"><div class="cb-head"><span>back in your terminal</span><button class="copy-btn">Copy</button></div><pre>git switch main
+git pull                       <span class="cmt"># bring the merged work down to your machine</span>
+git branch -d dark-theme       <span class="cmt"># tidy up the local branch too</span></pre></div>
+
+<h3>Scene 7 — The merge conflict (don't skip this)</h3>
+<p>Meanwhile Ana edited the site title on <code class="inline">main</code>… and so did you, on a branch. Both changed <b>the same line</b>:</p>
+<div class="codeblock"><div class="cb-head"><span>terminal</span><button class="copy-btn">Copy</button></div><pre>git switch -c better-title
+<span class="cmt"># you change the title to "Family Recipes"</span>
+git commit -am <span class="str">"Rename site to Family Recipes"</span>
+
+git switch main
+git pull                        <span class="cmt"># Ana's change arrives: she renamed it "Our Kitchen"</span>
+git merge better-title
+<span class="out">CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.</span></pre></div>
+<p>Open <code class="inline">index.html</code> and you'll find:</p>
+<div class="codeblock"><div class="cb-head"><span>index.html</span><button class="copy-btn">Copy</button></div><pre>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&lt;h1&gt;Our Kitchen&lt;/h1&gt;          <span class="cmt"># Ana's version</span>
+=======
+&lt;h1&gt;Family Recipes&lt;/h1&gt;      <span class="cmt"># your version</span>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; better-title</pre></div>
+<p>Git isn't broken and nothing is lost — it simply can't guess which title you want. You decide, delete the three marker lines, and finish:</p>
+<div class="codeblock"><div class="cb-head"><span>terminal</span><button class="copy-btn">Copy</button></div><pre><span class="cmt"># file now contains just:  &lt;h1&gt;Our Family Kitchen&lt;/h1&gt;</span>
+git add index.html
+git commit -m <span class="str">"Merge title change"</span>
+git push</pre></div>
+<div class="callout good"><b>Conflicts are normal</b>Every professional hits them weekly. The fix is always the same three steps: <b>edit the file → <code class="inline">git add</code> → <code class="inline">git commit</code></b>.</div>
+
+<h3>Scene 8 — Publish it to the world</h3>
+<p>On GitHub: <b>Settings → Pages → Source: Deploy from a branch → main / (root) → Save</b>. About a minute later your site is live at <code class="inline">https://YOUR-NAME.github.io/recipe-site/</code> — the exact process used to publish this guide.</p>
+
+<h3>What you just did</h3>
+<table>
+<tr><th style="width:38%">Step</th><th>Skill you now have</th></tr>
+<tr><td>Navigated and made files in the terminal</td><td><code class="inline">cd</code>, <code class="inline">mkdir</code>, <code class="inline">touch</code>, <code class="inline">ls</code>, <code class="inline">echo &gt;</code></td></tr>
+<tr><td>Created a repository and saved snapshots</td><td><code class="inline">git init</code>, <code class="inline">status</code>, <code class="inline">add</code>, <code class="inline">commit</code></td></tr>
+<tr><td>Experimented without risk</td><td><code class="inline">git switch -c</code>, branches</td></tr>
+<tr><td>Shared work online</td><td><code class="inline">git remote add</code>, <code class="inline">push</code>, <code class="inline">pull</code></td></tr>
+<tr><td>Collaborated and got reviewed</td><td>Pull requests, merging, deleting branches</td></tr>
+<tr><td>Resolved a real conflict</td><td>Editing markers, <code class="inline">add</code>, <code class="inline">commit</code></td></tr>
+<tr><td>Deployed a live website</td><td>GitHub Pages</td></tr>
+</table>
+<div class="callout good"><b>That's the whole job</b>Professional developers repeat this exact loop every day. Everything else in Git is a refinement of what you just did.</div>
+</section>
+</div><!-- /page -->
+
 <div class="page" data-title="Reference &amp; Quiz">
+<div class="metabox"><h3>🧭 Your map back to everything</h3><p>You've walked the whole world. This chapter is the map you keep open on your second screen: every command, every term, and a quiz to check what stuck.</p></div>
+
 <!-- ============ 18. CHEAT SHEET ============ -->
 <section id="cheatsheet">
 <h2><span class="num">25</span>Command Cheat Sheet</h2>
@@ -1348,10 +1579,10 @@ git add .gitattributes      <span class="cmt"># commit the tracking rules themse
 <tr><td><code class="inline">git reset [--hard] [commit]</code></td><td>Move the branch pointer back (--hard also discards changes ⚠️)</td><td>Undo</td></tr>
 <tr><td><code class="inline">git stash / git stash pop</code></td><td>Shelve and later restore uncommitted work</td><td>Undo</td></tr>
 <tr><td><code class="inline">git reflog</code></td><td>Log of where HEAD has been — recover "lost" commits</td><td>Undo</td></tr>
-<tr><td><code class="inline">git lfs track "*.pkl"</code></td><td>Manage large files via Git LFS pointers</td><td>Advanced</td></tr>
-<tr><td><code class="inline">git blame [file]</code></td><td>Show who last changed each line and in which commit</td><td>Advanced</td></tr>
-<tr><td><code class="inline">git cherry-pick [commit]</code></td><td>Copy a single commit onto the current branch</td><td>Advanced</td></tr>
-<tr><td><code class="inline">git bisect</code></td><td>Binary-search history to find the commit that introduced a bug</td><td>Advanced</td></tr>
+<tr class="advanced"><td><code class="inline">git lfs track "*.pkl"</code></td><td>Manage large files via Git LFS pointers</td><td>Advanced</td></tr>
+<tr class="advanced"><td><code class="inline">git blame [file]</code></td><td>Show who last changed each line and in which commit</td><td>Advanced</td></tr>
+<tr class="advanced"><td><code class="inline">git cherry-pick [commit]</code></td><td>Copy a single commit onto the current branch</td><td>Advanced</td></tr>
+<tr class="advanced"><td><code class="inline">git bisect</code></td><td>Binary-search history to find the commit that introduced a bug</td><td>Advanced</td></tr>
 </table>
 </section>
 
@@ -1647,23 +1878,16 @@ function showPage(i, dir){
   window.scrollTo({top: 0});
   spy();
 }
-// prev/next buttons on every page
+// single "next chapter" button at the end of each page
 pages.forEach((p, i) => {
+  if (i >= pages.length - 1) return;
   const nav = document.createElement('div');
   nav.className = 'pagenav';
-  if (i > 0){
-    const b = document.createElement('button');
-    b.innerHTML = '<span class="pn-label">← Previous</span><span class="pn-title">' + pageTitles[i-1] + '</span>';
-    b.addEventListener('click', () => showPage(i - 1, 'back'));
-    nav.appendChild(b);
-  }
-  if (i < pages.length - 1){
-    const b = document.createElement('button');
-    b.className = 'pn-next';
-    b.innerHTML = '<span class="pn-label">Next →</span><span class="pn-title">' + pageTitles[i+1] + '</span>';
-    b.addEventListener('click', () => showPage(i + 1));
-    nav.appendChild(b);
-  }
+  const b = document.createElement('button');
+  b.className = 'pn-next';
+  b.innerHTML = '<span class="pn-label">Next chapter →</span><span class="pn-title">' + pageTitles[i+1] + '</span>';
+  b.addEventListener('click', () => showPage(i + 1));
+  nav.appendChild(b);
   p.appendChild(nav);
 });
 // sidebar links -> switch page then scroll to section
@@ -1999,6 +2223,29 @@ if (navSearch){
     e.stopPropagation();
   });
 }
+
+
+// ================= BEGINNER MODE =================
+(function(){
+  const btn = document.getElementById('beg-toggle');
+  if (!btn) return;
+  const label = btn.querySelector('.lbl');
+  function apply(on){
+    document.body.classList.toggle('beginner', on);
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    if (label) label.textContent = on ? 'Beginner mode' : 'Beginner mode';
+    btn.title = on ? 'Beginner mode is ON — plain-language explanations shown, advanced topics hidden. Click to turn off.'
+                   : 'Turn on Beginner mode for plain-language explanations and fewer advanced topics.';
+  }
+  let saved = null;
+  try { saved = localStorage.getItem('guide-beginner'); } catch(e){}
+  apply(saved === null ? true : saved === '1');   // ON by default for newcomers
+  btn.addEventListener('click', () => {
+    const on = !document.body.classList.contains('beginner');
+    apply(on);
+    try { localStorage.setItem('guide-beginner', on ? '1' : '0'); } catch(e){}
+  });
+})();
 
 </script>
 </body>

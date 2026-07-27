@@ -2,15 +2,17 @@
 
 **Live site:** https://wai-999.github.io/Git-Github/
 
-An interactive, self-contained learning guide covering version control, the command line, Git, and GitHub — no installation required, works offline in any browser on Mac, Windows, or Linux.
+Learn version control, the command line, Git, and GitHub from zero. Beginner-friendly by design, but complete enough to use as a professional reference. Runs in any browser on Mac, Windows, or mobile — no installation, works offline.
 
 ## What's inside
 
-- **7 animated chapters** — Foundations · The Command Line · Git Fundamentals · Branching & Remotes · Collaboration & Safety · Professional Practice · Reference & Quiz
-- **2 interactive simulators** — an add→commit→push workflow machine, and a bash terminal playground with a practice filesystem (`ls`, `cd`, `grep`, pipes, redirection…)
-- **10+ infographics** — the grand map of Git commands, commit anatomy, merge vs rebase, the PR lifecycle, an undo decision tree, and more
-- **Searchable cheat sheet, glossary, and an 11-question quiz**
-- Light/dark theme, mobile-friendly, printable to PDF
+- **Beginner mode** (on by default) — plain-English explanations on every section, advanced topics hidden until you want them. One switch in the header turns it off for the full technical guide.
+- **One running metaphor** — everything is explained as saving your progress in a video game: commit = save point, branch = second save slot, GitHub = cloud saves, pull request = asking the guild to approve your quest.
+- **8 chapters** — Foundations · The Command Line · Git Fundamentals · Branching & Remotes · Collaboration & Safety · Professional Practice · **Your First Real Project** · Reference & Quiz
+- **A complete walkthrough** — build and publish a real website from an empty folder to a live URL, including a genuine merge conflict.
+- **2 interactive simulators** — an add→commit→push machine, and a working bash terminal playground.
+- **10+ infographics** — the map of Git commands, commit anatomy, merge vs rebase, the PR lifecycle, an undo decision tree.
+- Searchable cheat sheet, glossary, 11-question quiz, light/dark theme, printable to PDF.
 
 ## Run locally
 
