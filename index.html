@@ -113,6 +113,17 @@ code.i{background:var(--codebg);border:1px solid var(--line);border-radius:7px;p
 .mapgrid button:hover{border-color:var(--clay);transform:translateY(-2px)}
 .mapgrid button.done{border-color:var(--teal)}
 .mapgrid button b{display:block;font-size:.68rem;color:var(--soft);letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px;font-weight:800}
+/* ---------- Burmese localisation ---------- */
+body.my{font-family:"Pyidaungsu","Myanmar Text","Noto Sans Myanmar","Padauk","Myanmar MN",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:2.05;font-size:16.5px}
+body.my .step h1{line-height:1.6;letter-spacing:0;font-size:1.95rem}
+body.my .step h2,body.my .mini h3{line-height:1.7}
+body.my .eyebrow,body.my .analogy .tag,body.my .try .tt{letter-spacing:.04em}
+body.my .step p,body.my .step li{line-height:2.1}
+body.my .choice{line-height:1.9;padding:14px 18px}
+body.my .note p,body.my .analogy p,body.my .feedback{line-height:2.05}
+body.my code.i,body.my .cmd pre{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;line-height:1.75}
+#lang{font-weight:700}
+body.my #lang{border-color:var(--clay);color:var(--clay)}
 @media(max-width:640px){
   body{font-size:16px}
   .step h1{font-size:1.7rem}
@@ -124,10 +135,11 @@ code.i{background:var(--codebg);border:1px solid var(--line);border-radius:7px;p
 </head>
 <body>
 <header class="top">
-  <div class="brand"><span class="mark">✓</span> Git for Beginners</div>
+  <div class="brand"><span class="mark">✓</span> <span data-i18n="c_brand">Git for Beginners</span></div>
   <div class="top-actions">
+    <button class="btn-ghost" id="lang" title="ဗမာလို ဖတ်ရန် / Read in Burmese">🇲🇲 မြန်မာ</button>
     <button class="btn-ghost" id="theme">🌙</button>
-    <a class="btn-ghost" href="reference.html">Full reference →</a>
+    <a class="btn-ghost" href="reference.html" data-i18n="c_ref">Full reference →</a>
   </div>
 </header>
 <div class="progress-wrap">
@@ -137,25 +149,25 @@ code.i{background:var(--codebg);border:1px solid var(--line);border-radius:7px;p
 <main id="app">
 
 <!-- ============ 1 ============ -->
-<section class="step on" data-title="Welcome">
-<span class="eyebrow">Start here</span>
-<h1>You're about to learn the most useful tool in software.</h1>
-<p class="lead">No experience needed. No jargon. One idea at a time — and you can stop and come back whenever you like.</p>
-<p>By the end of these 14 short steps you'll understand what Git and GitHub actually are, you'll have typed real commands, and you'll know how professional teams work together on code without destroying each other's work.</p>
-<div class="analogy"><span class="tag">The idea we'll keep coming back to</span>
-<p>Learning Git is like learning to <b>save your progress in a video game</b>. You'll make save points, try risky things in a separate save slot, and share your saves with friends in the cloud. That's genuinely all it is.</p></div>
+<section class="step on" data-title="Welcome" data-title-my="ကြိုဆိုပါတယ်">
+<span class="eyebrow" data-i18n="k1">Start here</span>
+<h1 data-i18n="k2">You're about to learn the most useful tool in software.</h1>
+<p class="lead" data-i18n="k3">No experience needed. No jargon. One idea at a time — and you can stop and come back whenever you like.</p>
+<p data-i18n="k4">By the end of these 14 short steps you'll understand what Git and GitHub actually are, you'll have typed real commands, and you'll know how professional teams work together on code without destroying each other's work.</p>
+<div class="analogy"><span class="tag" data-i18n="k5">The idea we'll keep coming back to</span>
+<p data-i18n="k6">Learning Git is like learning to <b>save your progress in a video game</b>. You'll make save points, try risky things in a separate save slot, and share your saves with friends in the cloud. That's genuinely all it is.</p></div>
 <div class="two">
-  <div class="mini"><span class="em">⏱️</span><h3>About 25 minutes</h3><p>Fourteen small steps. Your place is saved automatically if you leave.</p></div>
-  <div class="mini"><span class="em">💻</span><h3>Nothing to install yet</h3><p>Read first. We'll install Git together at step 6, when you actually need it.</p></div>
+  <div class="mini"><span class="em">⏱️</span><h3 data-i18n="k7">About 25 minutes</h3><p data-i18n="k8">Fourteen small steps. Your place is saved automatically if you leave.</p></div>
+  <div class="mini"><span class="em">💻</span><h3 data-i18n="k9">Nothing to install yet</h3><p data-i18n="k10">Read first. We'll install Git together at step 6, when you actually need it.</p></div>
 </div>
-<div class="note"><b>One promise</b><p>If anything here feels confusing, it's the explanation's fault, not yours. Every idea is introduced only after you've seen why you'd want it.</p></div>
+<div class="note"><b data-i18n="k11">One promise</b><p data-i18n="k12">If anything here feels confusing, it's the explanation's fault, not yours. Every idea is introduced only after you've seen why you'd want it.</p></div>
 </section>
 
 <!-- ============ 2 ============ -->
-<section class="step" data-title="The problem">
-<span class="eyebrow">Step 2 · The problem</span>
-<h1>Everyone has lived this nightmare.</h1>
-<p>You're working on something important. You save a copy before making big changes. Then another. A week later your folder looks like this:</p>
+<section class="step" data-title="The problem" data-title-my="ပြဿနာ">
+<span class="eyebrow" data-i18n="k13">Step 2 · The problem</span>
+<h1 data-i18n="k14">Everyone has lived this nightmare.</h1>
+<p data-i18n="k15">You're working on something important. You save a copy before making big changes. Then another. A week later your folder looks like this:</p>
 <div class="art">
 <svg viewBox="0 0 620 250" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
   <rect x="20" y="20" width="270" height="210" rx="16" fill="#fff6ee" stroke="#e07a5f" stroke-width="2"/>
@@ -182,70 +194,70 @@ code.i{background:var(--codebg);border:1px solid var(--line);border-radius:7px;p
   <line x1="368" y1="161" x2="368" y2="179" stroke="#cfe6df" stroke-width="2"/>
   <text x="465" y="216" text-anchor="middle" fill="#3d8b7d" font-size="11">every version kept, labelled, and reversible</text>
 </svg>
-<div class="cap">Same work. One is chaos; the other is a history you can walk through.</div>
+<div class="cap" data-i18n="k16">Same work. One is chaos; the other is a history you can walk through.</div>
 </div>
-<p>The copying approach fails in three ways: you can't tell <b>what</b> changed between two files, you can't tell <b>why</b> anyone changed it, and if two people edit at once, somebody's work gets overwritten.</p>
-<div class="note warm"><b>This is the entire reason Git exists.</b><p>Not to be complicated — to make that folder impossible.</p></div>
+<p data-i18n="k17">The copying approach fails in three ways: you can't tell <b>what</b> changed between two files, you can't tell <b>why</b> anyone changed it, and if two people edit at once, somebody's work gets overwritten.</p>
+<div class="note warm"><b data-i18n="k18">This is the entire reason Git exists.</b><p data-i18n="k19">Not to be complicated — to make that folder impossible.</p></div>
 </section>
 
 <!-- ============ 3 ============ -->
-<section class="step" data-title="What version control is">
-<span class="eyebrow">Step 3 · The concept</span>
-<h1>Version control is an undo button for your whole project.</h1>
-<p>Your text editor lets you undo the last few things you typed. Version control does the same thing, but for <b>every file in your project</b>, going back <b>forever</b>, with a note attached to each point explaining what changed and who did it.</p>
-<div class="analogy"><span class="tag">Game metaphor</span>
-<p>Think of save points. You play for a while, reach somewhere good, and hit <b>Save</b>. If the next section goes badly, you load your save and try again. Version control is that — for your work.</p></div>
-<h2>What it gives you</h2>
+<section class="step" data-title="What version control is" data-title-my="Version control ဆိုတာ">
+<span class="eyebrow" data-i18n="k20">Step 3 · The concept</span>
+<h1 data-i18n="k21">Version control is an undo button for your whole project.</h1>
+<p data-i18n="k22">Your text editor lets you undo the last few things you typed. Version control does the same thing, but for <b>every file in your project</b>, going back <b>forever</b>, with a note attached to each point explaining what changed and who did it.</p>
+<div class="analogy"><span class="tag" data-i18n="k23">Game metaphor</span>
+<p data-i18n="k24">Think of save points. You play for a while, reach somewhere good, and hit <b>Save</b>. If the next section goes badly, you load your save and try again. Version control is that — for your work.</p></div>
+<h2 data-i18n="k25">What it gives you</h2>
 <div class="two">
-  <div class="mini good"><span class="em">⏪</span><h3>Go back safely</h3><p>Broke something? Return to any earlier point in seconds.</p></div>
-  <div class="mini good"><span class="em">🔍</span><h3>See what changed</h3><p>Compare any two moments, line by line.</p></div>
-  <div class="mini good"><span class="em">🤝</span><h3>Work together</h3><p>Several people edit the same project without overwriting each other.</p></div>
-  <div class="mini good"><span class="em">🧪</span><h3>Try wild ideas</h3><p>Experiment freely, knowing the working version is untouched.</p></div>
+  <div class="mini good"><span class="em">⏪</span><h3 data-i18n="k26">Go back safely</h3><p data-i18n="k27">Broke something? Return to any earlier point in seconds.</p></div>
+  <div class="mini good"><span class="em">🔍</span><h3 data-i18n="k28">See what changed</h3><p data-i18n="k29">Compare any two moments, line by line.</p></div>
+  <div class="mini good"><span class="em">🤝</span><h3 data-i18n="k30">Work together</h3><p data-i18n="k31">Several people edit the same project without overwriting each other.</p></div>
+  <div class="mini good"><span class="em">🧪</span><h3 data-i18n="k32">Try wild ideas</h3><p data-i18n="k33">Experiment freely, knowing the working version is untouched.</p></div>
 </div>
-<div class="try"><span class="tt">Check yourself</span>
-<p><b>Why isn't "save a copy in a new folder" good enough?</b></p>
-<div data-quiz='{"a":1,"why":"Copies keep the files, but they lose the story — what changed, why, and by whom. And when two people copy at once, someone’s work disappears."}'>
-  <button class="choice">Because copies take up too much disk space</button>
-  <button class="choice">Because copies don't record what changed, why, or by whom — and two people can overwrite each other</button>
-  <button class="choice">Because folders can't be shared online</button>
+<div class="try"><span class="tt" data-i18n="k34">Check yourself</span>
+<p data-i18n="k35"><b>Why isn't "save a copy in a new folder" good enough?</b></p>
+<div data-quiz='{"a":1,"myKey":"why_copy","why":"Copies keep the files, but they lose the story — what changed, why, and by whom. And when two people copy at once, someone’s work disappears."}'>
+  <button class="choice" data-i18n="k36">Because copies take up too much disk space</button>
+  <button class="choice" data-i18n="k37">Because copies don't record what changed, why, or by whom — and two people can overwrite each other</button>
+  <button class="choice" data-i18n="k38">Because folders can't be shared online</button>
 </div></div>
 </section>
 
 <!-- ============ 4 ============ -->
-<section class="step" data-title="Git vs GitHub">
-<span class="eyebrow">Step 4 · Two different things</span>
-<h1>Git and GitHub are not the same thing.</h1>
-<p>Almost every beginner mixes these up, so let's settle it now — it takes ten seconds.</p>
+<section class="step" data-title="Git vs GitHub" data-title-my="Git နဲ့ GitHub">
+<span class="eyebrow" data-i18n="k39">Step 4 · Two different things</span>
+<h1 data-i18n="k40">Git and GitHub are not the same thing.</h1>
+<p data-i18n="k41">Almost every beginner mixes these up, so let's settle it now — it takes ten seconds.</p>
 <div class="two">
-  <div class="mini"><span class="em">📷</span><h3>Git = the camera</h3><p>A free program on <b>your computer</b>. It takes the snapshots and keeps your history. Works with no internet at all.</p></div>
-  <div class="mini"><span class="em">📱</span><h3>GitHub = the photo app</h3><p>A <b>website</b> where you upload those snapshots so others can see them, comment, and contribute. Optional — but it's where teamwork happens.</p></div>
+  <div class="mini"><span class="em">📷</span><h3 data-i18n="k42">Git = the camera</h3><p data-i18n="k43">A free program on <b>your computer</b>. It takes the snapshots and keeps your history. Works with no internet at all.</p></div>
+  <div class="mini"><span class="em">📱</span><h3 data-i18n="k44">GitHub = the photo app</h3><p data-i18n="k45">A <b>website</b> where you upload those snapshots so others can see them, comment, and contribute. Optional — but it's where teamwork happens.</p></div>
 </div>
-<div class="analogy"><span class="tag">Game metaphor</span>
-<p>Git is your console saving the game to its own memory. GitHub is the <b>cloud save</b> — your friends can load your world, play in it, and send their progress back to you.</p></div>
-<p>Two consequences worth knowing: you can use Git completely alone forever and never touch GitHub — and GitHub isn't the only option (GitLab and Bitbucket do the same job).</p>
-<div class="try"><span class="tt">Check yourself</span>
-<p><b>Your internet goes down. Can you still save your work with Git?</b></p>
-<div data-quiz='{"a":0,"why":"Yes! Git lives on your machine. Saving (committing) never needs the internet — you only need it to upload to GitHub later."}'>
-  <button class="choice">Yes — Git runs on my computer, so saving still works</button>
-  <button class="choice">No — Git needs GitHub to save anything</button>
-  <button class="choice">Only if I saved a backup first</button>
+<div class="analogy"><span class="tag" data-i18n="k46">Game metaphor</span>
+<p data-i18n="k47">Git is your console saving the game to its own memory. GitHub is the <b>cloud save</b> — your friends can load your world, play in it, and send their progress back to you.</p></div>
+<p data-i18n="k48">Two consequences worth knowing: you can use Git completely alone forever and never touch GitHub — and GitHub isn't the only option (GitLab and Bitbucket do the same job).</p>
+<div class="try"><span class="tt" data-i18n="k49">Check yourself</span>
+<p data-i18n="k50"><b>Your internet goes down. Can you still save your work with Git?</b></p>
+<div data-quiz='{"a":0,"myKey":"why_offline","why":"Yes! Git lives on your machine. Saving (committing) never needs the internet — you only need it to upload to GitHub later."}'>
+  <button class="choice" data-i18n="k51">Yes — Git runs on my computer, so saving still works</button>
+  <button class="choice" data-i18n="k52">No — Git needs GitHub to save anything</button>
+  <button class="choice" data-i18n="k53">Only if I saved a backup first</button>
 </div></div>
 </section>
 
 <!-- ============ 5 ============ -->
-<section class="step" data-title="Meet the terminal">
-<span class="eyebrow">Step 5 · The black window</span>
-<h1>Meet the terminal. It's friendlier than it looks.</h1>
-<p>Git is usually operated by typing, in a program called the <b>terminal</b>. If that sounds intimidating, here's the reframe: it's just a way of asking your computer to do things with words instead of clicks.</p>
-<div class="analogy"><span class="tag">Think of it as</span>
-<p>Walking through your computer's folders <b>on foot</b>. Instead of double-clicking a folder to open it, you say "go in there". Instead of looking at icons, you ask "what's in this room?"</p></div>
-<h2>Open it</h2>
+<section class="step" data-title="Meet the terminal" data-title-my="Terminal နဲ့ မိတ်ဆက်">
+<span class="eyebrow" data-i18n="k54">Step 5 · The black window</span>
+<h1 data-i18n="k55">Meet the terminal. It's friendlier than it looks.</h1>
+<p data-i18n="k56">Git is usually operated by typing, in a program called the <b>terminal</b>. If that sounds intimidating, here's the reframe: it's just a way of asking your computer to do things with words instead of clicks.</p>
+<div class="analogy"><span class="tag" data-i18n="k57">Think of it as</span>
+<p data-i18n="k58">Walking through your computer's folders <b>on foot</b>. Instead of double-clicking a folder to open it, you say "go in there". Instead of looking at icons, you ask "what's in this room?"</p></div>
+<h2 data-i18n="k59">Open it</h2>
 <div class="two">
-  <div class="mini"><span class="em">🍎</span><h3>On a Mac</h3><p>Press <code class="i">⌘ + Space</code>, type <b>Terminal</b>, press Enter.</p></div>
-  <div class="mini"><span class="em">🪟</span><h3>On Windows</h3><p>You'll install <b>Git Bash</b> in the next step — it comes with Git and gives you the same commands as a Mac.</p></div>
+  <div class="mini"><span class="em">🍎</span><h3 data-i18n="k60">On a Mac</h3><p data-i18n="k61">Press <code class="i">⌘ + Space</code>, type <b>Terminal</b>, press Enter.</p></div>
+  <div class="mini"><span class="em">🪟</span><h3 data-i18n="k62">On Windows</h3><p data-i18n="k63">You'll install <b>Git Bash</b> in the next step — it comes with Git and gives you the same commands as a Mac.</p></div>
 </div>
-<h2>The only three commands you need today</h2>
-<div class="cmd"><div class="bar"><span>terminal</span><button class="copy">Copy</button></div><pre>pwd          <span class="c"># "where am I standing?"</span>
+<h2 data-i18n="k64">The only three commands you need today</h2>
+<div class="cmd"><div class="bar"><span data-i18n="k65">terminal</span><button class="copy">Copy</button></div><pre>pwd          <span class="c"># "where am I standing?"</span>
 <span class="o">/Users/you</span>
 
 ls           <span class="c"># "what's in this room?"</span>
@@ -253,50 +265,50 @@ ls           <span class="c"># "what's in this room?"</span>
 
 cd Documents <span class="c"># "walk into Documents"</span>
 cd ..        <span class="c"># "walk back out"</span></pre></div>
-<div class="note"><b>Two habits that make this painless</b><p>Press <b>Tab</b> while typing a folder name and the computer finishes it for you — no typos. Press <b>↑</b> to bring back the last command you ran.</p></div>
-<div class="note sun"><b>Can I break something?</b><p>Not with these. <code class="i">pwd</code>, <code class="i">ls</code> and <code class="i">cd</code> only look and walk around — they change nothing. Explore freely.</p></div>
+<div class="note"><b data-i18n="k66">Two habits that make this painless</b><p data-i18n="k67">Press <b>Tab</b> while typing a folder name and the computer finishes it for you — no typos. Press <b>↑</b> to bring back the last command you ran.</p></div>
+<div class="note sun"><b data-i18n="k68">Can I break something?</b><p data-i18n="k69">Not with these. <code class="i">pwd</code>, <code class="i">ls</code> and <code class="i">cd</code> only look and walk around — they change nothing. Explore freely.</p></div>
 </section>
 
 <!-- ============ 6 ============ -->
-<section class="step" data-title="Install Git">
-<span class="eyebrow">Step 6 · Setup (once, forever)</span>
-<h1>Install Git and tell it your name.</h1>
-<p>This is the only installation in the whole course, and you'll never repeat it on this computer.</p>
-<h2>1 · Install</h2>
+<section class="step" data-title="Install Git" data-title-my="Git ကို install လုပ်ခြင်း">
+<span class="eyebrow" data-i18n="k70">Step 6 · Setup (once, forever)</span>
+<h1 data-i18n="k71">Install Git and tell it your name.</h1>
+<p data-i18n="k72">This is the only installation in the whole course, and you'll never repeat it on this computer.</p>
+<h2 data-i18n="k73">1 · Install</h2>
 <div class="two">
-  <div class="mini"><span class="em">🍎</span><h3>Mac</h3><p>Open Terminal and type <code class="i">git --version</code>. If it prints a number, you already have it. If not, it will offer to install — say yes.</p></div>
-  <div class="mini"><span class="em">🪟</span><h3>Windows</h3><p>Go to <b>git-scm.com/download/win</b>, run the installer, keep clicking Next. Then open <b>Git Bash</b> from your Start menu.</p></div>
+  <div class="mini"><span class="em">🍎</span><h3 data-i18n="k74">Mac</h3><p data-i18n="k75">Open Terminal and type <code class="i">git --version</code>. If it prints a number, you already have it. If not, it will offer to install — say yes.</p></div>
+  <div class="mini"><span class="em">🪟</span><h3 data-i18n="k76">Windows</h3><p data-i18n="k77">Go to <b>git-scm.com/download/win</b>, run the installer, keep clicking Next. Then open <b>Git Bash</b> from your Start menu.</p></div>
 </div>
-<h2>2 · Sign your work</h2>
-<p>Every save point gets stamped with your name, so teammates know who did what. Type these two lines once:</p>
-<div class="cmd"><div class="bar"><span>terminal</span><button class="copy">Copy</button></div><pre>git config --global user.name <span class="o">"Your Name"</span>
+<h2 data-i18n="k78">2 · Sign your work</h2>
+<p data-i18n="k79">Every save point gets stamped with your name, so teammates know who did what. Type these two lines once:</p>
+<div class="cmd"><div class="bar"><span data-i18n="k80">terminal</span><button class="copy">Copy</button></div><pre>git config --global user.name <span class="o">"Your Name"</span>
 git config --global user.email <span class="o">"you@example.com"</span></pre></div>
-<div class="note"><b>That's the whole setup.</b><p>Nothing else to configure, ever. From here on it's all doing.</p></div>
+<div class="note"><b data-i18n="k81">That's the whole setup.</b><p data-i18n="k82">Nothing else to configure, ever. From here on it's all doing.</p></div>
 </section>
 
 <!-- ============ 7 ============ -->
-<section class="step" data-title="Your first repository">
-<span class="eyebrow">Step 7 · Create the world</span>
-<h1>Turn a folder into a project Git watches.</h1>
-<p>Let's make a real project. Type along — this takes 30 seconds.</p>
-<div class="cmd"><div class="bar"><span>terminal</span><button class="copy">Copy</button></div><pre>cd Documents           <span class="c"># walk into Documents</span>
+<section class="step" data-title="Your first repository" data-title-my="ပထမဆုံး repository">
+<span class="eyebrow" data-i18n="k83">Step 7 · Create the world</span>
+<h1 data-i18n="k84">Turn a folder into a project Git watches.</h1>
+<p data-i18n="k85">Let's make a real project. Type along — this takes 30 seconds.</p>
+<div class="cmd"><div class="bar"><span data-i18n="k86">terminal</span><button class="copy">Copy</button></div><pre>cd Documents           <span class="c"># walk into Documents</span>
 mkdir my-first-project <span class="c"># build a new folder</span>
 cd my-first-project    <span class="c"># step inside it</span>
 git init               <span class="c"># ✨ Git starts watching this folder</span>
 <span class="o">Initialized empty Git repository in .../my-first-project/.git/</span></pre></div>
-<p>That folder is now a <b>repository</b> — usually shortened to "repo". It's an ordinary folder plus a hidden <code class="i">.git</code> folder where Git stores every save point you'll ever make.</p>
-<div class="analogy"><span class="tag">Game metaphor</span>
-<p><code class="i">git init</code> is <b>starting a new game world</b>. Nothing has been saved yet, but the game now has a memory card to save to.</p></div>
-<div class="cmd"><div class="bar"><span>see it for yourself</span><button class="copy">Copy</button></div><pre>ls -a       <span class="c"># -a shows hidden things</span>
+<p data-i18n="k87">That folder is now a <b>repository</b> — usually shortened to "repo". It's an ordinary folder plus a hidden <code class="i">.git</code> folder where Git stores every save point you'll ever make.</p>
+<div class="analogy"><span class="tag" data-i18n="k88">Game metaphor</span>
+<p data-i18n="k89"><code class="i">git init</code> is <b>starting a new game world</b>. Nothing has been saved yet, but the game now has a memory card to save to.</p></div>
+<div class="cmd"><div class="bar"><span data-i18n="k90">see it for yourself</span><button class="copy">Copy</button></div><pre>ls -a       <span class="c"># -a shows hidden things</span>
 <span class="o">.   ..   .git</span>       <span class="c"># ← there it is: Git's memory</span></pre></div>
-<div class="note warm"><b>Don't touch .git</b><p>You never need to open it. Just know that deleting it would erase your history while leaving your files alone.</p></div>
+<div class="note warm"><b data-i18n="k91">Don't touch .git</b><p data-i18n="k92">You never need to open it. Just know that deleting it would erase your history while leaving your files alone.</p></div>
 </section>
 
 <!-- ============ 8 ============ -->
-<section class="step" data-title="Your first save point">
-<span class="eyebrow">Step 8 · The heart of Git</span>
-<h1>Make your first save point.</h1>
-<p>Saving in Git happens in <b>two moves</b>, not one — and that surprises everybody at first. You first <i>choose</i> what to save, then you <i>save</i> it with a note.</p>
+<section class="step" data-title="Your first save point" data-title-my="ပထမဆုံး save point">
+<span class="eyebrow" data-i18n="k93">Step 8 · The heart of Git</span>
+<h1 data-i18n="k94">Make your first save point.</h1>
+<p data-i18n="k95">Saving in Git happens in <b>two moves</b>, not one — and that surprises everybody at first. You first <i>choose</i> what to save, then you <i>save</i> it with a note.</p>
 <div class="art">
 <svg viewBox="0 0 640 190" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
   <defs><marker id="a1" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#3d8b7d"/></marker></defs>
@@ -318,7 +330,7 @@ git init               <span class="c"># ✨ Git starts watching this folder</sp
   <text x="320" y="168" text-anchor="middle" fill="#7a6f66" font-size="11">Why two steps? So you can save <tspan font-weight="bold">just the finished part</tspan> and leave the rest for later.</text>
 </svg>
 </div>
-<div class="cmd"><div class="bar"><span>terminal</span><button class="copy">Copy</button></div><pre>echo <span class="o">"Hello Git"</span> &gt; notes.txt   <span class="c"># create a file with some text</span>
+<div class="cmd"><div class="bar"><span data-i18n="k96">terminal</span><button class="copy">Copy</button></div><pre>echo <span class="o">"Hello Git"</span> &gt; notes.txt   <span class="c"># create a file with some text</span>
 
 git status                     <span class="c"># always start here — Git tells you what it sees</span>
 <span class="o">Untracked files:  notes.txt</span>
@@ -326,14 +338,14 @@ git status                     <span class="c"># always start here — Git tells
 git add notes.txt              <span class="c"># put it in the waiting tray</span>
 git commit -m <span class="o">"Add my notes"</span>   <span class="c"># save it, with a note explaining why</span>
 <span class="o">[main a1b2c3d] Add my notes</span></pre></div>
-<p>🎉 That's your first commit. That short code <code class="i">a1b2c3d</code> is its permanent name — you could return to this exact moment years from now.</p>
-<div class="try"><span class="tt">Try it — click through the cycle</span>
+<p data-i18n="k97">🎉 That's your first commit. That short code <code class="i">a1b2c3d</code> is its permanent name — you could return to this exact moment years from now.</p>
+<div class="try"><span class="tt" data-i18n="k98">Try it — click through the cycle</span>
 <div id="sim">
   <div class="row" style="margin-bottom:14px">
-    <button class="btn" id="s1">1 · Edit a file</button>
-    <button class="btn" id="s2" disabled>2 · git add</button>
-    <button class="btn" id="s3" disabled>3 · git commit</button>
-    <button class="btn soft" id="s0">Reset</button>
+    <button class="btn" id="s1" data-i18n="k99">1 · Edit a file</button>
+    <button class="btn" id="s2" disabled data-i18n="k100">2 · git add</button>
+    <button class="btn" id="s3" disabled data-i18n="k101">3 · git commit</button>
+    <button class="btn soft" id="s0" data-i18n="k102">Reset</button>
   </div>
   <svg viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" style="width:100%;height:auto">
     <rect x="10" y="20" width="170" height="80" rx="14" fill="none" stroke="#ebe0d5" stroke-width="2" id="z1"/>
@@ -344,36 +356,36 @@ git commit -m <span class="o">"Add my notes"</span>   <span class="c"># save it,
     <text x="505" y="42" text-anchor="middle" fill="#7a6f66" font-size="11">SAVE POINTS</text>
     <g id="doc" opacity="0"><rect x="60" y="55" width="70" height="30" rx="7" fill="#fff6ee" stroke="#e07a5f" stroke-width="2"/><text x="95" y="75" text-anchor="middle" fill="#e07a5f" font-size="11" font-family="monospace">notes.txt</text></g>
   </svg>
-  <p class="feedback" id="simmsg">Click “Edit a file” to begin.</p>
+  <p class="feedback" id="simmsg" data-i18n="k103">Click “Edit a file” to begin.</p>
 </div></div>
-<div class="note"><b>Write notes your future self will thank you for</b><p>"Fix crash when the file is empty" is useful. "update", "stuff", "asdf" are not. You'll be reading these later, promise.</p></div>
+<div class="note"><b data-i18n="k104">Write notes your future self will thank you for</b><p data-i18n="k105">"Fix crash when the file is empty" is useful. "update", "stuff", "asdf" are not. You'll be reading these later, promise.</p></div>
 </section>
 
 <!-- ============ 9 ============ -->
-<section class="step" data-title="Your history">
-<span class="eyebrow">Step 9 · Looking back</span>
-<h1>Read your project's story.</h1>
-<p>Make a few more save points — change the file, <code class="i">git add</code>, <code class="i">git commit</code>, repeat — then look at what you've built:</p>
-<div class="cmd"><div class="bar"><span>terminal</span><button class="copy">Copy</button></div><pre>git log --oneline
+<section class="step" data-title="Your history" data-title-my="မှတ်တမ်း ကြည့်ခြင်း">
+<span class="eyebrow" data-i18n="k106">Step 9 · Looking back</span>
+<h1 data-i18n="k107">Read your project's story.</h1>
+<p data-i18n="k108">Make a few more save points — change the file, <code class="i">git add</code>, <code class="i">git commit</code>, repeat — then look at what you've built:</p>
+<div class="cmd"><div class="bar"><span data-i18n="k109">terminal</span><button class="copy">Copy</button></div><pre>git log --oneline
 <span class="o">c3d4e5f  Add a second page
 b2c3d4e  Fix the spelling in the title
 a1b2c3d  Add my notes</span></pre></div>
-<p>Read it bottom to top and it's the story of your project. Three commands cover almost everything you'll want to know:</p>
+<p data-i18n="k110">Read it bottom to top and it's the story of your project. Three commands cover almost everything you'll want to know:</p>
 <div class="two">
-  <div class="mini"><span class="em">📋</span><h3>git status</h3><p>"What's changed right now?" Run it constantly — it's your compass.</p></div>
-  <div class="mini"><span class="em">📜</span><h3>git log</h3><p>"What have I saved so far?" Your list of save points.</p></div>
-  <div class="mini"><span class="em">🔎</span><h3>git diff</h3><p>"What exactly did I change since the last save?" Line by line.</p></div>
+  <div class="mini"><span class="em">📋</span><h3 data-i18n="k111">git status</h3><p data-i18n="k112">"What's changed right now?" Run it constantly — it's your compass.</p></div>
+  <div class="mini"><span class="em">📜</span><h3 data-i18n="k113">git log</h3><p data-i18n="k114">"What have I saved so far?" Your list of save points.</p></div>
+  <div class="mini"><span class="em">🔎</span><h3 data-i18n="k115">git diff</h3><p data-i18n="k116">"What exactly did I change since the last save?" Line by line.</p></div>
 </div>
-<div class="note"><b>The rhythm you'll repeat forever</b><p>edit → <code class="i">git status</code> → <code class="i">git add</code> → <code class="i">git commit</code>. Do it after every small piece of work that <i>works</i> — not once at the end of the day.</p></div>
+<div class="note"><b data-i18n="k117">The rhythm you'll repeat forever</b><p data-i18n="k118">edit → <code class="i">git status</code> → <code class="i">git add</code> → <code class="i">git commit</code>. Do it after every small piece of work that <i>works</i> — not once at the end of the day.</p></div>
 </section>
 
 <!-- ============ 10 ============ -->
-<section class="step" data-title="Branches">
-<span class="eyebrow">Step 10 · The superpower</span>
-<h1>Try risky things without any risk.</h1>
-<p>You want to redesign your whole page, but you're not sure it'll work. You don't want to ruin the version that currently works fine. So you make a <b>branch</b>.</p>
-<div class="analogy"><span class="tag">Game metaphor</span>
-<p>A branch is a <b>second save slot</b>. You copy your progress into it and attempt the hard boss fight there. If it goes badly, delete the slot — your main playthrough never knew. If it goes well, bring it into the main game.</p></div>
+<section class="step" data-title="Branches" data-title-my="Branch များ">
+<span class="eyebrow" data-i18n="k119">Step 10 · The superpower</span>
+<h1 data-i18n="k120">Try risky things without any risk.</h1>
+<p data-i18n="k121">You want to redesign your whole page, but you're not sure it'll work. You don't want to ruin the version that currently works fine. So you make a <b>branch</b>.</p>
+<div class="analogy"><span class="tag" data-i18n="k122">Game metaphor</span>
+<p data-i18n="k123">A branch is a <b>second save slot</b>. You copy your progress into it and attempt the hard boss fight there. If it goes badly, delete the slot — your main playthrough never knew. If it goes well, bring it into the main game.</p></div>
 <div class="art">
 <svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
   <line x1="40" y1="70" x2="580" y2="70" stroke="#ebe0d5" stroke-width="3"/>
@@ -385,9 +397,9 @@ a1b2c3d  Add my notes</span></pre></div>
   <text x="375" y="170" text-anchor="middle" fill="#3d8b7d" font-size="12" font-weight="bold">your experiment — safe to break</text>
   <text x="512" y="40" fill="#b98d15" font-size="12" font-weight="bold">it worked → merged in</text>
 </svg>
-<div class="cap">Two versions of your project exist at once. Switching between them takes a split second.</div>
+<div class="cap" data-i18n="k124">Two versions of your project exist at once. Switching between them takes a split second.</div>
 </div>
-<div class="cmd"><div class="bar"><span>terminal</span><button class="copy">Copy</button></div><pre>git switch -c my-experiment   <span class="c"># create the second slot and enter it</span>
+<div class="cmd"><div class="bar"><span data-i18n="k125">terminal</span><button class="copy">Copy</button></div><pre>git switch -c my-experiment   <span class="c"># create the second slot and enter it</span>
 <span class="c"># …change whatever you like, commit as usual…</span>
 
 git switch main               <span class="c"># hop back — your experiment vanishes from view</span>
@@ -396,42 +408,42 @@ git switch my-experiment      <span class="c"># …and reappears. Nothing was lo
 git switch main
 git merge my-experiment       <span class="c"># it worked! bring it into the main version</span>
 git branch -d my-experiment   <span class="c"># tidy up</span></pre></div>
-<div class="note sun"><b>What if two people changed the same line?</b><p>Git stops and asks you to choose — that's a <b>merge conflict</b>. It looks scary, it isn't: you open the file, pick what the line should say, then <code class="i">git add</code> and <code class="i">git commit</code>. That's the whole fix, and every professional does it weekly.</p></div>
-<div class="try"><span class="tt">Check yourself</span>
-<p><b>Your experiment turned out badly. What happens to <code class="i">main</code>?</b></p>
-<div data-quiz='{"a":2,"why":"Nothing at all. main never saw your experiment. You delete the branch and it’s as if the experiment never happened — that’s exactly why branches exist."}'>
-  <button class="choice">It gets the broken changes too</button>
-  <button class="choice">I have to undo each change by hand</button>
-  <button class="choice">Nothing — main is untouched. I just delete the branch.</button>
+<div class="note sun"><b data-i18n="k126">What if two people changed the same line?</b><p data-i18n="k127">Git stops and asks you to choose — that's a <b>merge conflict</b>. It looks scary, it isn't: you open the file, pick what the line should say, then <code class="i">git add</code> and <code class="i">git commit</code>. That's the whole fix, and every professional does it weekly.</p></div>
+<div class="try"><span class="tt" data-i18n="k128">Check yourself</span>
+<p data-i18n="k129"><b>Your experiment turned out badly. What happens to <code class="i">main</code>?</b></p>
+<div data-quiz='{"a":2,"myKey":"why_branch","why":"Nothing at all. main never saw your experiment. You delete the branch and it’s as if the experiment never happened — that’s exactly why branches exist."}'>
+  <button class="choice" data-i18n="k130">It gets the broken changes too</button>
+  <button class="choice" data-i18n="k131">I have to undo each change by hand</button>
+  <button class="choice" data-i18n="k132">Nothing — main is untouched. I just delete the branch.</button>
 </div></div>
 </section>
 
 <!-- ============ 11 ============ -->
-<section class="step" data-title="Going online">
-<span class="eyebrow">Step 11 · Into the cloud</span>
-<h1>Put your project on GitHub.</h1>
-<p>So far everything lives on your computer alone. Uploading it to GitHub gives you a backup, a link you can share, and the ability to work with other people.</p>
+<section class="step" data-title="Going online" data-title-my="Cloud ပေါ် တင်ခြင်း">
+<span class="eyebrow" data-i18n="k133">Step 11 · Into the cloud</span>
+<h1 data-i18n="k134">Put your project on GitHub.</h1>
+<p data-i18n="k135">So far everything lives on your computer alone. Uploading it to GitHub gives you a backup, a link you can share, and the ability to work with other people.</p>
 <ol>
-<li>Create a free account at <b>github.com</b>.</li>
-<li>Click <b>+</b> → <b>New repository</b>. Give it a name. Don't tick any of the extra options. Click <b>Create</b>.</li>
-<li>GitHub shows you a page of commands — you only need these:</li>
+<li data-i18n="k136">Create a free account at <b>github.com</b>.</li>
+<li data-i18n="k137">Click <b>+</b> → <b>New repository</b>. Give it a name. Don't tick any of the extra options. Click <b>Create</b>.</li>
+<li data-i18n="k138">GitHub shows you a page of commands — you only need these:</li>
 </ol>
-<div class="cmd"><div class="bar"><span>terminal</span><button class="copy">Copy</button></div><pre>git remote add origin https://github.com/YOU/my-first-project.git
+<div class="cmd"><div class="bar"><span data-i18n="k139">terminal</span><button class="copy">Copy</button></div><pre>git remote add origin https://github.com/YOU/my-first-project.git
 git push -u origin main
 <span class="o">* [new branch]  main -&gt; main</span></pre></div>
-<p>Refresh the GitHub page — your files are there, with your commit messages next to them. From now on, uploading is a single word:</p>
-<div class="cmd"><div class="bar"><span>the two words you'll use daily</span><button class="copy">Copy</button></div><pre>git push    <span class="c"># upload my save points</span>
+<p data-i18n="k140">Refresh the GitHub page — your files are there, with your commit messages next to them. From now on, uploading is a single word:</p>
+<div class="cmd"><div class="bar"><span data-i18n="k141">the two words you'll use daily</span><button class="copy">Copy</button></div><pre>git push    <span class="c"># upload my save points</span>
 git pull    <span class="c"># download everyone else's</span></pre></div>
-<div class="analogy"><span class="tag">Game metaphor</span>
-<p><b>push</b> = upload my save to the cloud. <b>pull</b> = download my friends' progress. Start every session with a pull, so you're building on the latest world rather than an old one.</p></div>
-<div class="note warm"><b>It asks for a password — and rejects it?</b><p>GitHub doesn't accept account passwords for uploads. Go to <b>Settings → Developer settings → Personal access tokens</b>, create one, and paste that instead. Your computer remembers it afterwards.</p></div>
+<div class="analogy"><span class="tag" data-i18n="k142">Game metaphor</span>
+<p data-i18n="k143"><b>push</b> = upload my save to the cloud. <b>pull</b> = download my friends' progress. Start every session with a pull, so you're building on the latest world rather than an old one.</p></div>
+<div class="note warm"><b data-i18n="k144">It asks for a password — and rejects it?</b><p data-i18n="k145">GitHub doesn't accept account passwords for uploads. Go to <b>Settings → Developer settings → Personal access tokens</b>, create one, and paste that instead. Your computer remembers it afterwards.</p></div>
 </section>
 
 <!-- ============ 12 ============ -->
-<section class="step" data-title="Working with others">
-<span class="eyebrow">Step 12 · Teamwork</span>
-<h1>How real teams actually work.</h1>
-<p>Here's the surprise: on professional teams, <b>nobody edits the main version directly</b>. Everyone proposes changes and someone else looks before it goes in. That single habit is what keeps large projects from falling apart.</p>
+<section class="step" data-title="Working with others" data-title-my="အဖွဲ့လိုက် လုပ်ကိုင်ခြင်း">
+<span class="eyebrow" data-i18n="k146">Step 12 · Teamwork</span>
+<h1 data-i18n="k147">How real teams actually work.</h1>
+<p data-i18n="k148">Here's the surprise: on professional teams, <b>nobody edits the main version directly</b>. Everyone proposes changes and someone else looks before it goes in. That single habit is what keeps large projects from falling apart.</p>
 <div class="art">
 <svg viewBox="0 0 620 130" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
   <defs><marker id="a2" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#e07a5f"/></marker></defs>
@@ -447,55 +459,55 @@ git pull    <span class="c"># download everyone else's</span></pre></div>
   <line x1="370" y1="50" x2="448" y2="50" stroke="#e07a5f" stroke-width="2" marker-end="url(#a2)"/>
   <line x1="510" y1="50" x2="558" y2="50" stroke="#e07a5f" stroke-width="2" marker-end="url(#a2)"/>
 </svg>
-<div class="cap">This loop runs thousands of times a day at every software company on earth.</div>
+<div class="cap" data-i18n="k149">This loop runs thousands of times a day at every software company on earth.</div>
 </div>
-<p>That third step — "ask for review" — has a name: a <b>pull request</b>. Despite the confusing name, it simply means: <i>"Here's what I changed. Please look before it goes in."</i> Your teammates read it, leave comments, automated tests run, and then someone clicks Merge.</p>
-<div class="analogy"><span class="tag">Game metaphor</span>
-<p>A pull request is showing your quest to the guild leader before it becomes part of the shared world. Comments are their feedback; merging is their approval.</p></div>
-<div class="note"><b>Contributing to someone else's project</b><p>If you don't have permission to change a project, you <b>fork</b> it — GitHub makes you your own copy — then send a pull request from your copy. That's how millions of strangers safely build open-source software together.</p></div>
+<p data-i18n="k150">That third step — "ask for review" — has a name: a <b>pull request</b>. Despite the confusing name, it simply means: <i>"Here's what I changed. Please look before it goes in."</i> Your teammates read it, leave comments, automated tests run, and then someone clicks Merge.</p>
+<div class="analogy"><span class="tag" data-i18n="k151">Game metaphor</span>
+<p data-i18n="k152">A pull request is showing your quest to the guild leader before it becomes part of the shared world. Comments are their feedback; merging is their approval.</p></div>
+<div class="note"><b data-i18n="k153">Contributing to someone else's project</b><p data-i18n="k154">If you don't have permission to change a project, you <b>fork</b> it — GitHub makes you your own copy — then send a pull request from your copy. That's how millions of strangers safely build open-source software together.</p></div>
 </section>
 
 <!-- ============ 13 ============ -->
-<section class="step" data-title="When things go wrong">
-<span class="eyebrow">Step 13 · Don't panic</span>
-<h1>Three fixes cover almost every mistake.</h1>
-<p>Beginners freeze when something breaks. Skip that phase — here's the only question you need to ask: <b>has anyone else seen it yet?</b></p>
-<div class="try"><span class="tt">What went wrong? Click one</span>
+<section class="step" data-title="When things go wrong" data-title-my="အမှား ဖြေရှင်းခြင်း">
+<span class="eyebrow" data-i18n="k155">Step 13 · Don't panic</span>
+<h1 data-i18n="k156">Three fixes cover almost every mistake.</h1>
+<p data-i18n="k157">Beginners freeze when something breaks. Skip that phase — here's the only question you need to ask: <b>has anyone else seen it yet?</b></p>
+<div class="try"><span class="tt" data-i18n="k158">What went wrong? Click one</span>
 <div id="fix">
-  <button class="choice" data-fix="I made a mess in a file and haven't saved it yet">😖 I made a mess in a file and haven't committed yet</button>
-  <button class="choice" data-fix="I committed, but the message is wrong or I forgot a file">🙃 I committed, but the message is wrong — and I haven't pushed</button>
-  <button class="choice" data-fix="I already pushed a commit and it broke something">😱 I already pushed it, and it broke something</button>
-  <button class="choice" data-fix="I did something drastic and think work is lost">💀 I did something drastic and think I lost work</button>
+  <button class="choice" data-fix="I made a mess in a file and haven't saved it yet" data-i18n="k159">😖 I made a mess in a file and haven't committed yet</button>
+  <button class="choice" data-fix="I committed, but the message is wrong or I forgot a file" data-i18n="k160">🙃 I committed, but the message is wrong — and I haven't pushed</button>
+  <button class="choice" data-fix="I already pushed a commit and it broke something" data-i18n="k161">😱 I already pushed it, and it broke something</button>
+  <button class="choice" data-fix="I did something drastic and think work is lost" data-i18n="k162">💀 I did something drastic and think I lost work</button>
 </div>
 <div id="fixout" style="margin-top:14px"></div>
 </div>
-<div class="note"><b>The one rule to remember</b><p>If it's still only on <b>your</b> computer, you can rewrite it freely. If you already <b>pushed</b> it, use <code class="i">git revert</code> — it undoes the change by adding a new save point rather than erasing history, so nobody else's copy breaks.</p></div>
-<div class="note sun"><b>Git very rarely loses committed work</b><p>Once you've committed something, it's extremely hard to truly destroy — <code class="i">git reflog</code> can usually find it. That's the deeper reason to commit often: committed work is protected work.</p></div>
+<div class="note"><b data-i18n="k163">The one rule to remember</b><p data-i18n="k164">If it's still only on <b>your</b> computer, you can rewrite it freely. If you already <b>pushed</b> it, use <code class="i">git revert</code> — it undoes the change by adding a new save point rather than erasing history, so nobody else's copy breaks.</p></div>
+<div class="note sun"><b data-i18n="k165">Git very rarely loses committed work</b><p data-i18n="k166">Once you've committed something, it's extremely hard to truly destroy — <code class="i">git reflog</code> can usually find it. That's the deeper reason to commit often: committed work is protected work.</p></div>
 </section>
 
 <!-- ============ 14 ============ -->
-<section class="step" data-title="You did it">
-<span class="eyebrow">Step 14 · Finish line</span>
-<h1>You now know Git. 🎉</h1>
-<p class="lead">Not "the basics of Git" — the actual thing professionals use all day. Everything else is refinement.</p>
-<h2>What you can do now</h2>
+<section class="step" data-title="You did it" data-title-my="အောင်မြင်ပါပြီ">
+<span class="eyebrow" data-i18n="k167">Step 14 · Finish line</span>
+<h1 data-i18n="k168">You now know Git. 🎉</h1>
+<p class="lead" data-i18n="k169">Not "the basics of Git" — the actual thing professionals use all day. Everything else is refinement.</p>
+<h2 data-i18n="k170">What you can do now</h2>
 <div class="two">
-  <div class="mini good"><span class="em">💾</span><h3>Save your work properly</h3><p><code class="i">add</code> → <code class="i">commit</code>, with a history you can read and return to.</p></div>
-  <div class="mini good"><span class="em">🌿</span><h3>Experiment without fear</h3><p>Branch, break things, merge or delete.</p></div>
-  <div class="mini good"><span class="em">☁️</span><h3>Work in the open</h3><p>Push to GitHub, pull from teammates, propose changes with pull requests.</p></div>
-  <div class="mini good"><span class="em">🛟</span><h3>Recover from mistakes</h3><p>Know which fix to reach for, and why.</p></div>
+  <div class="mini good"><span class="em">💾</span><h3 data-i18n="k171">Save your work properly</h3><p data-i18n="k172"><code class="i">add</code> → <code class="i">commit</code>, with a history you can read and return to.</p></div>
+  <div class="mini good"><span class="em">🌿</span><h3 data-i18n="k173">Experiment without fear</h3><p data-i18n="k174">Branch, break things, merge or delete.</p></div>
+  <div class="mini good"><span class="em">☁️</span><h3 data-i18n="k175">Work in the open</h3><p data-i18n="k176">Push to GitHub, pull from teammates, propose changes with pull requests.</p></div>
+  <div class="mini good"><span class="em">🛟</span><h3 data-i18n="k177">Recover from mistakes</h3><p data-i18n="k178">Know which fix to reach for, and why.</p></div>
 </div>
-<h2>Quick quiz — five questions</h2>
+<h2 data-i18n="k179">Quick quiz — five questions</h2>
 <div id="quiz"></div>
-<h2>Where to go next</h2>
+<h2 data-i18n="k180">Where to go next</h2>
 <ol>
-<li><b>Use it today.</b> Take any folder of your own work and run <code class="i">git init</code>. Commit ten times this week — that's the real learning.</li>
-<li><b>Publish something.</b> Push a small project to GitHub. Your profile becomes a portfolio.</li>
-<li><b>Go deeper when you need it.</b> The full reference has the command cheat sheet, the terminal playground, merge conflicts in detail, rebase, and a complete project walkthrough.</li>
+<li data-i18n="k181"><b>Use it today.</b> Take any folder of your own work and run <code class="i">git init</code>. Commit ten times this week — that's the real learning.</li>
+<li data-i18n="k182"><b>Publish something.</b> Push a small project to GitHub. Your profile becomes a portfolio.</li>
+<li data-i18n="k183"><b>Go deeper when you need it.</b> The full reference has the command cheat sheet, the terminal playground, merge conflicts in detail, rebase, and a complete project walkthrough.</li>
 </ol>
 <div style="text-align:center;margin:32px 0 10px">
-  <a class="btn" href="reference.html" style="text-decoration:none;display:inline-block;padding:14px 30px">Open the full reference →</a>
-  <p style="font-size:.84rem;color:var(--soft);margin-top:12px">Same topics, professional depth. Come back here anytime.</p>
+  <a class="btn" href="reference.html" style="text-decoration:none;display:inline-block;padding:14px 30px" data-i18n="k184">Open the full reference →</a>
+  <p style="font-size:.84rem;color:var(--soft);margin-top:12px" data-i18n="k185">Same topics, professional depth. Come back here anytime.</p>
 </div>
 </section>
 </main>
@@ -509,6 +521,45 @@ git pull    <span class="c"># download everyone else's</span></pre></div>
 </nav>
 
 <script>
+/* ================= Burmese localisation ================= */
+const I18N = {"MY": {"k1": "ဒီကနေ စလိုက်ပါ", "k2": "ဆော့ဖ်ဝဲလောကမှာ အသုံးအဝင်ဆုံး tool ကို သင်ယူတော့မှာပါ။", "k3": "အတွေ့အကြုံ မလိုပါဘူး။ ခက်ခဲတဲ့ ဝေါဟာရတွေလည်း မသုံးပါဘူး။ အယူအဆတစ်ခုစီ တစ်ဆင့်ချင်း — ရပ်ချင်တဲ့အခါ ရပ်ပြီး ပြန်လာလို့ရပါတယ်။", "k4": "ဒီအဆင့် ၁၄ ဆင့် ပြီးသွားတဲ့အခါ Git နဲ့ GitHub ဆိုတာ တကယ်ဘာလဲဆိုတာ နားလည်သွားပါလိမ့်မယ်။ command တွေကို ကိုယ်တိုင် ရိုက်ဖူးပြီး ဖြစ်နေမှာဖြစ်သလို၊ ပရော်ဖက်ရှင်နယ် အဖွဲ့တွေက တစ်ယောက်နဲ့တစ်ယောက် အလုပ်တွေ မပျက်စီးစေဘဲ ဘယ်လို ပူးပေါင်းလုပ်ကိုင်ကြလဲဆိုတာလည်း သိသွားပါလိမ့်မယ်။", "k5": "အမြဲ ပြန်သုံးသွားမယ့် သဘောတရား", "k6": "Git သင်ယူတာဟာ <b>ဂိမ်းထဲမှာ progress ကို save လုပ်တာ</b> နဲ့ တူပါတယ်။ save point တွေ ဆောက်မယ်၊ စွန့်စားစရာတွေကို သီးခြား save slot တစ်ခုမှာ စမ်းမယ်၊ ပြီးရင် အဲဒီ save တွေကို cloud ပေါ်တင်ပြီး သူငယ်ချင်းတွေနဲ့ မျှဝေမယ်။ တကယ်တော့ ဒီလောက်ပါပဲ။", "k7": "မိနစ် ၂၅ ခန့်", "k8": "အဆင့်သေးသေးလေး ၁၄ ဆင့်။ ထွက်သွားရင်တောင် ရောက်နေတဲ့နေရာကို အလိုအလျောက် မှတ်ထားပေးပါတယ်။", "k9": "အခုချိန်မှာ ဘာမှ install လုပ်စရာ မလိုသေးပါ", "k10": "အရင် ဖတ်လိုက်ပါ။ တကယ်လိုအပ်တဲ့ အဆင့် ၆ ရောက်မှ Git ကို အတူတူ install လုပ်ကြပါမယ်။", "k11": "ကတိတစ်ခု", "k12": "ဒီမှာ ရှုပ်ထွေးတယ်လို့ ခံစားရရင် သင့်အပြစ် မဟုတ်ပါဘူး — ရှင်းပြပုံရဲ့ အပြစ်ပါ။ အယူအဆတိုင်းကို ဘာကြောင့် လိုအပ်လဲဆိုတာ မြင်ပြီးမှသာ မိတ်ဆက်ပေးထားပါတယ်။", "k13": "အဆင့် ၂ · ပြဿနာ", "k14": "ဒီအခက်အခဲကို လူတိုင်း ကြုံဖူးကြပါတယ်။", "k15": "အရေးကြီးတဲ့ အလုပ်တစ်ခု လုပ်နေတယ်။ အပြောင်းအလဲကြီးကြီး မလုပ်ခင် မိတ္တူတစ်ခု သိမ်းထားလိုက်တယ်။ ပြီးတော့ နောက်တစ်ခု။ တစ်ပတ်ကြာတော့ ကိုယ့် folder က ဒီလို ဖြစ်နေတယ် —", "k16": "အလုပ်ချင်း အတူတူပါပဲ။ တစ်ဖက်က ရှုပ်ထွေးမှု၊ တစ်ဖက်ကတော့ ပြန်လျှောက်ကြည့်လို့ရတဲ့ မှတ်တမ်း။", "k17": "မိတ္တူကူးတဲ့ နည်းလမ်းက အချက် ၃ ချက်နဲ့ ကျရှုံးပါတယ် — ဖိုင်နှစ်ခုကြားမှာ <b>ဘာ</b> ပြောင်းသွားလဲ မသိရဘူး၊ <b>ဘာကြောင့်</b> ပြောင်းလဲတာလဲ မသိရဘူး၊ ပြီးတော့ နှစ်ယောက် တစ်ပြိုင်နက် ပြင်လိုက်ရင် တစ်ယောက်ရဲ့ အလုပ် ပျောက်သွားတယ်။", "k18": "ဒါဟာ Git တည်ရှိရတဲ့ အကြောင်းရင်း အပြည့်အစုံပါ။", "k19": "ရှုပ်ထွေးအောင် လုပ်ဖို့ မဟုတ်ပါဘူး — အဲဒီလို folder မျိုး မဖြစ်နိုင်တော့အောင် လုပ်ဖို့ပါ။", "k20": "အဆင့် ၃ · အခြေခံ သဘောတရား", "k21": "Version control ဆိုတာ project တစ်ခုလုံးအတွက် undo ခလုတ်ပါပဲ။", "k22": "စာရိုက် program တွေမှာ ခုနက ရိုက်လိုက်တာလေးတွေကို undo လုပ်လို့ရတယ်။ Version control ကလည်း အလုပ်တူတူပါပဲ — ဒါပေမဲ့ <b>project ထဲက ဖိုင်အားလုံး</b> အတွက်ဖြစ်ပြီး <b>အစအဆုံး</b> ပြန်သွားလို့ရပါတယ်။ အချက်တိုင်းမှာ ဘာပြောင်းလဲ၊ ဘယ်သူ ပြောင်းလဲဆိုတဲ့ မှတ်ချက်ပါ တွဲပါလာပါတယ်။", "k23": "ဂိမ်းနဲ့ နှိုင်းယှဉ်ကြည့်ရင်", "k24": "Save point တွေကို စဉ်းစားကြည့်ပါ။ နည်းနည်း ကစားပြီး အဆင်ပြေတဲ့နေရာ ရောက်တော့ <b>Save</b> နှိပ်လိုက်တယ်။ နောက်အပိုင်းမှာ မကောင်းဘူးဆိုရင် save ကို ပြန် load ပြီး ထပ်စမ်းလိုက်တာပဲ။ Version control ဆိုတာ ကိုယ့်အလုပ်အတွက် အဲဒါပါပဲ။", "k25": "ဘာတွေ ရလာမလဲ", "k26": "လုံခြုံစွာ ပြန်သွားနိုင်", "k27": "တစ်ခုခု ပျက်သွားလား။ အရင်အချိန် တစ်ခုခုကို စက္ကန့်ပိုင်းအတွင်း ပြန်ရောက်နိုင်ပါတယ်။", "k28": "ဘာပြောင်းလဲ မြင်နိုင်", "k29": "အချိန်နှစ်ခုကို လိုင်းလိုက် နှိုင်းယှဉ်ကြည့်လို့ ရပါတယ်။", "k30": "အတူတကွ လုပ်ကိုင်နိုင်", "k31": "လူအများကြီးက project တစ်ခုတည်းကို တစ်ယောက်နဲ့တစ်ယောက် မဖျက်မိဘဲ ပြင်နိုင်ပါတယ်။", "k32": "စွန့်စားတဲ့ အကြံတွေ စမ်းနိုင်", "k33": "အလုပ်လုပ်နေတဲ့ version ကို မထိခိုက်ဘူးဆိုတာ သိထားလို့ လွတ်လွတ်လပ်လပ် စမ်းသပ်နိုင်ပါတယ်။", "k34": "ကိုယ်တိုင် စစ်ကြည့်ပါ", "k35": "<b>“folder အသစ်တစ်ခုမှာ မိတ္တူ သိမ်းထားတာ” က ဘာကြောင့် မလုံလောက်တာလဲ။</b>", "k36": "မိတ္တူတွေက disk နေရာ အများကြီး ယူလို့", "k37": "မိတ္တူတွေက ဘာပြောင်းလဲ၊ ဘာကြောင့်၊ ဘယ်သူ ပြောင်းလဲဆိုတာ မမှတ်တမ်းတင်လို့ — ပြီးတော့ နှစ်ယောက် တစ်ပြိုင်နက် လုပ်ရင် အပြန်အလှန် ဖျက်မိလို့", "k38": "folder တွေကို online မှာ မျှဝေလို့ မရလို့", "k39": "အဆင့် ၄ · မတူညီတဲ့ အရာနှစ်ခု", "k40": "Git နဲ့ GitHub က တစ်ခုတည်း မဟုတ်ပါဘူး။", "k41": "စတင်လေ့လာသူ အများစုက ဒါကို ရောထွေးတတ်ကြတယ် — ဒါကြောင့် အခုပဲ ရှင်းလိုက်ရအောင်၊ စက္ကန့် ၁၀ လောက်ပဲ ကြာပါတယ်။", "k42": "Git = ကင်မရာ", "k43": "<b>ကိုယ့်ကွန်ပျူတာ</b> ပေါ်မှာ ရှိတဲ့ အခမဲ့ program တစ်ခုပါ။ snapshot တွေ ရိုက်ပေးပြီး မှတ်တမ်းကို သိမ်းထားပေးတယ်။ အင်တာနက် လုံးဝ မလိုပါဘူး။", "k44": "GitHub = ဓာတ်ပုံ app", "k45": "အဲဒီ snapshot တွေကို တင်ထားလို့ သူများတွေ ကြည့်နိုင်၊ မှတ်ချက်ပေးနိုင်၊ ပါဝင်ကူညီနိုင်တဲ့ <b>website</b> တစ်ခုပါ။ မသုံးလည်း ရပါတယ် — ဒါပေမဲ့ အဖွဲ့လိုက် လုပ်ကိုင်တာက ဒီမှာပါ။", "k46": "ဂိမ်းနဲ့ နှိုင်းယှဉ်ကြည့်ရင်", "k47": "Git က ကိုယ့် console ကနေ ဂိမ်းကို သူ့ memory ထဲ save လုပ်တာ။ GitHub ကတော့ <b>cloud save</b> — သူငယ်ချင်းတွေက ကိုယ့်ကမ္ဘာကို load လုပ်၊ ကစား၊ ပြီးရင် သူတို့ progress ကို ပြန်ပို့လို့ ရတယ်။", "k48": "မှတ်သားစရာ နှစ်ချက် — Git ကို တစ်သက်လုံး တစ်ယောက်တည်း သုံးပြီး GitHub ကို လုံးဝ မကိုင်လည်း ရပါတယ်။ ပြီးတော့ GitHub တစ်ခုတည်းလည်း မဟုတ်ပါဘူး (GitLab နဲ့ Bitbucket တို့ကလည်း အလုပ်တူတူပါပဲ)။", "k49": "ကိုယ်တိုင် စစ်ကြည့်ပါ", "k50": "<b>အင်တာနက် ပြတ်သွားပြီ။ Git နဲ့ အလုပ်ကို save လုပ်လို့ ရသေးလား။</b>", "k51": "ရပါတယ် — Git က ကိုယ့်ကွန်ပျူတာပေါ်မှာ run နေလို့ save လုပ်လို့ ရပါတယ်", "k52": "မရဘူး — Git က save လုပ်ဖို့ GitHub လိုတယ်", "k53": "အရင် backup သိမ်းထားမှ ရမယ်", "k54": "အဆင့် ၅ · အနက်ရောင် ဝင်းဒိုး", "k55": "Terminal နဲ့ မိတ်ဆက်ပါ။ မြင်ရသလောက် ကြောက်စရာ မကောင်းပါဘူး။", "k56": "Git ကို များသောအားဖြင့် <b>terminal</b> လို့ခေါ်တဲ့ program ထဲမှာ စာရိုက်ပြီး သုံးပါတယ်။ ကြောက်စရာလို့ ထင်ရင် ဒီလို ပြန်စဉ်းစားကြည့်ပါ — ကွန်ပျူတာကို click နှိပ်မယ့်အစား စကားလုံးနဲ့ ခိုင်းလိုက်တာပါပဲ။", "k57": "ဒီလို မြင်ကြည့်ပါ", "k58": "ကွန်ပျူတာထဲက folder တွေကြားမှာ <b>ခြေလျင် လျှောက်</b> နေတာလို့ ထင်ပါ။ folder ကို double-click နှိပ်မယ့်အစား “အဲဒီထဲ ဝင်လိုက်” လို့ ပြောလိုက်တာ။ icon တွေကို ကြည့်မယ့်အစား “ဒီအခန်းထဲမှာ ဘာတွေ ရှိလဲ” လို့ မေးလိုက်တာပါ။", "k59": "ဖွင့်ကြည့်ရအောင်", "k60": "Mac မှာဆိုရင်", "k61": "<code class=\"i\">⌘ + Space</code> ကို နှိပ်၊ <b>Terminal</b> လို့ ရိုက်၊ Enter နှိပ်ပါ။", "k62": "Windows မှာဆိုရင်", "k63": "နောက်အဆင့်မှာ <b>Git Bash</b> ကို install လုပ်ပါမယ် — Git နဲ့အတူ ပါလာပြီး Mac မှာလိုပဲ command တွေ အတူတူ သုံးလို့ ရပါတယ်။", "k64": "ဒီနေ့အတွက် လိုအပ်တဲ့ command သုံးခုတည်း", "k65": "terminal", "k66": "ဒီအလေ့အထ နှစ်ခုက အလုပ်ကို အရမ်း လွယ်ကူစေတယ်", "k67": "folder နာမည် ရိုက်နေရင်း <b>Tab</b> နှိပ်လိုက်ရင် ကွန်ပျူတာက ဆက်ဖြည့်ပေးပါတယ် — စာလုံးမှားစရာ မလိုတော့ဘူး။ <b>↑</b> နှိပ်ရင် နောက်ဆုံး ရိုက်ခဲ့တဲ့ command ပြန်ပေါ်လာပါတယ်။", "k68": "တစ်ခုခု ပျက်သွားနိုင်လား", "k69": "ဒီ command တွေနဲ့တော့ မဖြစ်ပါဘူး။ <code class=\"i\">pwd</code>၊ <code class=\"i\">ls</code> နဲ့ <code class=\"i\">cd</code> က ကြည့်ရုံ၊ လျှောက်ရုံပဲ — ဘာမှ မပြောင်းလဲပါဘူး။ လွတ်လွတ်လပ်လပ် လေ့လာလိုက်ပါ။", "k70": "အဆင့် ၆ · တစ်ကြိမ်တည်း ပြင်ဆင်မှု", "k71": "Git ကို install လုပ်ပြီး ကိုယ့်နာမည် ပြောပြလိုက်ပါ။", "k72": "ဒါဟာ သင်တန်းတစ်ခုလုံးမှာ တစ်ခုတည်းသော install လုပ်ရမယ့် အဆင့်ဖြစ်ပြီး ဒီကွန်ပျူတာမှာ ထပ်လုပ်စရာ မလိုတော့ပါဘူး။", "k73": "၁ · Install လုပ်ပါ", "k74": "Mac", "k75": "Terminal ဖွင့်ပြီး <code class=\"i\">git --version</code> လို့ ရိုက်ကြည့်ပါ။ နံပါတ်တစ်ခု ပေါ်လာရင် ရှိပြီးသားပါ။ မပေါ်ရင် install လုပ်မလားလို့ မေးလာပါလိမ့်မယ် — yes လို့ ဖြေလိုက်ပါ။", "k76": "Windows", "k77": "<b>git-scm.com/download/win</b> ကို သွားပြီး installer ကို run ပါ။ Next ကို ဆက်နှိပ်သွားရုံပါပဲ။ ပြီးရင် Start menu ကနေ <b>Git Bash</b> ကို ဖွင့်ပါ။", "k78": "၂ · ကိုယ့်အလုပ်ကို လက်မှတ်ထိုးပါ", "k79": "save point တိုင်းမှာ ကိုယ့်နာမည် ပါသွားမှာမို့ အဖွဲ့သားတွေက ဘယ်သူ ဘာလုပ်ခဲ့လဲ သိနိုင်ပါတယ်။ ဒီစာနှစ်ကြောင်းကို တစ်ခါတည်း ရိုက်ထည့်လိုက်ပါ —", "k80": "terminal", "k81": "ပြင်ဆင်မှုက ဒီလောက်ပါပဲ။", "k82": "နောက်ထပ် ဘာမှ ချိန်ညှိစရာ မရှိတော့ပါဘူး။ ဒီကနေစပြီး လက်တွေ့ လုပ်ရုံပါပဲ။", "k83": "အဆင့် ၇ · ကမ္ဘာကို ဖန်တီးပါ", "k84": "folder တစ်ခုကို Git စောင့်ကြည့်တဲ့ project ဖြစ်အောင် ပြောင်းလိုက်ပါ။", "k85": "တကယ့် project တစ်ခု လုပ်ကြည့်ရအောင်။ လိုက်ရိုက်ကြည့်ပါ — စက္ကန့် ၃၀ ပဲ ကြာပါတယ်။", "k86": "terminal", "k87": "အခု အဲဒီ folder ဟာ <b>repository</b> ဖြစ်သွားပါပြီ — အတိုကောက် “repo” လို့ ခေါ်ကြပါတယ်။ သာမန် folder တစ်ခုပေါ်မှာ <code class=\"i\">.git</code> ဆိုတဲ့ ဖျောက်ထားတဲ့ folder တစ်ခု ပါလာတာပါ။ ကိုယ်လုပ်မယ့် save point တိုင်းကို Git က အဲဒီထဲမှာ သိမ်းထားပါတယ်။", "k88": "ဂိမ်းနဲ့ နှိုင်းယှဉ်ကြည့်ရင်", "k89": "<code class=\"i\">git init</code> ဟာ <b>ဂိမ်းကမ္ဘာအသစ်တစ်ခု စတင်လိုက်တာ</b>ပါ။ ဘာမှ မ save ရသေးပေမယ့် ဂိမ်းမှာ save လုပ်စရာ memory card တစ်ခု ရှိသွားပါပြီ။", "k90": "ကိုယ်တိုင် ကြည့်ကြည့်ပါ", "k91": ".git ကို မထိပါနဲ့", "k92": "အဲဒီထဲ ဖွင့်ကြည့်စရာ ဘယ်တော့မှ မလိုပါဘူး။ ဖျက်လိုက်ရင် ဖိုင်တွေတော့ ကျန်ပေမယ့် မှတ်တမ်းအားလုံး ပျောက်သွားမယ်ဆိုတာလေးပဲ သိထားပါ။", "k93": "အဆင့် ၈ · Git ရဲ့ နှလုံးသား", "k94": "ပထမဆုံး save point ကို လုပ်ကြည့်ပါ။", "k95": "Git မှာ save လုပ်တာက တစ်ဆင့်တည်း မဟုတ်ဘဲ <b>နှစ်ဆင့်</b> ဖြစ်ပါတယ် — ဒါက အစပိုင်းမှာ လူတိုင်းကို အံ့သြစေပါတယ်။ ဘာကို save မလဲ အရင် <i>ရွေး</i>ရပြီး၊ ပြီးမှ မှတ်ချက်တစ်ခုနဲ့အတူ <i>save</i> လုပ်ရပါတယ်။", "k96": "terminal", "k97": "🎉 ဒါ ကိုယ့်ရဲ့ ပထမဆုံး commit ပါ။ အဲဒီ ကုဒ်တို <code class=\"i\">a1b2c3d</code> ဟာ သူ့ရဲ့ အမြဲတမ်း နာမည်ပါ — နှစ်တွေ ကြာသွားပြီးတောင် ဒီအချိန်အတိအကျကို ပြန်လာနိုင်ပါတယ်။", "k98": "စမ်းကြည့်ပါ — အဆင့်အလိုက် နှိပ်ကြည့်ပါ", "k99": "၁ · ဖိုင်ကို ပြင်မယ်", "k100": "၂ · git add", "k101": "၃ · git commit", "k102": "အစကနေ ပြန်စ", "k103": "စတင်ဖို့ “ဖိုင်ကို ပြင်မယ်” ကို နှိပ်ပါ။", "k104": "နောင်တစ်ချိန် ကိုယ့်ကိုယ်ကိုယ် ကျေးဇူးတင်မယ့် မှတ်ချက်တွေ ရေးပါ", "k105": "“ဖိုင်ဗလာဖြစ်နေရင် crash ဖြစ်တာ ပြင်ပြီး” ဆိုတာမျိုးက အသုံးဝင်ပါတယ်။ “update”၊ “stuff”၊ “asdf” တို့ကတော့ မဝင်ပါဘူး။ ဒါတွေကို နောက်မှ ကိုယ်တိုင် ပြန်ဖတ်ရမှာပါ။", "k106": "အဆင့် ၉ · ပြန်လှည့်ကြည့်ခြင်း", "k107": "ကိုယ့် project ရဲ့ ဇာတ်လမ်းကို ဖတ်ကြည့်ပါ။", "k108": "save point တွေ ထပ်လုပ်ကြည့်ပါ — ဖိုင်ပြင်၊ <code class=\"i\">git add</code>၊ <code class=\"i\">git commit</code>၊ ထပ်ခါထပ်ခါ — ပြီးရင် ဘာတွေ တည်ဆောက်ထားပြီးလဲ ကြည့်လိုက်ပါ —", "k109": "terminal", "k110": "အောက်ကနေ အပေါ်ကို ဖတ်လိုက်ရင် ကိုယ့် project ရဲ့ ဇာတ်လမ်းပါပဲ။ သိချင်တာ အားလုံးနီးပါးကို command သုံးခုနဲ့ ရပါတယ် —", "k111": "git status", "k112": "“အခုချိန်မှာ ဘာတွေ ပြောင်းနေလဲ။” မကြာခဏ run ပါ — ကိုယ့်ရဲ့ သံလိုက်အိမ်မြှောင်ပါပဲ။", "k113": "git log", "k114": "“အခုအထိ ဘာတွေ save လုပ်ခဲ့ပြီးလဲ။” ကိုယ့် save point စာရင်းပါ။", "k115": "git diff", "k116": "“နောက်ဆုံး save ကတည်းက ဘာတွေ အတိအကျ ပြောင်းလဲ။” လိုင်းလိုက် ပြပါတယ်။", "k117": "အမြဲ ထပ်ခါထပ်ခါ လုပ်ရမယ့် စည်းချက်", "k118": "ပြင် → <code class=\"i\">git status</code> → <code class=\"i\">git add</code> → <code class=\"i\">git commit</code>။ <i>အလုပ်လုပ်တဲ့</i> အပိုင်းလေးတစ်ခု ပြီးတိုင်း လုပ်ပါ — တစ်နေ့စာ အကုန်လုံးကို ညနေမှ တစ်ခါတည်း မလုပ်ပါနဲ့။", "k119": "အဆင့် ၁၀ · အစွမ်းထက်ဆုံး လက်နက်", "k120": "အန္တရာယ် မရှိဘဲ စွန့်စားကြည့်ပါ။", "k121": "စာမျက်နှာတစ်ခုလုံးကို ဒီဇိုင်းအသစ် ပြောင်းချင်တယ်၊ ဒါပေမဲ့ အဆင်ပြေမလား မသေချာဘူး။ အခု အလုပ်လုပ်နေတဲ့ version ကိုလည်း မဖျက်ချင်ဘူး။ ဒါဆိုရင် <b>branch</b> တစ်ခု လုပ်လိုက်ပါ။", "k122": "ဂိမ်းနဲ့ နှိုင်းယှဉ်ကြည့်ရင်", "k123": "Branch ဆိုတာ <b>ဒုတိယ save slot</b> တစ်ခုပါ။ ကိုယ့် progress ကို အဲဒီထဲ ကူးထည့်ပြီး ခက်ခဲတဲ့ boss fight ကို အဲဒီမှာ စမ်းတိုက်ကြည့်တာ။ မကောင်းဘူးဆိုရင် slot ကို ဖျက်လိုက်ရုံပါပဲ — ကိုယ့်ရဲ့ ပင်မ playthrough က ဘာမှ မသိလိုက်ဘူး။ ကောင်းရင်တော့ ပင်မဂိမ်းထဲ ထည့်လိုက်တာပါပဲ။", "k124": "project ရဲ့ version နှစ်ခု တစ်ပြိုင်နက် ရှိနေတယ်။ တစ်ခုကနေ တစ်ခုကို ပြောင်းဖို့ စက္ကန့်ပိုင်းလေးပဲ ကြာတယ်။", "k125": "terminal", "k126": "လူနှစ်ယောက်က စာကြောင်းတစ်ကြောင်းတည်းကို ပြင်ရင်ရော", "k127": "Git က ရပ်ပြီး ကိုယ့်ကို ရွေးခိုင်းပါတယ် — အဲဒါကို <b>merge conflict</b> လို့ ခေါ်ပါတယ်။ ကြောက်စရာလို ထင်ရပေမယ့် မဟုတ်ပါဘူး — ဖိုင်ကို ဖွင့်၊ စာကြောင်းက ဘာဖြစ်သင့်လဲ ရွေး၊ ပြီးရင် <code class=\"i\">git add</code> နဲ့ <code class=\"i\">git commit</code> လုပ်ရုံပါပဲ။ ဒါက ဖြေရှင်းနည်း အားလုံးပါပဲ၊ ပရော်ဖက်ရှင်နယ်တိုင်း အပတ်တိုင်း ကြုံနေကျပါ။", "k128": "ကိုယ်တိုင် စစ်ကြည့်ပါ", "k129": "<b>ကိုယ့် စမ်းသပ်မှုက မအောင်မြင်ဘူး။ <code class=\"i\">main</code> ကိုရော ဘာဖြစ်သွားမလဲ။</b>", "k130": "ပျက်နေတဲ့ အပြောင်းအလဲတွေ main ဆီ ရောက်သွားမယ်", "k131": "အပြောင်းအလဲတိုင်းကို လက်နဲ့ ပြန်ဖျက်ရမယ်", "k132": "ဘာမှ မဖြစ်ဘူး — main က မထိခိုက်ဘူး။ branch ကို ဖျက်လိုက်ရုံပါပဲ။", "k133": "အဆင့် ၁၁ · Cloud ပေါ် တက်ခြင်း", "k134": "ကိုယ့် project ကို GitHub ပေါ် တင်လိုက်ပါ။", "k135": "အခုအချိန်အထိ အားလုံးက ကိုယ့်ကွန်ပျူတာထဲမှာပဲ ရှိနေတယ်။ GitHub ပေါ် တင်လိုက်ရင် backup ရမယ်၊ မျှဝေလို့ရတဲ့ link ရမယ်၊ ပြီးတော့ သူများတွေနဲ့ အတူတူ လုပ်လို့ ရလာမယ်။", "k136": "<b>github.com</b> မှာ အခမဲ့ account တစ်ခု ဖွင့်ပါ။", "k137": "<b>+</b> → <b>New repository</b> ကို နှိပ်ပါ။ နာမည်ပေးပါ။ ကျန်တဲ့ option တွေ ဘာမှ မရွေးပါနဲ့။ <b>Create</b> နှိပ်ပါ။", "k138": "GitHub က command စာမျက်နှာတစ်ခု ပြပါလိမ့်မယ် — ဒီနှစ်ကြောင်းပဲ လိုပါတယ် —", "k139": "terminal", "k140": "GitHub စာမျက်နှာကို refresh လုပ်ကြည့်ပါ — ကိုယ့်ဖိုင်တွေ ရောက်နေပြီး commit မှတ်ချက်တွေပါ ဘေးမှာ ပေါ်နေပါလိမ့်မယ်။ ဒီကနေစပြီး တင်ဖို့ဆိုရင် စကားလုံးတစ်လုံးပဲ လိုပါတယ် —", "k141": "နေ့စဉ် သုံးရမယ့် စကားလုံး နှစ်လုံး", "k142": "ဂိမ်းနဲ့ နှိုင်းယှဉ်ကြည့်ရင်", "k143": "<b>push</b> = ကိုယ့် save ကို cloud ပေါ် တင်တာ။ <b>pull</b> = သူငယ်ချင်းတွေရဲ့ progress ကို ဒေါင်းလုဒ်ဆွဲတာ။ အလုပ်စတိုင်း pull နဲ့ စပါ — ဒါမှ အဟောင်းပေါ်မှာ မဟုတ်ဘဲ နောက်ဆုံးကမ္ဘာပေါ်မှာ ဆက်တည်ဆောက်တာ ဖြစ်မှာပါ။", "k144": "password တောင်းပြီး လက်မခံဘူးလား", "k145": "GitHub က upload အတွက် account password ကို လက်မခံတော့ပါဘူး။ <b>Settings → Developer settings → Personal access tokens</b> ကို သွား၊ token တစ်ခု ဖန်တီးပြီး အဲဒါကို ထည့်ပါ။ ပြီးရင် ကွန်ပျူတာက မှတ်ထားပေးပါလိမ့်မယ်။", "k146": "အဆင့် ၁၂ · အဖွဲ့လိုက် လုပ်ကိုင်ခြင်း", "k147": "တကယ့် အဖွဲ့တွေ ဘယ်လို အလုပ်လုပ်ကြလဲ။", "k148": "အံ့သြစရာက ဒါပါ — ပရော်ဖက်ရှင်နယ် အဖွဲ့တွေမှာ <b>ဘယ်သူမှ ပင်မ version ကို တိုက်ရိုက် မပြင်ကြပါဘူး</b>။ လူတိုင်းက အပြောင်းအလဲကို အဆိုပြုပြီး၊ မထည့်ခင် နောက်တစ်ယောက်က စစ်ပေးပါတယ်။ အဲဒီ အလေ့အထ တစ်ခုတည်းက project ကြီးတွေ မပြိုကွဲအောင် ထိန်းထားပေးတာပါ။", "k149": "ဒီ loop ဟာ ကမ္ဘာပေါ်က software ကုမ္ပဏီတိုင်းမှာ တစ်နေ့ ထောင်နဲ့ချီ လည်ပတ်နေပါတယ်။", "k150": "တတိယအဆင့် — “စစ်ဆေးပေးဖို့ တောင်းဆိုတာ” — ကို <b>pull request</b> လို့ ခေါ်ပါတယ်။ နာမည်က ရှုပ်ပေမယ့် အဓိပ္ပာယ်ကတော့ ရိုးရှင်းပါတယ် — <i>“ကျွန်တော် ပြောင်းထားတာ ဒါပါ။ မထည့်ခင် ကြည့်ပေးပါဦး”</i> ဆိုတာပါပဲ။ အဖွဲ့သားတွေက ဖတ်၊ မှတ်ချက်ပေး၊ အလိုအလျောက် test တွေ run ပြီးမှ တစ်ယောက်ယောက်က Merge ကို နှိပ်ပါတယ်။", "k151": "ဂိမ်းနဲ့ နှိုင်းယှဉ်ကြည့်ရင်", "k152": "Pull request ဆိုတာ ကိုယ့် quest ကို မျှဝေထားတဲ့ ကမ္ဘာထဲ မထည့်ခင် guild leader ကို ပြတာပါ။ မှတ်ချက်တွေက သူတို့ရဲ့ အကြံပြုချက်၊ merge လုပ်တာက သူတို့ရဲ့ ခွင့်ပြုချက်ပါ။", "k153": "သူများရဲ့ project မှာ ပါဝင် ကူညီခြင်း", "k154": "project တစ်ခုကို ပြင်ခွင့် မရှိရင် <b>fork</b> လုပ်လိုက်ပါ — GitHub က ကိုယ်ပိုင် မိတ္တူတစ်ခု ပေးပါတယ် — ပြီးရင် ကိုယ့်မိတ္တူကနေ pull request ပို့လိုက်တာပါပဲ။ ဒါဟာ မသိကျွမ်းသူ သန်းနဲ့ချီပြီး open-source software တွေကို လုံခြုံစွာ အတူတည်ဆောက်နိုင်တဲ့ နည်းလမ်းပါ။", "k155": "အဆင့် ၁၃ · စိတ်မပူပါနဲ့", "k156": "အမှားအားလုံးနီးပါးကို ဖြေရှင်းနည်း သုံးခုနဲ့ ကုသလို့ ရပါတယ်။", "k157": "စတင်လေ့လာသူတွေက တစ်ခုခု ပျက်ရင် ရုတ်တရက် ရပ်သွားတတ်တယ်။ အဲဒီအဆင့်ကို ကျော်လိုက်ပါ — မေးရမယ့် မေးခွန်းက တစ်ခုတည်းပါ — <b>တခြားသူတွေ မြင်ပြီးပြီလား။</b>", "k158": "ဘာမှားသွားလဲ။ တစ်ခုကို နှိပ်ပါ", "k159": "😖 ဖိုင်ထဲမှာ ရှုပ်ထွေးအောင် လုပ်မိပြီး commit မလုပ်ရသေးဘူး", "k160": "🙃 commit လုပ်ပြီးပြီ၊ ဒါပေမဲ့ မှတ်ချက် မှားနေတယ် — push မလုပ်ရသေးဘူး", "k161": "😱 push လုပ်ပြီးသွားပြီ၊ ပြီးတော့ တစ်ခုခု ပျက်သွားတယ်", "k162": "💀 အကြီးအကျယ် လုပ်မိပြီး အလုပ်တွေ ပျောက်သွားပြီလို့ ထင်တယ်", "k163": "မှတ်ထားရမယ့် စည်းမျဉ်း တစ်ခု", "k164": "<b>ကိုယ့်</b> ကွန်ပျူတာပေါ်မှာပဲ ရှိသေးရင် လွတ်လွတ်လပ်လပ် ပြန်ရေးလို့ရတယ်။ <b>push</b> လုပ်ပြီးသွားပြီဆိုရင်တော့ <code class=\"i\">git revert</code> ကို သုံးပါ — မှတ်တမ်းကို ဖျက်မယ့်အစား save point အသစ်တစ်ခု ထပ်ထည့်ပြီး ပြန်ဖျက်ပေးတာမို့ တခြားသူတွေရဲ့ မိတ္တူတွေ မပျက်ပါဘူး။", "k165": "commit လုပ်ပြီးသား အလုပ်တွေ Git မှာ ပျောက်ခဲပါတယ်", "k166": "တစ်ခုခုကို commit လုပ်ပြီးပြီဆိုရင် အမှန်တကယ် ဖျက်ဆီးဖို့ အလွန် ခက်ပါတယ် — <code class=\"i\">git reflog</code> နဲ့ ပြန်ရှာလို့ ရလေ့ရှိပါတယ်။ ဒါက မကြာခဏ commit လုပ်သင့်တဲ့ နက်နဲတဲ့ အကြောင်းရင်းပါ — commit လုပ်ထားတဲ့ အလုပ်ဟာ ကာကွယ်ထားပြီးသား အလုပ်ပါ။", "k167": "အဆင့် ၁၄ · ပန်းဝင်ပြီ", "k168": "အခု သင် Git တတ်သွားပါပြီ။ 🎉", "k169": "“Git အခြေခံ” လောက်တင် မဟုတ်ပါဘူး — ပရော်ဖက်ရှင်နယ်တွေ တစ်နေ့လုံး သုံးနေတဲ့ အရာအစစ်ပါ။ ကျန်တာအားလုံးက ဒါကို ပိုသေချာအောင် လုပ်တာတွေပါ။", "k170": "အခု ဘာတွေ လုပ်နိုင်ပြီလဲ", "k171": "အလုပ်ကို စနစ်တကျ သိမ်းနိုင်", "k172": "<code class=\"i\">add</code> → <code class=\"i\">commit</code>၊ ဖတ်လို့ရပြီး ပြန်သွားလို့ရတဲ့ မှတ်တမ်းနဲ့အတူ။", "k173": "မကြောက်ဘဲ စမ်းသပ်နိုင်", "k174": "Branch ခွဲ၊ ဖျက်စီးကြည့်၊ merge ဒါမှမဟုတ် ဖျက်ပစ်။", "k175": "အများနဲ့ ပွင့်လင်းစွာ လုပ်ကိုင်နိုင်", "k176": "GitHub ကို push လုပ်၊ အဖွဲ့သားတွေဆီက pull လုပ်၊ pull request နဲ့ အပြောင်းအလဲ အဆိုပြုနိုင်။", "k177": "အမှားတွေကနေ ပြန်ထူနိုင်", "k178": "ဘယ်ဖြေရှင်းနည်းကို ဘာကြောင့် သုံးရမလဲ သိပြီ။", "k179": "အမြန်စစ်ဆေးမှု — မေးခွန်း ၅ ခု", "k180": "နောက်ထပ် ဘယ်ကို ဆက်သွားမလဲ", "k181": "<b>ဒီနေ့ပဲ စသုံးပါ။</b> ကိုယ့်ရဲ့ အလုပ် folder တစ်ခုခုကို ယူပြီး <code class=\"i\">git init</code> လုပ်လိုက်ပါ။ ဒီတစ်ပတ် commit ဆယ်ခါ လုပ်ကြည့်ပါ — အဲဒါက တကယ့် သင်ယူမှုပါ။", "k182": "<b>တစ်ခုခု ထုတ်ဝေပါ။</b> project သေးသေးလေးတစ်ခုကို GitHub ပေါ် တင်လိုက်ပါ။ ကိုယ့် profile က portfolio ဖြစ်လာပါလိမ့်မယ်။", "k183": "<b>လိုအပ်တဲ့အခါ ပိုနက်နက်ရှိုင်းရှိုင်း လေ့လာပါ။</b> Full reference မှာ command cheat sheet၊ terminal playground၊ merge conflict အသေးစိတ်၊ rebase နဲ့ project တစ်ခုလုံး လမ်းညွှန် ပါဝင်ပါတယ်။", "k184": "Full reference ကို ဖွင့်မယ် →", "k185": "အကြောင်းအရာ အတူတူ၊ ပရော်ဖက်ရှင်နယ် အနက်နဲ့။ ဘယ်အချိန်မဆို ဒီကို ပြန်လာနိုင်ပါတယ်။", "c_brand": "Git စတင်လေ့လာသူများအတွက်", "c_ref": "အပြည့်အစုံ ကြည့်ရန် →", "c_back": "← နောက်သို့", "c_next": "ရှေ့သို့ →", "c_restart": "အစကနေ ပြန်စ ↺", "c_stepfmt": "အဆင့် {n} / {N}", "c_title": "Git စတင်လေ့လာသူများအတွက် — ဒီကနေ စပါ", "c_copy": "ကူးယူ", "c_copied": "ကူးပြီးပြီ ✓", "c_usethis": "ဒါကို သုံးပါ"}, "DYN": {"sim_reset": "စတင်ဖို့ “ဖိုင်ကို ပြင်မယ်” ကို နှိပ်ပါ။", "sim_edit": "ဖိုင်တစ်ခုကို ပြောင်းလိုက်ပြီ။ Git က မြင်နေပေမယ့် ဘာမှ မ save ရသေးပါဘူး။", "sim_add": "git add — ဖိုင်က စောင့်ဆိုင်းခန်းထဲ ရောက်သွားပြီ၊ နောက် save point အတွက် ရွေးထားပြီးပါပြီ။", "sim_commit": "git commit — မှတ်ချက်နဲ့အတူ အမြဲတမ်း သိမ်းလိုက်ပါပြီ။ ထပ်ပြင်ပြီး သံသရာကို ပြန်လည်ကြည့်ပါ။", "fix1": "မ save ရသေးတဲ့ အပြောင်းအလဲတွေကို ဖျက်ပြီး ဖိုင်ကို နောက်ဆုံး save point အတိုင်း ပြန်ထားပေးပါတယ်။ commit လုပ်ပြီးသားတွေကို မထိခိုက်လို့ လုံခြုံပါတယ်။", "fix2": "နောက်ဆုံး save point ကို ပြန်ရေးပေးပါတယ် — မှတ်ချက် ပြင်ချင်ရင်ဖြစ်စေ၊ မေ့ကျန်ခဲ့တဲ့ ဖိုင် ထည့်ချင်ရင်ဖြစ်စေ။ push မလုပ်ရသေးမှသာ လုပ်ပါ။", "fix3": "မကောင်းတဲ့ commit ကို ပြန်ဖျက်ပေးမယ့် save point အသစ်တစ်ခု ဖန်တီးပေးပါတယ်။ မှတ်တမ်း မပျက်လို့ တခြားသူတွေရဲ့ မိတ္တူတွေလည်း မပျက်ပါဘူး။ ဒါက လုံခြုံပြီး ပရော်ဖက်ရှင်နယ်ဆန်ဆုံး ရွေးချယ်မှုပါ။", "fix4": "ကိုယ်ရောက်ဖူးတဲ့ နေရာအားလုံးကို ပြပါတယ် — “ပျောက်သွားပြီ” ထင်ရတဲ့ commit တွေအပါအဝင်။ လိုချင်တဲ့ကုဒ်ကို ရှာပြီး ပြန်သွားလိုက်ပါ။ commit လုပ်ထားတဲ့ အလုပ်ဟာ တကယ်ပျောက်တာ ရှားပါတယ်။", "why_copy": "မိတ္တူတွေက ဖိုင်တွေကိုတော့ ထိန်းထားပေမယ့် ဇာတ်လမ်းကို ဆုံးရှုံးစေတယ် — ဘာပြောင်းလဲ၊ ဘာကြောင့်လဲ၊ ဘယ်သူလဲ။ ပြီးတော့ နှစ်ယောက် တစ်ပြိုင်နက် မိတ္တူကူးရင် တစ်ယောက်ရဲ့ အလုပ် ပျောက်သွားပါတယ်။", "why_offline": "ရပါတယ်! Git က ကိုယ့်စက်ပေါ်မှာ ရှိပါတယ်။ Save (commit) လုပ်ဖို့ အင်တာနက် လုံးဝ မလိုပါဘူး — နောက်မှ GitHub ပေါ် တင်ဖို့သာ လိုတာပါ။", "why_branch": "ဘာမှ မဖြစ်ပါဘူး။ main က ကိုယ့်စမ်းသပ်မှုကို လုံးဝ မမြင်ခဲ့ရပါဘူး။ branch ကို ဖျက်လိုက်ရင် အဲဒီစမ်းသပ်မှု မဖြစ်ခဲ့သလိုပါပဲ — ဒါက branch တွေ ရှိရတဲ့ အကြောင်းရင်း အတိအကျပါ။", "fb_right": "✅ မှန်ပါတယ်။ ", "fb_wrong": "💡 ", "q1": "Commit ဆိုတာ ဘာလဲ။", "q1o1": "project ရဲ့ အခြေအနေကို မှတ်ချက်နဲ့အတူ သိမ်းထားတဲ့ snapshot တစ်ခု", "q1o2": "အဖွဲ့ကို ပို့လိုက်တဲ့ message တစ်ခု", "q1o3": "hard drive ရဲ့ backup တစ်ခု", "q1w": "save point တစ်ခုပါ — အချိန်တစ်ခုမှာ project တစ်ခုလုံးကို “ဘာကြောင့်” ဆိုတဲ့ မှတ်ချက်နဲ့အတူ သိမ်းထားလိုက်တာပါ။", "q2": "Git က ကိုယ့်ကွန်ပျူတာမှာ ရှိတယ်။ GitHub ကရော ဘာလဲ။", "q2o1": "Git ရဲ့ version အသစ်", "q2o2": "project တွေကို သိမ်းပေးပြီး သူများတွေ ကြည့်နိုင်၊ ပါဝင်နိုင်တဲ့ website", "q2o3": "code editor တစ်ခု", "q2w": "Git = ကိုယ့်စက်ပေါ်က ကင်မရာ။ GitHub = ဓာတ်ပုံတွေ တင်ပြီး သူများတွေ ပါဝင်နိုင်တဲ့ နေရာ။", "q3": "Branch တစ်ခုကို ဘာကြောင့် ဖန်တီးရတာလဲ။", "q3o1": "project ပိုမြန်အောင်", "q3o2": "ဖိုင်အဟောင်းတွေ ဖျက်ဖို့", "q3o3": "အလုပ်လုပ်နေတဲ့ version ကို မထိဘဲ စွန့်စား စမ်းသပ်ဖို့", "q3w": "ဒုတိယ save slot ပါ။ လွတ်လွတ်လပ်လပ် စမ်းပါ — merge လုပ်ဖို့ ကိုယ်တိုင် မဆုံးဖြတ်မချင်း main က လုံခြုံနေပါတယ်။", "q4": "commit တစ်ခု push လုပ်လိုက်လို့ site ပျက်သွားတယ်။ ဘာသုံးမလဲ။", "q4o1": "git revert", "q4o2": "git reset --hard", "q4o3": "repository ကို ဖျက်ပစ်မယ်", "q4w": "revert က commit အသစ်တစ်ခု ထပ်ထည့်ပြီး ပြန်ဖျက်ပေးလို့ တခြားသူတွေရဲ့ မိတ္တူ မပျက်ပါဘူး။ သူများ ရထားပြီးသား မှတ်တမ်းကို ဘယ်တော့မှ ပြန်မရေးပါနဲ့။", "q5": "“git pull” က ဘာလုပ်ပေးလဲ။", "q5o1": "ကျွန်တော့် အလုပ်ကို တင်ပေးတယ်", "q5o2": "တခြားသူတွေရဲ့ နောက်ဆုံး အလုပ်ကို ဒေါင်းလုဒ်ဆွဲပေးတယ်", "q5o3": "ကျွန်တော့် branch ကို ဖျက်ပေးတယ်", "q5w": "pull က အဖွဲ့ရဲ့ အပြောင်းအလဲတွေကို ဆွဲယူပေးတယ်။ push က ကိုယ့်ဟာကို တင်ပေးတယ်။ အလုပ် မစခင် pull လုပ်ပါ။"}};
+const MY = I18N.MY, DYN = I18N.DYN;
+let LANG = 'en';
+const BI = [];                       /* dynamically created bilingual nodes */
+function bi(el, en, my, html){        /* register a dynamic node */
+  el.dataset.en = en; el.dataset.my = my; el.dataset.html = html ? '1' : '';
+  BI.push(el); paintOne(el); return el;
+}
+function paintOne(el){
+  const v = LANG === 'my' ? el.dataset.my : el.dataset.en;
+  if (el.dataset.html) el.innerHTML = v; else el.textContent = v;
+}
+function t(key, en){ return LANG === 'my' && DYN[key] ? DYN[key] : en; }
+function applyLang(){
+  document.documentElement.lang = LANG === 'my' ? 'my' : 'en';
+  document.body.classList.toggle('my', LANG === 'my');
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.dataset.i18n;
+    if (!el.dataset.origHtml) el.dataset.origHtml = el.innerHTML;
+    el.innerHTML = (LANG === 'my' && MY[k]) ? MY[k] : el.dataset.origHtml;
+  });
+  BI.forEach(paintOne);
+  document.title = LANG === 'my' ? MY.c_title : 'Git for Beginners — Start Here';
+  document.querySelectorAll('.cmd .copy').forEach(b => {
+    if (!b.dataset.busy) b.textContent = LANG === 'my' ? MY.c_copy : 'Copy';
+  });
+  const lb = document.getElementById('lang');
+  if (lb) lb.textContent = LANG === 'my' ? '🇬🇧 English' : '🇲🇲 မြန်မာ';
+  if (typeof refreshChrome === 'function') refreshChrome();
+}
+document.getElementById('lang').addEventListener('click', () => {
+  LANG = LANG === 'my' ? 'en' : 'my';
+  try { localStorage.setItem('beg-lang', LANG); } catch(e){}
+  applyLang();
+});
+try { LANG = localStorage.getItem('beg-lang') || 'en'; } catch(e){}
+</script>
+<script>
 /* ---------- Steps ---------- */
 const steps = [...document.querySelectorAll('.step')];
 const N = steps.length;
@@ -520,17 +571,26 @@ const where = document.getElementById('where');
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 
+function updateChrome(i){
+  const stepTxt = LANG === 'my'
+    ? MY.c_stepfmt.replace('{n}', i + 1).replace('{N}', N)
+    : 'Step ' + (i + 1) + ' of ' + N;
+  pstep.textContent = stepTxt;
+  where.textContent = stepTxt;
+  ptitle.textContent = (LANG === 'my' && steps[i].dataset.titleMy)
+    ? steps[i].dataset.titleMy : steps[i].dataset.title;
+  prev.disabled = i === 0;
+  prev.textContent = LANG === 'my' ? MY.c_back : '← Back';
+  next.textContent = i === N - 1
+    ? (LANG === 'my' ? MY.c_restart : 'Start over ↺')
+    : (LANG === 'my' ? MY.c_next : 'Next →');
+}
 function show(i){
   if (i < 0 || i >= N) return;
   cur = i;
   steps.forEach((s, j) => s.classList.toggle('on', j === i));
-  const pct = ((i + 1) / N) * 100;
-  pfill.style.width = pct + '%';
-  pstep.textContent = 'Step ' + (i + 1) + ' of ' + N;
-  ptitle.textContent = steps[i].dataset.title;
-  where.textContent = 'Step ' + (i + 1) + ' of ' + N;
-  prev.disabled = i === 0;
-  next.textContent = i === N - 1 ? 'Start over ↺' : 'Next →';
+  pfill.style.width = (((i + 1) / N) * 100) + '%';
+  updateChrome(i);
   try { localStorage.setItem('beg-step', String(i)); } catch(e){}
   window.scrollTo({ top: 0 });
 }
@@ -541,9 +601,11 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') show(cur + 1);
   if (e.key === 'ArrowLeft') show(cur - 1);
 });
+function refreshChrome(){ updateChrome(cur); }
 let start = 0;
 try { start = parseInt(localStorage.getItem('beg-step')) || 0; } catch(e){}
 show(start >= 0 && start < N ? start : 0);
+applyLang();
 
 /* ---------- Theme ---------- */
 const themeBtn = document.getElementById('theme');
@@ -561,7 +623,11 @@ themeBtn.addEventListener('click', () => setTheme(document.documentElement.getAt
 document.querySelectorAll('.copy').forEach(btn => {
   btn.addEventListener('click', () => {
     const text = btn.closest('.cmd').querySelector('pre').innerText;
-    const ok = () => { btn.textContent = 'Copied ✓'; setTimeout(() => btn.textContent = 'Copy', 1400); };
+    const ok = () => {
+      btn.dataset.busy = '1';
+      btn.textContent = LANG === 'my' ? MY.c_copied : 'Copied ✓';
+      setTimeout(() => { btn.textContent = LANG === 'my' ? MY.c_copy : 'Copy'; btn.dataset.busy = ''; }, 1400);
+    };
     const fb = () => {
       const ta = document.createElement('textarea');
       ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
@@ -585,7 +651,9 @@ document.querySelectorAll('[data-quiz]').forEach(box => {
     if (i !== cfg.a) b.classList.add('wrong');
     const p = document.createElement('p');
     p.className = 'feedback';
-    p.textContent = (i === cfg.a ? '✅ Exactly. ' : '💡 ') + cfg.why;
+    const pre = i === cfg.a ? '✅ Exactly. ' : '💡 ';
+    const preMy = i === cfg.a ? DYN.fb_right : DYN.fb_wrong;
+    bi(p, pre + cfg.why, preMy + (DYN[cfg.myKey] || cfg.why));
     box.appendChild(p);
   }));
 });
@@ -606,23 +674,23 @@ document.querySelectorAll('[data-quiz]').forEach(box => {
   function reset(){
     doc.setAttribute('opacity', '0'); highlight(-1);
     b[1].disabled = false; b[2].disabled = true; b[3].disabled = true;
-    msg.textContent = 'Click “Edit a file” to begin.';
+    bi(msg, 'Click “Edit a file” to begin.', DYN.sim_reset);
   }
   b[0].addEventListener('click', reset);
   b[1].addEventListener('click', () => {
     doc.setAttribute('opacity', '1'); place(60, '#e07a5f', 'notes.txt'); highlight(0);
     b[1].disabled = true; b[2].disabled = false;
-    msg.textContent = 'You changed a file. Git can see it, but nothing is saved yet.';
+    bi(msg, 'You changed a file. Git can see it, but nothing is saved yet.', DYN.sim_edit);
   });
   b[2].addEventListener('click', () => {
     place(265, '#3d8b7d', 'notes.txt'); highlight(1);
     b[2].disabled = true; b[3].disabled = false;
-    msg.textContent = 'git add — the file is in the waiting tray, chosen for the next save point.';
+    bi(msg, 'git add — the file is in the waiting tray, chosen for the next save point.', DYN.sim_add);
   });
   b[3].addEventListener('click', () => {
     place(470, '#b98d15', '✓ saved'); highlight(2);
     b[3].disabled = true; b[1].disabled = false;
-    msg.textContent = 'git commit — saved forever, with your note. Edit again to repeat the cycle.';
+    bi(msg, 'git commit — saved forever, with your note. Edit again to repeat the cycle.', DYN.sim_commit);
   });
   reset();
 })();
@@ -632,20 +700,28 @@ document.querySelectorAll('[data-quiz]').forEach(box => {
   const box = document.getElementById('fix');
   if (!box) return;
   const out = document.getElementById('fixout');
+  const myWhy = { 0: DYN.fix1, 1: DYN.fix2, 2: DYN.fix3, 3: DYN.fix4 };
   const answers = {
     "I made a mess in a file and haven't saved it yet": ['git restore thatfile.txt', 'Throws away your unsaved edits and puts the file back the way it was at your last save point. Safe, because nothing committed is affected.'],
     "I committed, but the message is wrong or I forgot a file": ['git commit --amend', 'Rewrites your most recent save point — fix the message, or add the file you forgot. Only do this if you have NOT pushed yet.'],
     "I already pushed a commit and it broke something": ['git revert abc1234', 'Creates a NEW save point that undoes the bad one. History stays intact, so nobody else’s copy breaks. This is the safe, professional choice.'],
     "I did something drastic and think work is lost": ['git reflog', 'Shows everywhere you have been, including “lost” commits. Find the code you want and go back to it. Committed work is almost never truly gone.']
   };
-  box.querySelectorAll('.choice').forEach(btn => btn.addEventListener('click', () => {
-    box.querySelectorAll('.choice').forEach(b => b.classList.remove('right'));
+  const allFix = [...box.querySelectorAll('.choice')];
+  allFix.forEach((btn, fi) => btn.addEventListener('click', () => {
+    allFix.forEach(b => b.classList.remove('right'));
     btn.classList.add('right');
     const [cmd, why] = answers[btn.dataset.fix];
-    out.innerHTML = '<div class="cmd"><div class="bar"><span>use this</span><button class="copy">Copy</button></div><pre>' + cmd + '</pre></div><p class="feedback">' + why + '</p>';
+    out.innerHTML = '<div class="cmd"><div class="bar"><span class="fix-bar"></span><button class="copy"></button></div><pre>' + cmd + '</pre></div><p class="feedback fix-why"></p>';
+    bi(out.querySelector('.fix-bar'), 'use this', MY.c_usethis);
+    bi(out.querySelector('.copy'), 'Copy', MY.c_copy);
+    bi(out.querySelector('.fix-why'), why, myWhy[fi]);
     out.querySelector('.copy').addEventListener('click', function(){
       const t = out.querySelector('pre').innerText;
-      const ok = () => { this.textContent = 'Copied ✓'; setTimeout(() => this.textContent = 'Copy', 1400); };
+      const ok = () => {
+        this.textContent = LANG === 'my' ? MY.c_copied : 'Copied ✓';
+        setTimeout(() => { this.textContent = LANG === 'my' ? MY.c_copy : 'Copy'; }, 1400);
+      };
       if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(t).then(ok).catch(()=>{});
     });
   }));
@@ -671,11 +747,11 @@ document.querySelectorAll('[data-quiz]').forEach(box => {
     const d = document.createElement('div');
     d.style.marginBottom = '20px';
     const p = document.createElement('p');
-    p.innerHTML = '<b>' + (qi + 1) + '. ' + item.q + '</b>';
+    bi(p, '<b>' + (qi + 1) + '. ' + item.q + '</b>', '<b>' + (qi + 1) + '. ' + (DYN['q' + (qi + 1)] || item.q) + '</b>', true);
     d.appendChild(p);
     item.o.forEach((opt, oi) => {
       const b = document.createElement('button');
-      b.className = 'choice'; b.textContent = opt;
+      b.className = 'choice'; bi(b, opt, DYN['q' + (qi + 1) + 'o' + (oi + 1)] || opt);
       b.addEventListener('click', () => {
         if (d.dataset.done) return;
         d.dataset.done = '1';
@@ -683,7 +759,9 @@ document.querySelectorAll('[data-quiz]').forEach(box => {
         if (oi !== item.a) b.classList.add('wrong');
         const f = document.createElement('p');
         f.className = 'feedback';
-        f.textContent = (oi === item.a ? '✅ Correct. ' : '💡 ') + item.w;
+        const pf = oi === item.a ? '✅ Correct. ' : '💡 ';
+        const pfMy = oi === item.a ? DYN.fb_right : DYN.fb_wrong;
+        bi(f, pf + item.w, pfMy + (DYN['q' + (qi + 1) + 'w'] || item.w));
         d.appendChild(f);
       });
       d.appendChild(b);

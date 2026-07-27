@@ -1,0 +1,831 @@
+{
+  "_meta": {
+    "page": "index.html (Git for Beginners)",
+    "encoding": "Myanmar Unicode (NOT Zawgyi)",
+    "usage": "Keys map to elements marked with data-i18n=\"key\" in the HTML. DYN keys are used by JavaScript-generated content.",
+    "static_keys": 195,
+    "dynamic_keys": 38
+  },
+  "static": {
+    "k1": {
+      "en": "Start here",
+      "my": "ဒီကနေ စလိုက်ပါ"
+    },
+    "k2": {
+      "en": "You're about to learn the most useful tool in software.",
+      "my": "ဆော့ဖ်ဝဲလောကမှာ အသုံးအဝင်ဆုံး tool ကို သင်ယူတော့မှာပါ။"
+    },
+    "k3": {
+      "en": "No experience needed. No jargon. One idea at a time — and you can stop and come back whenever you like.",
+      "my": "အတွေ့အကြုံ မလိုပါဘူး။ ခက်ခဲတဲ့ ဝေါဟာရတွေလည်း မသုံးပါဘူး။ အယူအဆတစ်ခုစီ တစ်ဆင့်ချင်း — ရပ်ချင်တဲ့အခါ ရပ်ပြီး ပြန်လာလို့ရပါတယ်။"
+    },
+    "k4": {
+      "en": "By the end of these 14 short steps you'll understand what Git and GitHub actually are, you'll have typed real commands, and you'll know how professional teams work together on code without destroying each other's work.",
+      "my": "ဒီအဆင့် ၁၄ ဆင့် ပြီးသွားတဲ့အခါ Git နဲ့ GitHub ဆိုတာ တကယ်ဘာလဲဆိုတာ နားလည်သွားပါလိမ့်မယ်။ command တွေကို ကိုယ်တိုင် ရိုက်ဖူးပြီး ဖြစ်နေမှာဖြစ်သလို၊ ပရော်ဖက်ရှင်နယ် အဖွဲ့တွေက တစ်ယောက်နဲ့တစ်ယောက် အလုပ်တွေ မပျက်စီးစေဘဲ ဘယ်လို ပူးပေါင်းလုပ်ကိုင်ကြလဲဆိုတာလည်း သိသွားပါလိမ့်မယ်။"
+    },
+    "k5": {
+      "en": "The idea we'll keep coming back to",
+      "my": "အမြဲ ပြန်သုံးသွားမယ့် သဘောတရား"
+    },
+    "k6": {
+      "en": "Learning Git is like learning to <b>save your progress in a video game</b>. You'll make save points, try risky things in a separate save slot, and share your saves with friends in the cloud. That's genuinely all it is.",
+      "my": "Git သင်ယူတာဟာ <b>ဂိမ်းထဲမှာ progress ကို save လုပ်တာ</b> နဲ့ တူပါတယ်။ save point တွေ ဆောက်မယ်၊ စွန့်စားစရာတွေကို သီးခြား save slot တစ်ခုမှာ စမ်းမယ်၊ ပြီးရင် အဲဒီ save တွေကို cloud ပေါ်တင်ပြီး သူငယ်ချင်းတွေနဲ့ မျှဝေမယ်။ တကယ်တော့ ဒီလောက်ပါပဲ။"
+    },
+    "k7": {
+      "en": "About 25 minutes",
+      "my": "မိနစ် ၂၅ ခန့်"
+    },
+    "k8": {
+      "en": "Fourteen small steps. Your place is saved automatically if you leave.",
+      "my": "အဆင့်သေးသေးလေး ၁၄ ဆင့်။ ထွက်သွားရင်တောင် ရောက်နေတဲ့နေရာကို အလိုအလျောက် မှတ်ထားပေးပါတယ်။"
+    },
+    "k9": {
+      "en": "Nothing to install yet",
+      "my": "အခုချိန်မှာ ဘာမှ install လုပ်စရာ မလိုသေးပါ"
+    },
+    "k10": {
+      "en": "Read first. We'll install Git together at step 6, when you actually need it.",
+      "my": "အရင် ဖတ်လိုက်ပါ။ တကယ်လိုအပ်တဲ့ အဆင့် ၆ ရောက်မှ Git ကို အတူတူ install လုပ်ကြပါမယ်။"
+    },
+    "k11": {
+      "en": "One promise",
+      "my": "ကတိတစ်ခု"
+    },
+    "k12": {
+      "en": "If anything here feels confusing, it's the explanation's fault, not yours. Every idea is introduced only after you've seen why you'd want it.",
+      "my": "ဒီမှာ ရှုပ်ထွေးတယ်လို့ ခံစားရရင် သင့်အပြစ် မဟုတ်ပါဘူး — ရှင်းပြပုံရဲ့ အပြစ်ပါ။ အယူအဆတိုင်းကို ဘာကြောင့် လိုအပ်လဲဆိုတာ မြင်ပြီးမှသာ မိတ်ဆက်ပေးထားပါတယ်။"
+    },
+    "k13": {
+      "en": "Step 2 · The problem",
+      "my": "အဆင့် ၂ · ပြဿနာ"
+    },
+    "k14": {
+      "en": "Everyone has lived this nightmare.",
+      "my": "ဒီအခက်အခဲကို လူတိုင်း ကြုံဖူးကြပါတယ်။"
+    },
+    "k15": {
+      "en": "You're working on something important. You save a copy before making big changes. Then another. A week later your folder looks like this:",
+      "my": "အရေးကြီးတဲ့ အလုပ်တစ်ခု လုပ်နေတယ်။ အပြောင်းအလဲကြီးကြီး မလုပ်ခင် မိတ္တူတစ်ခု သိမ်းထားလိုက်တယ်။ ပြီးတော့ နောက်တစ်ခု။ တစ်ပတ်ကြာတော့ ကိုယ့် folder က ဒီလို ဖြစ်နေတယ် —"
+    },
+    "k16": {
+      "en": "Same work. One is chaos; the other is a history you can walk through.",
+      "my": "အလုပ်ချင်း အတူတူပါပဲ။ တစ်ဖက်က ရှုပ်ထွေးမှု၊ တစ်ဖက်ကတော့ ပြန်လျှောက်ကြည့်လို့ရတဲ့ မှတ်တမ်း။"
+    },
+    "k17": {
+      "en": "The copying approach fails in three ways: you can't tell <b>what</b> changed between two files, you can't tell <b>why</b> anyone changed it, and if two people edit at once, somebody's work gets overwritten.",
+      "my": "မိတ္တူကူးတဲ့ နည်းလမ်းက အချက် ၃ ချက်နဲ့ ကျရှုံးပါတယ် — ဖိုင်နှစ်ခုကြားမှာ <b>ဘာ</b> ပြောင်းသွားလဲ မသိရဘူး၊ <b>ဘာကြောင့်</b> ပြောင်းလဲတာလဲ မသိရဘူး၊ ပြီးတော့ နှစ်ယောက် တစ်ပြိုင်နက် ပြင်လိုက်ရင် တစ်ယောက်ရဲ့ အလုပ် ပျောက်သွားတယ်။"
+    },
+    "k18": {
+      "en": "This is the entire reason Git exists.",
+      "my": "ဒါဟာ Git တည်ရှိရတဲ့ အကြောင်းရင်း အပြည့်အစုံပါ။"
+    },
+    "k19": {
+      "en": "Not to be complicated — to make that folder impossible.",
+      "my": "ရှုပ်ထွေးအောင် လုပ်ဖို့ မဟုတ်ပါဘူး — အဲဒီလို folder မျိုး မဖြစ်နိုင်တော့အောင် လုပ်ဖို့ပါ။"
+    },
+    "k20": {
+      "en": "Step 3 · The concept",
+      "my": "အဆင့် ၃ · အခြေခံ သဘောတရား"
+    },
+    "k21": {
+      "en": "Version control is an undo button for your whole project.",
+      "my": "Version control ဆိုတာ project တစ်ခုလုံးအတွက် undo ခလုတ်ပါပဲ။"
+    },
+    "k22": {
+      "en": "Your text editor lets you undo the last few things you typed. Version control does the same thing, but for <b>every file in your project</b>, going back <b>forever</b>, with a note attached to each point explaining what changed and who did it.",
+      "my": "စာရိုက် program တွေမှာ ခုနက ရိုက်လိုက်တာလေးတွေကို undo လုပ်လို့ရတယ်။ Version control ကလည်း အလုပ်တူတူပါပဲ — ဒါပေမဲ့ <b>project ထဲက ဖိုင်အားလုံး</b> အတွက်ဖြစ်ပြီး <b>အစအဆုံး</b> ပြန်သွားလို့ရပါတယ်။ အချက်တိုင်းမှာ ဘာပြောင်းလဲ၊ ဘယ်သူ ပြောင်းလဲဆိုတဲ့ မှတ်ချက်ပါ တွဲပါလာပါတယ်။"
+    },
+    "k23": {
+      "en": "Game metaphor",
+      "my": "ဂိမ်းနဲ့ နှိုင်းယှဉ်ကြည့်ရင်"
+    },
+    "k24": {
+      "en": "Think of save points. You play for a while, reach somewhere good, and hit <b>Save</b>. If the next section goes badly, you load your save and try again. Version control is that — for your work.",
+      "my": "Save point တွေကို စဉ်းစားကြည့်ပါ။ နည်းနည်း ကစားပြီး အဆင်ပြေတဲ့နေရာ ရောက်တော့ <b>Save</b> နှိပ်လိုက်တယ်။ နောက်အပိုင်းမှာ မကောင်းဘူးဆိုရင် save ကို ပြန် load ပြီး ထပ်စမ်းလိုက်တာပဲ။ Version control ဆိုတာ ကိုယ့်အလုပ်အတွက် အဲဒါပါပဲ။"
+    },
+    "k25": {
+      "en": "What it gives you",
+      "my": "ဘာတွေ ရလာမလဲ"
+    },
+    "k26": {
+      "en": "Go back safely",
+      "my": "လုံခြုံစွာ ပြန်သွားနိုင်"
+    },
+    "k27": {
+      "en": "Broke something? Return to any earlier point in seconds.",
+      "my": "တစ်ခုခု ပျက်သွားလား။ အရင်အချိန် တစ်ခုခုကို စက္ကန့်ပိုင်းအတွင်း ပြန်ရောက်နိုင်ပါတယ်။"
+    },
+    "k28": {
+      "en": "See what changed",
+      "my": "ဘာပြောင်းလဲ မြင်နိုင်"
+    },
+    "k29": {
+      "en": "Compare any two moments, line by line.",
+      "my": "အချိန်နှစ်ခုကို လိုင်းလိုက် နှိုင်းယှဉ်ကြည့်လို့ ရပါတယ်။"
+    },
+    "k30": {
+      "en": "Work together",
+      "my": "အတူတကွ လုပ်ကိုင်နိုင်"
+    },
+    "k31": {
+      "en": "Several people edit the same project without overwriting each other.",
+      "my": "လူအများကြီးက project တစ်ခုတည်းကို တစ်ယောက်နဲ့တစ်ယောက် မဖျက်မိဘဲ ပြင်နိုင်ပါတယ်။"
+    },
+    "k32": {
+      "en": "Try wild ideas",
+      "my": "စွန့်စားတဲ့ အကြံတွေ စမ်းနိုင်"
+    },
+    "k33": {
+      "en": "Experiment freely, knowing the working version is untouched.",
+      "my": "အလုပ်လုပ်နေတဲ့ version ကို မထိခိုက်ဘူးဆိုတာ သိထားလို့ လွတ်လွတ်လပ်လပ် စမ်းသပ်နိုင်ပါတယ်။"
+    },
+    "k34": {
+      "en": "Check yourself",
+      "my": "ကိုယ်တိုင် စစ်ကြည့်ပါ"
+    },
+    "k35": {
+      "en": "<b>Why isn't \"save a copy in a new folder\" good enough?</b>",
+      "my": "<b>“folder အသစ်တစ်ခုမှာ မိတ္တူ သိမ်းထားတာ” က ဘာကြောင့် မလုံလောက်တာလဲ။</b>"
+    },
+    "k36": {
+      "en": "Because copies take up too much disk space",
+      "my": "မိတ္တူတွေက disk နေရာ အများကြီး ယူလို့"
+    },
+    "k37": {
+      "en": "Because copies don't record what changed, why, or by whom — and two people can overwrite each other",
+      "my": "မိတ္တူတွေက ဘာပြောင်းလဲ၊ ဘာကြောင့်၊ ဘယ်သူ ပြောင်းလဲဆိုတာ မမှတ်တမ်းတင်လို့ — ပြီးတော့ နှစ်ယောက် တစ်ပြိုင်နက် လုပ်ရင် အပြန်အလှန် ဖျက်မိလို့"
+    },
+    "k38": {
+      "en": "Because folders can't be shared online",
+      "my": "folder တွေကို online မှာ မျှဝေလို့ မရလို့"
+    },
+    "k39": {
+      "en": "Step 4 · Two different things",
+      "my": "အဆင့် ၄ · မတူညီတဲ့ အရာနှစ်ခု"
+    },
+    "k40": {
+      "en": "Git and GitHub are not the same thing.",
+      "my": "Git နဲ့ GitHub က တစ်ခုတည်း မဟုတ်ပါဘူး။"
+    },
+    "k41": {
+      "en": "Almost every beginner mixes these up, so let's settle it now — it takes ten seconds.",
+      "my": "စတင်လေ့လာသူ အများစုက ဒါကို ရောထွေးတတ်ကြတယ် — ဒါကြောင့် အခုပဲ ရှင်းလိုက်ရအောင်၊ စက္ကန့် ၁၀ လောက်ပဲ ကြာပါတယ်။"
+    },
+    "k42": {
+      "en": "Git = the camera",
+      "my": "Git = ကင်မရာ"
+    },
+    "k43": {
+      "en": "A free program on <b>your computer</b>. It takes the snapshots and keeps your history. Works with no internet at all.",
+      "my": "<b>ကိုယ့်ကွန်ပျူတာ</b> ပေါ်မှာ ရှိတဲ့ အခမဲ့ program တစ်ခုပါ။ snapshot တွေ ရိုက်ပေးပြီး မှတ်တမ်းကို သိမ်းထားပေးတယ်။ အင်တာနက် လုံးဝ မလိုပါဘူး။"
+    },
+    "k44": {
+      "en": "GitHub = the photo app",
+      "my": "GitHub = ဓာတ်ပုံ app"
+    },
+    "k45": {
+      "en": "A <b>website</b> where you upload those snapshots so others can see them, comment, and contribute. Optional — but it's where teamwork happens.",
+      "my": "အဲဒီ snapshot တွေကို တင်ထားလို့ သူများတွေ ကြည့်နိုင်၊ မှတ်ချက်ပေးနိုင်၊ ပါဝင်ကူညီနိုင်တဲ့ <b>website</b> တစ်ခုပါ။ မသုံးလည်း ရပါတယ် — ဒါပေမဲ့ အဖွဲ့လိုက် လုပ်ကိုင်တာက ဒီမှာပါ။"
+    },
+    "k46": {
+      "en": "Game metaphor",
+      "my": "ဂိမ်းနဲ့ နှိုင်းယှဉ်ကြည့်ရင်"
+    },
+    "k47": {
+      "en": "Git is your console saving the game to its own memory. GitHub is the <b>cloud save</b> — your friends can load your world, play in it, and send their progress back to you.",
+      "my": "Git က ကိုယ့် console ကနေ ဂိမ်းကို သူ့ memory ထဲ save လုပ်တာ။ GitHub ကတော့ <b>cloud save</b> — သူငယ်ချင်းတွေက ကိုယ့်ကမ္ဘာကို load လုပ်၊ ကစား၊ ပြီးရင် သူတို့ progress ကို ပြန်ပို့လို့ ရတယ်။"
+    },
+    "k48": {
+      "en": "Two consequences worth knowing: you can use Git completely alone forever and never touch GitHub — and GitHub isn't the only option (GitLab and Bitbucket do the same job).",
+      "my": "မှတ်သားစရာ နှစ်ချက် — Git ကို တစ်သက်လုံး တစ်ယောက်တည်း သုံးပြီး GitHub ကို လုံးဝ မကိုင်လည်း ရပါတယ်။ ပြီးတော့ GitHub တစ်ခုတည်းလည်း မဟုတ်ပါဘူး (GitLab နဲ့ Bitbucket တို့ကလည်း အလုပ်တူတူပါပဲ)။"
+    },
+    "k49": {
+      "en": "Check yourself",
+      "my": "ကိုယ်တိုင် စစ်ကြည့်ပါ"
+    },
+    "k50": {
+      "en": "<b>Your internet goes down. Can you still save your work with Git?</b>",
+      "my": "<b>အင်တာနက် ပြတ်သွားပြီ။ Git နဲ့ အလုပ်ကို save လုပ်လို့ ရသေးလား။</b>"
+    },
+    "k51": {
+      "en": "Yes — Git runs on my computer, so saving still works",
+      "my": "ရပါတယ် — Git က ကိုယ့်ကွန်ပျူတာပေါ်မှာ run နေလို့ save လုပ်လို့ ရပါတယ်"
+    },
+    "k52": {
+      "en": "No — Git needs GitHub to save anything",
+      "my": "မရဘူး — Git က save လုပ်ဖို့ GitHub လိုတယ်"
+    },
+    "k53": {
+      "en": "Only if I saved a backup first",
+      "my": "အရင် backup သိမ်းထားမှ ရမယ်"
+    },
+    "k54": {
+      "en": "Step 5 · The black window",
+      "my": "အဆင့် ၅ · အနက်ရောင် ဝင်းဒိုး"
+    },
+    "k55": {
+      "en": "Meet the terminal. It's friendlier than it looks.",
+      "my": "Terminal နဲ့ မိတ်ဆက်ပါ။ မြင်ရသလောက် ကြောက်စရာ မကောင်းပါဘူး။"
+    },
+    "k56": {
+      "en": "Git is usually operated by typing, in a program called the <b>terminal</b>. If that sounds intimidating, here's the reframe: it's just a way of asking your computer to do things with words instead of clicks.",
+      "my": "Git ကို များသောအားဖြင့် <b>terminal</b> လို့ခေါ်တဲ့ program ထဲမှာ စာရိုက်ပြီး သုံးပါတယ်။ ကြောက်စရာလို့ ထင်ရင် ဒီလို ပြန်စဉ်းစားကြည့်ပါ — ကွန်ပျူတာကို click နှိပ်မယ့်အစား စကားလုံးနဲ့ ခိုင်းလိုက်တာပါပဲ။"
+    },
+    "k57": {
+      "en": "Think of it as",
+      "my": "ဒီလို မြင်ကြည့်ပါ"
+    },
+    "k58": {
+      "en": "Walking through your computer's folders <b>on foot</b>. Instead of double-clicking a folder to open it, you say \"go in there\". Instead of looking at icons, you ask \"what's in this room?\"",
+      "my": "ကွန်ပျူတာထဲက folder တွေကြားမှာ <b>ခြေလျင် လျှောက်</b> နေတာလို့ ထင်ပါ။ folder ကို double-click နှိပ်မယ့်အစား “အဲဒီထဲ ဝင်လိုက်” လို့ ပြောလိုက်တာ။ icon တွေကို ကြည့်မယ့်အစား “ဒီအခန်းထဲမှာ ဘာတွေ ရှိလဲ” လို့ မေးလိုက်တာပါ။"
+    },
+    "k59": {
+      "en": "Open it",
+      "my": "ဖွင့်ကြည့်ရအောင်"
+    },
+    "k60": {
+      "en": "On a Mac",
+      "my": "Mac မှာဆိုရင်"
+    },
+    "k61": {
+      "en": "Press <code class=\"i\">⌘ + Space</code>, type <b>Terminal</b>, press Enter.",
+      "my": "<code class=\"i\">⌘ + Space</code> ကို နှိပ်၊ <b>Terminal</b> လို့ ရိုက်၊ Enter နှိပ်ပါ။"
+    },
+    "k62": {
+      "en": "On Windows",
+      "my": "Windows မှာဆိုရင်"
+    },
+    "k63": {
+      "en": "You'll install <b>Git Bash</b> in the next step — it comes with Git and gives you the same commands as a Mac.",
+      "my": "နောက်အဆင့်မှာ <b>Git Bash</b> ကို install လုပ်ပါမယ် — Git နဲ့အတူ ပါလာပြီး Mac မှာလိုပဲ command တွေ အတူတူ သုံးလို့ ရပါတယ်။"
+    },
+    "k64": {
+      "en": "The only three commands you need today",
+      "my": "ဒီနေ့အတွက် လိုအပ်တဲ့ command သုံးခုတည်း"
+    },
+    "k65": {
+      "en": "terminal",
+      "my": "terminal"
+    },
+    "k66": {
+      "en": "Two habits that make this painless",
+      "my": "ဒီအလေ့အထ နှစ်ခုက အလုပ်ကို အရမ်း လွယ်ကူစေတယ်"
+    },
+    "k67": {
+      "en": "Press <b>Tab</b> while typing a folder name and the computer finishes it for you — no typos. Press <b>↑</b> to bring back the last command you ran.",
+      "my": "folder နာမည် ရိုက်နေရင်း <b>Tab</b> နှိပ်လိုက်ရင် ကွန်ပျူတာက ဆက်ဖြည့်ပေးပါတယ် — စာလုံးမှားစရာ မလိုတော့ဘူး။ <b>↑</b> နှိပ်ရင် နောက်ဆုံး ရိုက်ခဲ့တဲ့ command ပြန်ပေါ်လာပါတယ်။"
+    },
+    "k68": {
+      "en": "Can I break something?",
+      "my": "တစ်ခုခု ပျက်သွားနိုင်လား"
+    },
+    "k69": {
+      "en": "Not with these. <code class=\"i\">pwd</code>, <code class=\"i\">ls</code> and <code class=\"i\">cd</code> only look and walk around — they change nothing. Explore freely.",
+      "my": "ဒီ command တွေနဲ့တော့ မဖြစ်ပါဘူး။ <code class=\"i\">pwd</code>၊ <code class=\"i\">ls</code> နဲ့ <code class=\"i\">cd</code> က ကြည့်ရုံ၊ လျှောက်ရုံပဲ — ဘာမှ မပြောင်းလဲပါဘူး။ လွတ်လွတ်လပ်လပ် လေ့လာလိုက်ပါ။"
+    },
+    "k70": {
+      "en": "Step 6 · Setup (once, forever)",
+      "my": "အဆင့် ၆ · တစ်ကြိမ်တည်း ပြင်ဆင်မှု"
+    },
+    "k71": {
+      "en": "Install Git and tell it your name.",
+      "my": "Git ကို install လုပ်ပြီး ကိုယ့်နာမည် ပြောပြလိုက်ပါ။"
+    },
+    "k72": {
+      "en": "This is the only installation in the whole course, and you'll never repeat it on this computer.",
+      "my": "ဒါဟာ သင်တန်းတစ်ခုလုံးမှာ တစ်ခုတည်းသော install လုပ်ရမယ့် အဆင့်ဖြစ်ပြီး ဒီကွန်ပျူတာမှာ ထပ်လုပ်စရာ မလိုတော့ပါဘူး။"
+    },
+    "k73": {
+      "en": "1 · Install",
+      "my": "၁ · Install လုပ်ပါ"
+    },
+    "k74": {
+      "en": "Mac",
+      "my": "Mac"
+    },
+    "k75": {
+      "en": "Open Terminal and type <code class=\"i\">git --version</code>. If it prints a number, you already have it. If not, it will offer to install — say yes.",
+      "my": "Terminal ဖွင့်ပြီး <code class=\"i\">git --version</code> လို့ ရိုက်ကြည့်ပါ။ နံပါတ်တစ်ခု ပေါ်လာရင် ရှိပြီးသားပါ။ မပေါ်ရင် install လုပ်မလားလို့ မေးလာပါလိမ့်မယ် — yes လို့ ဖြေလိုက်ပါ။"
+    },
+    "k76": {
+      "en": "Windows",
+      "my": "Windows"
+    },
+    "k77": {
+      "en": "Go to <b>git-scm.com/download/win</b>, run the installer, keep clicking Next. Then open <b>Git Bash</b> from your Start menu.",
+      "my": "<b>git-scm.com/download/win</b> ကို သွားပြီး installer ကို run ပါ။ Next ကို ဆက်နှိပ်သွားရုံပါပဲ။ ပြီးရင် Start menu ကနေ <b>Git Bash</b> ကို ဖွင့်ပါ။"
+    },
+    "k78": {
+      "en": "2 · Sign your work",
+      "my": "၂ · ကိုယ့်အလုပ်ကို လက်မှတ်ထိုးပါ"
+    },
+    "k79": {
+      "en": "Every save point gets stamped with your name, so teammates know who did what. Type these two lines once:",
+      "my": "save point တိုင်းမှာ ကိုယ့်နာမည် ပါသွားမှာမို့ အဖွဲ့သားတွေက ဘယ်သူ ဘာလုပ်ခဲ့လဲ သိနိုင်ပါတယ်။ ဒီစာနှစ်ကြောင်းကို တစ်ခါတည်း ရိုက်ထည့်လိုက်ပါ —"
+    },
+    "k80": {
+      "en": "terminal",
+      "my": "terminal"
+    },
+    "k81": {
+      "en": "That's the whole setup.",
+      "my": "ပြင်ဆင်မှုက ဒီလောက်ပါပဲ။"
+    },
+    "k82": {
+      "en": "Nothing else to configure, ever. From here on it's all doing.",
+      "my": "နောက်ထပ် ဘာမှ ချိန်ညှိစရာ မရှိတော့ပါဘူး။ ဒီကနေစပြီး လက်တွေ့ လုပ်ရုံပါပဲ။"
+    },
+    "k83": {
+      "en": "Step 7 · Create the world",
+      "my": "အဆင့် ၇ · ကမ္ဘာကို ဖန်တီးပါ"
+    },
+    "k84": {
+      "en": "Turn a folder into a project Git watches.",
+      "my": "folder တစ်ခုကို Git စောင့်ကြည့်တဲ့ project ဖြစ်အောင် ပြောင်းလိုက်ပါ။"
+    },
+    "k85": {
+      "en": "Let's make a real project. Type along — this takes 30 seconds.",
+      "my": "တကယ့် project တစ်ခု လုပ်ကြည့်ရအောင်။ လိုက်ရိုက်ကြည့်ပါ — စက္ကန့် ၃၀ ပဲ ကြာပါတယ်။"
+    },
+    "k86": {
+      "en": "terminal",
+      "my": "terminal"
+    },
+    "k87": {
+      "en": "That folder is now a <b>repository</b> — usually shortened to \"repo\". It's an ordinary folder plus a hidden <code class=\"i\">.git</code> folder where Git stores every save point you'll ever make.",
+      "my": "အခု အဲဒီ folder ဟာ <b>repository</b> ဖြစ်သွားပါပြီ — အတိုကောက် “repo” လို့ ခေါ်ကြပါတယ်။ သာမန် folder တစ်ခုပေါ်မှာ <code class=\"i\">.git</code> ဆိုတဲ့ ဖျောက်ထားတဲ့ folder တစ်ခု ပါလာတာပါ။ ကိုယ်လုပ်မယ့် save point တိုင်းကို Git က အဲဒီထဲမှာ သိမ်းထားပါတယ်။"
+    },
+    "k88": {
+      "en": "Game metaphor",
+      "my": "ဂိမ်းနဲ့ နှိုင်းယှဉ်ကြည့်ရင်"
+    },
+    "k89": {
+      "en": "<code class=\"i\">git init</code> is <b>starting a new game world</b>. Nothing has been saved yet, but the game now has a memory card to save to.",
+      "my": "<code class=\"i\">git init</code> ဟာ <b>ဂိမ်းကမ္ဘာအသစ်တစ်ခု စတင်လိုက်တာ</b>ပါ။ ဘာမှ မ save ရသေးပေမယ့် ဂိမ်းမှာ save လုပ်စရာ memory card တစ်ခု ရှိသွားပါပြီ။"
+    },
+    "k90": {
+      "en": "see it for yourself",
+      "my": "ကိုယ်တိုင် ကြည့်ကြည့်ပါ"
+    },
+    "k91": {
+      "en": "Don't touch .git",
+      "my": ".git ကို မထိပါနဲ့"
+    },
+    "k92": {
+      "en": "You never need to open it. Just know that deleting it would erase your history while leaving your files alone.",
+      "my": "အဲဒီထဲ ဖွင့်ကြည့်စရာ ဘယ်တော့မှ မလိုပါဘူး။ ဖျက်လိုက်ရင် ဖိုင်တွေတော့ ကျန်ပေမယ့် မှတ်တမ်းအားလုံး ပျောက်သွားမယ်ဆိုတာလေးပဲ သိထားပါ။"
+    },
+    "k93": {
+      "en": "Step 8 · The heart of Git",
+      "my": "အဆင့် ၈ · Git ရဲ့ နှလုံးသား"
+    },
+    "k94": {
+      "en": "Make your first save point.",
+      "my": "ပထမဆုံး save point ကို လုပ်ကြည့်ပါ။"
+    },
+    "k95": {
+      "en": "Saving in Git happens in <b>two moves</b>, not one — and that surprises everybody at first. You first <i>choose</i> what to save, then you <i>save</i> it with a note.",
+      "my": "Git မှာ save လုပ်တာက တစ်ဆင့်တည်း မဟုတ်ဘဲ <b>နှစ်ဆင့်</b> ဖြစ်ပါတယ် — ဒါက အစပိုင်းမှာ လူတိုင်းကို အံ့သြစေပါတယ်။ ဘာကို save မလဲ အရင် <i>ရွေး</i>ရပြီး၊ ပြီးမှ မှတ်ချက်တစ်ခုနဲ့အတူ <i>save</i> လုပ်ရပါတယ်။"
+    },
+    "k96": {
+      "en": "terminal",
+      "my": "terminal"
+    },
+    "k97": {
+      "en": "🎉 That's your first commit. That short code <code class=\"i\">a1b2c3d</code> is its permanent name — you could return to this exact moment years from now.",
+      "my": "🎉 ဒါ ကိုယ့်ရဲ့ ပထမဆုံး commit ပါ။ အဲဒီ ကုဒ်တို <code class=\"i\">a1b2c3d</code> ဟာ သူ့ရဲ့ အမြဲတမ်း နာမည်ပါ — နှစ်တွေ ကြာသွားပြီးတောင် ဒီအချိန်အတိအကျကို ပြန်လာနိုင်ပါတယ်။"
+    },
+    "k98": {
+      "en": "Try it — click through the cycle",
+      "my": "စမ်းကြည့်ပါ — အဆင့်အလိုက် နှိပ်ကြည့်ပါ"
+    },
+    "k99": {
+      "en": "1 · Edit a file",
+      "my": "၁ · ဖိုင်ကို ပြင်မယ်"
+    },
+    "k100": {
+      "en": "2 · git add",
+      "my": "၂ · git add"
+    },
+    "k101": {
+      "en": "3 · git commit",
+      "my": "၃ · git commit"
+    },
+    "k102": {
+      "en": "Reset",
+      "my": "အစကနေ ပြန်စ"
+    },
+    "k103": {
+      "en": "Click “Edit a file” to begin.",
+      "my": "စတင်ဖို့ “ဖိုင်ကို ပြင်မယ်” ကို နှိပ်ပါ။"
+    },
+    "k104": {
+      "en": "Write notes your future self will thank you for",
+      "my": "နောင်တစ်ချိန် ကိုယ့်ကိုယ်ကိုယ် ကျေးဇူးတင်မယ့် မှတ်ချက်တွေ ရေးပါ"
+    },
+    "k105": {
+      "en": "\"Fix crash when the file is empty\" is useful. \"update\", \"stuff\", \"asdf\" are not. You'll be reading these later, promise.",
+      "my": "“ဖိုင်ဗလာဖြစ်နေရင် crash ဖြစ်တာ ပြင်ပြီး” ဆိုတာမျိုးက အသုံးဝင်ပါတယ်။ “update”၊ “stuff”၊ “asdf” တို့ကတော့ မဝင်ပါဘူး။ ဒါတွေကို နောက်မှ ကိုယ်တိုင် ပြန်ဖတ်ရမှာပါ။"
+    },
+    "k106": {
+      "en": "Step 9 · Looking back",
+      "my": "အဆင့် ၉ · ပြန်လှည့်ကြည့်ခြင်း"
+    },
+    "k107": {
+      "en": "Read your project's story.",
+      "my": "ကိုယ့် project ရဲ့ ဇာတ်လမ်းကို ဖတ်ကြည့်ပါ။"
+    },
+    "k108": {
+      "en": "Make a few more save points — change the file, <code class=\"i\">git add</code>, <code class=\"i\">git commit</code>, repeat — then look at what you've built:",
+      "my": "save point တွေ ထပ်လုပ်ကြည့်ပါ — ဖိုင်ပြင်၊ <code class=\"i\">git add</code>၊ <code class=\"i\">git commit</code>၊ ထပ်ခါထပ်ခါ — ပြီးရင် ဘာတွေ တည်ဆောက်ထားပြီးလဲ ကြည့်လိုက်ပါ —"
+    },
+    "k109": {
+      "en": "terminal",
+      "my": "terminal"
+    },
+    "k110": {
+      "en": "Read it bottom to top and it's the story of your project. Three commands cover almost everything you'll want to know:",
+      "my": "အောက်ကနေ အပေါ်ကို ဖတ်လိုက်ရင် ကိုယ့် project ရဲ့ ဇာတ်လမ်းပါပဲ။ သိချင်တာ အားလုံးနီးပါးကို command သုံးခုနဲ့ ရပါတယ် —"
+    },
+    "k111": {
+      "en": "git status",
+      "my": "git status"
+    },
+    "k112": {
+      "en": "\"What's changed right now?\" Run it constantly — it's your compass.",
+      "my": "“အခုချိန်မှာ ဘာတွေ ပြောင်းနေလဲ။” မကြာခဏ run ပါ — ကိုယ့်ရဲ့ သံလိုက်အိမ်မြှောင်ပါပဲ။"
+    },
+    "k113": {
+      "en": "git log",
+      "my": "git log"
+    },
+    "k114": {
+      "en": "\"What have I saved so far?\" Your list of save points.",
+      "my": "“အခုအထိ ဘာတွေ save လုပ်ခဲ့ပြီးလဲ။” ကိုယ့် save point စာရင်းပါ။"
+    },
+    "k115": {
+      "en": "git diff",
+      "my": "git diff"
+    },
+    "k116": {
+      "en": "\"What exactly did I change since the last save?\" Line by line.",
+      "my": "“နောက်ဆုံး save ကတည်းက ဘာတွေ အတိအကျ ပြောင်းလဲ။” လိုင်းလိုက် ပြပါတယ်။"
+    },
+    "k117": {
+      "en": "The rhythm you'll repeat forever",
+      "my": "အမြဲ ထပ်ခါထပ်ခါ လုပ်ရမယ့် စည်းချက်"
+    },
+    "k118": {
+      "en": "edit → <code class=\"i\">git status</code> → <code class=\"i\">git add</code> → <code class=\"i\">git commit</code>. Do it after every small piece of work that <i>works</i> — not once at the end of the day.",
+      "my": "ပြင် → <code class=\"i\">git status</code> → <code class=\"i\">git add</code> → <code class=\"i\">git commit</code>။ <i>အလုပ်လုပ်တဲ့</i> အပိုင်းလေးတစ်ခု ပြီးတိုင်း လုပ်ပါ — တစ်နေ့စာ အကုန်လုံးကို ညနေမှ တစ်ခါတည်း မလုပ်ပါနဲ့။"
+    },
+    "k119": {
+      "en": "Step 10 · The superpower",
+      "my": "အဆင့် ၁၀ · အစွမ်းထက်ဆုံး လက်နက်"
+    },
+    "k120": {
+      "en": "Try risky things without any risk.",
+      "my": "အန္တရာယ် မရှိဘဲ စွန့်စားကြည့်ပါ။"
+    },
+    "k121": {
+      "en": "You want to redesign your whole page, but you're not sure it'll work. You don't want to ruin the version that currently works fine. So you make a <b>branch</b>.",
+      "my": "စာမျက်နှာတစ်ခုလုံးကို ဒီဇိုင်းအသစ် ပြောင်းချင်တယ်၊ ဒါပေမဲ့ အဆင်ပြေမလား မသေချာဘူး။ အခု အလုပ်လုပ်နေတဲ့ version ကိုလည်း မဖျက်ချင်ဘူး။ ဒါဆိုရင် <b>branch</b> တစ်ခု လုပ်လိုက်ပါ။"
+    },
+    "k122": {
+      "en": "Game metaphor",
+      "my": "ဂိမ်းနဲ့ နှိုင်းယှဉ်ကြည့်ရင်"
+    },
+    "k123": {
+      "en": "A branch is a <b>second save slot</b>. You copy your progress into it and attempt the hard boss fight there. If it goes badly, delete the slot — your main playthrough never knew. If it goes well, bring it into the main game.",
+      "my": "Branch ဆိုတာ <b>ဒုတိယ save slot</b> တစ်ခုပါ။ ကိုယ့် progress ကို အဲဒီထဲ ကူးထည့်ပြီး ခက်ခဲတဲ့ boss fight ကို အဲဒီမှာ စမ်းတိုက်ကြည့်တာ။ မကောင်းဘူးဆိုရင် slot ကို ဖျက်လိုက်ရုံပါပဲ — ကိုယ့်ရဲ့ ပင်မ playthrough က ဘာမှ မသိလိုက်ဘူး။ ကောင်းရင်တော့ ပင်မဂိမ်းထဲ ထည့်လိုက်တာပါပဲ။"
+    },
+    "k124": {
+      "en": "Two versions of your project exist at once. Switching between them takes a split second.",
+      "my": "project ရဲ့ version နှစ်ခု တစ်ပြိုင်နက် ရှိနေတယ်။ တစ်ခုကနေ တစ်ခုကို ပြောင်းဖို့ စက္ကန့်ပိုင်းလေးပဲ ကြာတယ်။"
+    },
+    "k125": {
+      "en": "terminal",
+      "my": "terminal"
+    },
+    "k126": {
+      "en": "What if two people changed the same line?",
+      "my": "လူနှစ်ယောက်က စာကြောင်းတစ်ကြောင်းတည်းကို ပြင်ရင်ရော"
+    },
+    "k127": {
+      "en": "Git stops and asks you to choose — that's a <b>merge conflict</b>. It looks scary, it isn't: you open the file, pick what the line should say, then <code class=\"i\">git add</code> and <code class=\"i\">git commit</code>. That's the whole fix, and every professional does it weekly.",
+      "my": "Git က ရပ်ပြီး ကိုယ့်ကို ရွေးခိုင်းပါတယ် — အဲဒါကို <b>merge conflict</b> လို့ ခေါ်ပါတယ်။ ကြောက်စရာလို ထင်ရပေမယ့် မဟုတ်ပါဘူး — ဖိုင်ကို ဖွင့်၊ စာကြောင်းက ဘာဖြစ်သင့်လဲ ရွေး၊ ပြီးရင် <code class=\"i\">git add</code> နဲ့ <code class=\"i\">git commit</code> လုပ်ရုံပါပဲ။ ဒါက ဖြေရှင်းနည်း အားလုံးပါပဲ၊ ပရော်ဖက်ရှင်နယ်တိုင်း အပတ်တိုင်း ကြုံနေကျပါ။"
+    },
+    "k128": {
+      "en": "Check yourself",
+      "my": "ကိုယ်တိုင် စစ်ကြည့်ပါ"
+    },
+    "k129": {
+      "en": "<b>Your experiment turned out badly. What happens to <code class=\"i\">main</code>?</b>",
+      "my": "<b>ကိုယ့် စမ်းသပ်မှုက မအောင်မြင်ဘူး။ <code class=\"i\">main</code> ကိုရော ဘာဖြစ်သွားမလဲ။</b>"
+    },
+    "k130": {
+      "en": "It gets the broken changes too",
+      "my": "ပျက်နေတဲ့ အပြောင်းအလဲတွေ main ဆီ ရောက်သွားမယ်"
+    },
+    "k131": {
+      "en": "I have to undo each change by hand",
+      "my": "အပြောင်းအလဲတိုင်းကို လက်နဲ့ ပြန်ဖျက်ရမယ်"
+    },
+    "k132": {
+      "en": "Nothing — main is untouched. I just delete the branch.",
+      "my": "ဘာမှ မဖြစ်ဘူး — main က မထိခိုက်ဘူး။ branch ကို ဖျက်လိုက်ရုံပါပဲ။"
+    },
+    "k133": {
+      "en": "Step 11 · Into the cloud",
+      "my": "အဆင့် ၁၁ · Cloud ပေါ် တက်ခြင်း"
+    },
+    "k134": {
+      "en": "Put your project on GitHub.",
+      "my": "ကိုယ့် project ကို GitHub ပေါ် တင်လိုက်ပါ။"
+    },
+    "k135": {
+      "en": "So far everything lives on your computer alone. Uploading it to GitHub gives you a backup, a link you can share, and the ability to work with other people.",
+      "my": "အခုအချိန်အထိ အားလုံးက ကိုယ့်ကွန်ပျူတာထဲမှာပဲ ရှိနေတယ်။ GitHub ပေါ် တင်လိုက်ရင် backup ရမယ်၊ မျှဝေလို့ရတဲ့ link ရမယ်၊ ပြီးတော့ သူများတွေနဲ့ အတူတူ လုပ်လို့ ရလာမယ်။"
+    },
+    "k136": {
+      "en": "Create a free account at <b>github.com</b>.",
+      "my": "<b>github.com</b> မှာ အခမဲ့ account တစ်ခု ဖွင့်ပါ။"
+    },
+    "k137": {
+      "en": "Click <b>+</b> → <b>New repository</b>. Give it a name. Don't tick any of the extra options. Click <b>Create</b>.",
+      "my": "<b>+</b> → <b>New repository</b> ကို နှိပ်ပါ။ နာမည်ပေးပါ။ ကျန်တဲ့ option တွေ ဘာမှ မရွေးပါနဲ့။ <b>Create</b> နှိပ်ပါ။"
+    },
+    "k138": {
+      "en": "GitHub shows you a page of commands — you only need these:",
+      "my": "GitHub က command စာမျက်နှာတစ်ခု ပြပါလိမ့်မယ် — ဒီနှစ်ကြောင်းပဲ လိုပါတယ် —"
+    },
+    "k139": {
+      "en": "terminal",
+      "my": "terminal"
+    },
+    "k140": {
+      "en": "Refresh the GitHub page — your files are there, with your commit messages next to them. From now on, uploading is a single word:",
+      "my": "GitHub စာမျက်နှာကို refresh လုပ်ကြည့်ပါ — ကိုယ့်ဖိုင်တွေ ရောက်နေပြီး commit မှတ်ချက်တွေပါ ဘေးမှာ ပေါ်နေပါလိမ့်မယ်။ ဒီကနေစပြီး တင်ဖို့ဆိုရင် စကားလုံးတစ်လုံးပဲ လိုပါတယ် —"
+    },
+    "k141": {
+      "en": "the two words you'll use daily",
+      "my": "နေ့စဉ် သုံးရမယ့် စကားလုံး နှစ်လုံး"
+    },
+    "k142": {
+      "en": "Game metaphor",
+      "my": "ဂိမ်းနဲ့ နှိုင်းယှဉ်ကြည့်ရင်"
+    },
+    "k143": {
+      "en": "<b>push</b> = upload my save to the cloud. <b>pull</b> = download my friends' progress. Start every session with a pull, so you're building on the latest world rather than an old one.",
+      "my": "<b>push</b> = ကိုယ့် save ကို cloud ပေါ် တင်တာ။ <b>pull</b> = သူငယ်ချင်းတွေရဲ့ progress ကို ဒေါင်းလုဒ်ဆွဲတာ။ အလုပ်စတိုင်း pull နဲ့ စပါ — ဒါမှ အဟောင်းပေါ်မှာ မဟုတ်ဘဲ နောက်ဆုံးကမ္ဘာပေါ်မှာ ဆက်တည်ဆောက်တာ ဖြစ်မှာပါ။"
+    },
+    "k144": {
+      "en": "It asks for a password — and rejects it?",
+      "my": "password တောင်းပြီး လက်မခံဘူးလား"
+    },
+    "k145": {
+      "en": "GitHub doesn't accept account passwords for uploads. Go to <b>Settings → Developer settings → Personal access tokens</b>, create one, and paste that instead. Your computer remembers it afterwards.",
+      "my": "GitHub က upload အတွက် account password ကို လက်မခံတော့ပါဘူး။ <b>Settings → Developer settings → Personal access tokens</b> ကို သွား၊ token တစ်ခု ဖန်တီးပြီး အဲဒါကို ထည့်ပါ။ ပြီးရင် ကွန်ပျူတာက မှတ်ထားပေးပါလိမ့်မယ်။"
+    },
+    "k146": {
+      "en": "Step 12 · Teamwork",
+      "my": "အဆင့် ၁၂ · အဖွဲ့လိုက် လုပ်ကိုင်ခြင်း"
+    },
+    "k147": {
+      "en": "How real teams actually work.",
+      "my": "တကယ့် အဖွဲ့တွေ ဘယ်လို အလုပ်လုပ်ကြလဲ။"
+    },
+    "k148": {
+      "en": "Here's the surprise: on professional teams, <b>nobody edits the main version directly</b>. Everyone proposes changes and someone else looks before it goes in. That single habit is what keeps large projects from falling apart.",
+      "my": "အံ့သြစရာက ဒါပါ — ပရော်ဖက်ရှင်နယ် အဖွဲ့တွေမှာ <b>ဘယ်သူမှ ပင်မ version ကို တိုက်ရိုက် မပြင်ကြပါဘူး</b>။ လူတိုင်းက အပြောင်းအလဲကို အဆိုပြုပြီး၊ မထည့်ခင် နောက်တစ်ယောက်က စစ်ပေးပါတယ်။ အဲဒီ အလေ့အထ တစ်ခုတည်းက project ကြီးတွေ မပြိုကွဲအောင် ထိန်းထားပေးတာပါ။"
+    },
+    "k149": {
+      "en": "This loop runs thousands of times a day at every software company on earth.",
+      "my": "ဒီ loop ဟာ ကမ္ဘာပေါ်က software ကုမ္ပဏီတိုင်းမှာ တစ်နေ့ ထောင်နဲ့ချီ လည်ပတ်နေပါတယ်။"
+    },
+    "k150": {
+      "en": "That third step — \"ask for review\" — has a name: a <b>pull request</b>. Despite the confusing name, it simply means: <i>\"Here's what I changed. Please look before it goes in.\"</i> Your teammates read it, leave comments, automated tests run, and then someone clicks Merge.",
+      "my": "တတိယအဆင့် — “စစ်ဆေးပေးဖို့ တောင်းဆိုတာ” — ကို <b>pull request</b> လို့ ခေါ်ပါတယ်။ နာမည်က ရှုပ်ပေမယ့် အဓိပ္ပာယ်ကတော့ ရိုးရှင်းပါတယ် — <i>“ကျွန်တော် ပြောင်းထားတာ ဒါပါ။ မထည့်ခင် ကြည့်ပေးပါဦး”</i> ဆိုတာပါပဲ။ အဖွဲ့သားတွေက ဖတ်၊ မှတ်ချက်ပေး၊ အလိုအလျောက် test တွေ run ပြီးမှ တစ်ယောက်ယောက်က Merge ကို နှိပ်ပါတယ်။"
+    },
+    "k151": {
+      "en": "Game metaphor",
+      "my": "ဂိမ်းနဲ့ နှိုင်းယှဉ်ကြည့်ရင်"
+    },
+    "k152": {
+      "en": "A pull request is showing your quest to the guild leader before it becomes part of the shared world. Comments are their feedback; merging is their approval.",
+      "my": "Pull request ဆိုတာ ကိုယ့် quest ကို မျှဝေထားတဲ့ ကမ္ဘာထဲ မထည့်ခင် guild leader ကို ပြတာပါ။ မှတ်ချက်တွေက သူတို့ရဲ့ အကြံပြုချက်၊ merge လုပ်တာက သူတို့ရဲ့ ခွင့်ပြုချက်ပါ။"
+    },
+    "k153": {
+      "en": "Contributing to someone else's project",
+      "my": "သူများရဲ့ project မှာ ပါဝင် ကူညီခြင်း"
+    },
+    "k154": {
+      "en": "If you don't have permission to change a project, you <b>fork</b> it — GitHub makes you your own copy — then send a pull request from your copy. That's how millions of strangers safely build open-source software together.",
+      "my": "project တစ်ခုကို ပြင်ခွင့် မရှိရင် <b>fork</b> လုပ်လိုက်ပါ — GitHub က ကိုယ်ပိုင် မိတ္တူတစ်ခု ပေးပါတယ် — ပြီးရင် ကိုယ့်မိတ္တူကနေ pull request ပို့လိုက်တာပါပဲ။ ဒါဟာ မသိကျွမ်းသူ သန်းနဲ့ချီပြီး open-source software တွေကို လုံခြုံစွာ အတူတည်ဆောက်နိုင်တဲ့ နည်းလမ်းပါ။"
+    },
+    "k155": {
+      "en": "Step 13 · Don't panic",
+      "my": "အဆင့် ၁၃ · စိတ်မပူပါနဲ့"
+    },
+    "k156": {
+      "en": "Three fixes cover almost every mistake.",
+      "my": "အမှားအားလုံးနီးပါးကို ဖြေရှင်းနည်း သုံးခုနဲ့ ကုသလို့ ရပါတယ်။"
+    },
+    "k157": {
+      "en": "Beginners freeze when something breaks. Skip that phase — here's the only question you need to ask: <b>has anyone else seen it yet?</b>",
+      "my": "စတင်လေ့လာသူတွေက တစ်ခုခု ပျက်ရင် ရုတ်တရက် ရပ်သွားတတ်တယ်။ အဲဒီအဆင့်ကို ကျော်လိုက်ပါ — မေးရမယ့် မေးခွန်းက တစ်ခုတည်းပါ — <b>တခြားသူတွေ မြင်ပြီးပြီလား။</b>"
+    },
+    "k158": {
+      "en": "What went wrong? Click one",
+      "my": "ဘာမှားသွားလဲ။ တစ်ခုကို နှိပ်ပါ"
+    },
+    "k159": {
+      "en": "😖 I made a mess in a file and haven't committed yet",
+      "my": "😖 ဖိုင်ထဲမှာ ရှုပ်ထွေးအောင် လုပ်မိပြီး commit မလုပ်ရသေးဘူး"
+    },
+    "k160": {
+      "en": "🙃 I committed, but the message is wrong — and I haven't pushed",
+      "my": "🙃 commit လုပ်ပြီးပြီ၊ ဒါပေမဲ့ မှတ်ချက် မှားနေတယ် — push မလုပ်ရသေးဘူး"
+    },
+    "k161": {
+      "en": "😱 I already pushed it, and it broke something",
+      "my": "😱 push လုပ်ပြီးသွားပြီ၊ ပြီးတော့ တစ်ခုခု ပျက်သွားတယ်"
+    },
+    "k162": {
+      "en": "💀 I did something drastic and think I lost work",
+      "my": "💀 အကြီးအကျယ် လုပ်မိပြီး အလုပ်တွေ ပျောက်သွားပြီလို့ ထင်တယ်"
+    },
+    "k163": {
+      "en": "The one rule to remember",
+      "my": "မှတ်ထားရမယ့် စည်းမျဉ်း တစ်ခု"
+    },
+    "k164": {
+      "en": "If it's still only on <b>your</b> computer, you can rewrite it freely. If you already <b>pushed</b> it, use <code class=\"i\">git revert</code> — it undoes the change by adding a new save point rather than erasing history, so nobody else's copy breaks.",
+      "my": "<b>ကိုယ့်</b> ကွန်ပျူတာပေါ်မှာပဲ ရှိသေးရင် လွတ်လွတ်လပ်လပ် ပြန်ရေးလို့ရတယ်။ <b>push</b> လုပ်ပြီးသွားပြီဆိုရင်တော့ <code class=\"i\">git revert</code> ကို သုံးပါ — မှတ်တမ်းကို ဖျက်မယ့်အစား save point အသစ်တစ်ခု ထပ်ထည့်ပြီး ပြန်ဖျက်ပေးတာမို့ တခြားသူတွေရဲ့ မိတ္တူတွေ မပျက်ပါဘူး။"
+    },
+    "k165": {
+      "en": "Git very rarely loses committed work",
+      "my": "commit လုပ်ပြီးသား အလုပ်တွေ Git မှာ ပျောက်ခဲပါတယ်"
+    },
+    "k166": {
+      "en": "Once you've committed something, it's extremely hard to truly destroy — <code class=\"i\">git reflog</code> can usually find it. That's the deeper reason to commit often: committed work is protected work.",
+      "my": "တစ်ခုခုကို commit လုပ်ပြီးပြီဆိုရင် အမှန်တကယ် ဖျက်ဆီးဖို့ အလွန် ခက်ပါတယ် — <code class=\"i\">git reflog</code> နဲ့ ပြန်ရှာလို့ ရလေ့ရှိပါတယ်။ ဒါက မကြာခဏ commit လုပ်သင့်တဲ့ နက်နဲတဲ့ အကြောင်းရင်းပါ — commit လုပ်ထားတဲ့ အလုပ်ဟာ ကာကွယ်ထားပြီးသား အလုပ်ပါ။"
+    },
+    "k167": {
+      "en": "Step 14 · Finish line",
+      "my": "အဆင့် ၁၄ · ပန်းဝင်ပြီ"
+    },
+    "k168": {
+      "en": "You now know Git. 🎉",
+      "my": "အခု သင် Git တတ်သွားပါပြီ။ 🎉"
+    },
+    "k169": {
+      "en": "Not \"the basics of Git\" — the actual thing professionals use all day. Everything else is refinement.",
+      "my": "“Git အခြေခံ” လောက်တင် မဟုတ်ပါဘူး — ပရော်ဖက်ရှင်နယ်တွေ တစ်နေ့လုံး သုံးနေတဲ့ အရာအစစ်ပါ။ ကျန်တာအားလုံးက ဒါကို ပိုသေချာအောင် လုပ်တာတွေပါ။"
+    },
+    "k170": {
+      "en": "What you can do now",
+      "my": "အခု ဘာတွေ လုပ်နိုင်ပြီလဲ"
+    },
+    "k171": {
+      "en": "Save your work properly",
+      "my": "အလုပ်ကို စနစ်တကျ သိမ်းနိုင်"
+    },
+    "k172": {
+      "en": "<code class=\"i\">add</code> → <code class=\"i\">commit</code>, with a history you can read and return to.",
+      "my": "<code class=\"i\">add</code> → <code class=\"i\">commit</code>၊ ဖတ်လို့ရပြီး ပြန်သွားလို့ရတဲ့ မှတ်တမ်းနဲ့အတူ။"
+    },
+    "k173": {
+      "en": "Experiment without fear",
+      "my": "မကြောက်ဘဲ စမ်းသပ်နိုင်"
+    },
+    "k174": {
+      "en": "Branch, break things, merge or delete.",
+      "my": "Branch ခွဲ၊ ဖျက်စီးကြည့်၊ merge ဒါမှမဟုတ် ဖျက်ပစ်။"
+    },
+    "k175": {
+      "en": "Work in the open",
+      "my": "အများနဲ့ ပွင့်လင်းစွာ လုပ်ကိုင်နိုင်"
+    },
+    "k176": {
+      "en": "Push to GitHub, pull from teammates, propose changes with pull requests.",
+      "my": "GitHub ကို push လုပ်၊ အဖွဲ့သားတွေဆီက pull လုပ်၊ pull request နဲ့ အပြောင်းအလဲ အဆိုပြုနိုင်။"
+    },
+    "k177": {
+      "en": "Recover from mistakes",
+      "my": "အမှားတွေကနေ ပြန်ထူနိုင်"
+    },
+    "k178": {
+      "en": "Know which fix to reach for, and why.",
+      "my": "ဘယ်ဖြေရှင်းနည်းကို ဘာကြောင့် သုံးရမလဲ သိပြီ။"
+    },
+    "k179": {
+      "en": "Quick quiz — five questions",
+      "my": "အမြန်စစ်ဆေးမှု — မေးခွန်း ၅ ခု"
+    },
+    "k180": {
+      "en": "Where to go next",
+      "my": "နောက်ထပ် ဘယ်ကို ဆက်သွားမလဲ"
+    },
+    "k181": {
+      "en": "<b>Use it today.</b> Take any folder of your own work and run <code class=\"i\">git init</code>. Commit ten times this week — that's the real learning.",
+      "my": "<b>ဒီနေ့ပဲ စသုံးပါ။</b> ကိုယ့်ရဲ့ အလုပ် folder တစ်ခုခုကို ယူပြီး <code class=\"i\">git init</code> လုပ်လိုက်ပါ။ ဒီတစ်ပတ် commit ဆယ်ခါ လုပ်ကြည့်ပါ — အဲဒါက တကယ့် သင်ယူမှုပါ။"
+    },
+    "k182": {
+      "en": "<b>Publish something.</b> Push a small project to GitHub. Your profile becomes a portfolio.",
+      "my": "<b>တစ်ခုခု ထုတ်ဝေပါ။</b> project သေးသေးလေးတစ်ခုကို GitHub ပေါ် တင်လိုက်ပါ။ ကိုယ့် profile က portfolio ဖြစ်လာပါလိမ့်မယ်။"
+    },
+    "k183": {
+      "en": "<b>Go deeper when you need it.</b> The full reference has the command cheat sheet, the terminal playground, merge conflicts in detail, rebase, and a complete project walkthrough.",
+      "my": "<b>လိုအပ်တဲ့အခါ ပိုနက်နက်ရှိုင်းရှိုင်း လေ့လာပါ။</b> Full reference မှာ command cheat sheet၊ terminal playground၊ merge conflict အသေးစိတ်၊ rebase နဲ့ project တစ်ခုလုံး လမ်းညွှန် ပါဝင်ပါတယ်။"
+    },
+    "k184": {
+      "en": "Open the full reference →",
+      "my": "Full reference ကို ဖွင့်မယ် →"
+    },
+    "k185": {
+      "en": "Same topics, professional depth. Come back here anytime.",
+      "my": "အကြောင်းအရာ အတူတူ၊ ပရော်ဖက်ရှင်နယ် အနက်နဲ့။ ဘယ်အချိန်မဆို ဒီကို ပြန်လာနိုင်ပါတယ်။"
+    },
+    "c_brand": {
+      "en": "",
+      "my": "Git စတင်လေ့လာသူများအတွက်"
+    },
+    "c_ref": {
+      "en": "",
+      "my": "အပြည့်အစုံ ကြည့်ရန် →"
+    },
+    "c_back": {
+      "en": "",
+      "my": "← နောက်သို့"
+    },
+    "c_next": {
+      "en": "",
+      "my": "ရှေ့သို့ →"
+    },
+    "c_restart": {
+      "en": "",
+      "my": "အစကနေ ပြန်စ ↺"
+    },
+    "c_stepfmt": {
+      "en": "",
+      "my": "အဆင့် {n} / {N}"
+    },
+    "c_title": {
+      "en": "",
+      "my": "Git စတင်လေ့လာသူများအတွက် — ဒီကနေ စပါ"
+    },
+    "c_copy": {
+      "en": "",
+      "my": "ကူးယူ"
+    },
+    "c_copied": {
+      "en": "",
+      "my": "ကူးပြီးပြီ ✓"
+    },
+    "c_usethis": {
+      "en": "",
+      "my": "ဒါကို သုံးပါ"
+    }
+  },
+  "dynamic": {
+    "sim_reset": "စတင်ဖို့ “ဖိုင်ကို ပြင်မယ်” ကို နှိပ်ပါ။",
+    "sim_edit": "ဖိုင်တစ်ခုကို ပြောင်းလိုက်ပြီ။ Git က မြင်နေပေမယ့် ဘာမှ မ save ရသေးပါဘူး။",
+    "sim_add": "git add — ဖိုင်က စောင့်ဆိုင်းခန်းထဲ ရောက်သွားပြီ၊ နောက် save point အတွက် ရွေးထားပြီးပါပြီ။",
+    "sim_commit": "git commit — မှတ်ချက်နဲ့အတူ အမြဲတမ်း သိမ်းလိုက်ပါပြီ။ ထပ်ပြင်ပြီး သံသရာကို ပြန်လည်ကြည့်ပါ။",
+    "fix1": "မ save ရသေးတဲ့ အပြောင်းအလဲတွေကို ဖျက်ပြီး ဖိုင်ကို နောက်ဆုံး save point အတိုင်း ပြန်ထားပေးပါတယ်။ commit လုပ်ပြီးသားတွေကို မထိခိုက်လို့ လုံခြုံပါတယ်။",
+    "fix2": "နောက်ဆုံး save point ကို ပြန်ရေးပေးပါတယ် — မှတ်ချက် ပြင်ချင်ရင်ဖြစ်စေ၊ မေ့ကျန်ခဲ့တဲ့ ဖိုင် ထည့်ချင်ရင်ဖြစ်စေ။ push မလုပ်ရသေးမှသာ လုပ်ပါ။",
+    "fix3": "မကောင်းတဲ့ commit ကို ပြန်ဖျက်ပေးမယ့် save point အသစ်တစ်ခု ဖန်တီးပေးပါတယ်။ မှတ်တမ်း မပျက်လို့ တခြားသူတွေရဲ့ မိတ္တူတွေလည်း မပျက်ပါဘူး။ ဒါက လုံခြုံပြီး ပရော်ဖက်ရှင်နယ်ဆန်ဆုံး ရွေးချယ်မှုပါ။",
+    "fix4": "ကိုယ်ရောက်ဖူးတဲ့ နေရာအားလုံးကို ပြပါတယ် — “ပျောက်သွားပြီ” ထင်ရတဲ့ commit တွေအပါအဝင်။ လိုချင်တဲ့ကုဒ်ကို ရှာပြီး ပြန်သွားလိုက်ပါ။ commit လုပ်ထားတဲ့ အလုပ်ဟာ တကယ်ပျောက်တာ ရှားပါတယ်။",
+    "why_copy": "မိတ္တူတွေက ဖိုင်တွေကိုတော့ ထိန်းထားပေမယ့် ဇာတ်လမ်းကို ဆုံးရှုံးစေတယ် — ဘာပြောင်းလဲ၊ ဘာကြောင့်လဲ၊ ဘယ်သူလဲ။ ပြီးတော့ နှစ်ယောက် တစ်ပြိုင်နက် မိတ္တူကူးရင် တစ်ယောက်ရဲ့ အလုပ် ပျောက်သွားပါတယ်။",
+    "why_offline": "ရပါတယ်! Git က ကိုယ့်စက်ပေါ်မှာ ရှိပါတယ်။ Save (commit) လုပ်ဖို့ အင်တာနက် လုံးဝ မလိုပါဘူး — နောက်မှ GitHub ပေါ် တင်ဖို့သာ လိုတာပါ။",
+    "why_branch": "ဘာမှ မဖြစ်ပါဘူး။ main က ကိုယ့်စမ်းသပ်မှုကို လုံးဝ မမြင်ခဲ့ရပါဘူး။ branch ကို ဖျက်လိုက်ရင် အဲဒီစမ်းသပ်မှု မဖြစ်ခဲ့သလိုပါပဲ — ဒါက branch တွေ ရှိရတဲ့ အကြောင်းရင်း အတိအကျပါ။",
+    "fb_right": "✅ မှန်ပါတယ်။ ",
+    "fb_wrong": "💡 ",
+    "q1": "Commit ဆိုတာ ဘာလဲ။",
+    "q1o1": "project ရဲ့ အခြေအနေကို မှတ်ချက်နဲ့အတူ သိမ်းထားတဲ့ snapshot တစ်ခု",
+    "q1o2": "အဖွဲ့ကို ပို့လိုက်တဲ့ message တစ်ခု",
+    "q1o3": "hard drive ရဲ့ backup တစ်ခု",
+    "q1w": "save point တစ်ခုပါ — အချိန်တစ်ခုမှာ project တစ်ခုလုံးကို “ဘာကြောင့်” ဆိုတဲ့ မှတ်ချက်နဲ့အတူ သိမ်းထားလိုက်တာပါ။",
+    "q2": "Git က ကိုယ့်ကွန်ပျူတာမှာ ရှိတယ်။ GitHub ကရော ဘာလဲ။",
+    "q2o1": "Git ရဲ့ version အသစ်",
+    "q2o2": "project တွေကို သိမ်းပေးပြီး သူများတွေ ကြည့်နိုင်၊ ပါဝင်နိုင်တဲ့ website",
+    "q2o3": "code editor တစ်ခု",
+    "q2w": "Git = ကိုယ့်စက်ပေါ်က ကင်မရာ။ GitHub = ဓာတ်ပုံတွေ တင်ပြီး သူများတွေ ပါဝင်နိုင်တဲ့ နေရာ။",
+    "q3": "Branch တစ်ခုကို ဘာကြောင့် ဖန်တီးရတာလဲ။",
+    "q3o1": "project ပိုမြန်အောင်",
+    "q3o2": "ဖိုင်အဟောင်းတွေ ဖျက်ဖို့",
+    "q3o3": "အလုပ်လုပ်နေတဲ့ version ကို မထိဘဲ စွန့်စား စမ်းသပ်ဖို့",
+    "q3w": "ဒုတိယ save slot ပါ။ လွတ်လွတ်လပ်လပ် စမ်းပါ — merge လုပ်ဖို့ ကိုယ်တိုင် မဆုံးဖြတ်မချင်း main က လုံခြုံနေပါတယ်။",
+    "q4": "commit တစ်ခု push လုပ်လိုက်လို့ site ပျက်သွားတယ်။ ဘာသုံးမလဲ။",
+    "q4o1": "git revert",
+    "q4o2": "git reset --hard",
+    "q4o3": "repository ကို ဖျက်ပစ်မယ်",
+    "q4w": "revert က commit အသစ်တစ်ခု ထပ်ထည့်ပြီး ပြန်ဖျက်ပေးလို့ တခြားသူတွေရဲ့ မိတ္တူ မပျက်ပါဘူး။ သူများ ရထားပြီးသား မှတ်တမ်းကို ဘယ်တော့မှ ပြန်မရေးပါနဲ့။",
+    "q5": "“git pull” က ဘာလုပ်ပေးလဲ။",
+    "q5o1": "ကျွန်တော့် အလုပ်ကို တင်ပေးတယ်",
+    "q5o2": "တခြားသူတွေရဲ့ နောက်ဆုံး အလုပ်ကို ဒေါင်းလုဒ်ဆွဲပေးတယ်",
+    "q5o3": "ကျွန်တော့် branch ကို ဖျက်ပေးတယ်",
+    "q5w": "pull က အဖွဲ့ရဲ့ အပြောင်းအလဲတွေကို ဆွဲယူပေးတယ်။ push က ကိုယ့်ဟာကို တင်ပေးတယ်။ အလုပ် မစခင် pull လုပ်ပါ။"
+  }
+}
